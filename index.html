@@ -372,6 +372,11 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 .with-cover{display:flex;align-items:flex-end;gap:24px}
 .series-cover{width:170px;height:auto;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--line);box-shadow:6px 6px 0 var(--black);transform:rotate(-2deg);flex:none}
 @media (max-width:860px){.with-cover{gap:16px}.series-cover{width:110px}}
+
+/* ===== v14: result card covers ===== */
+.shot.has-img{background-size:cover;background-position:center}
+.shot.has-img .tag{color:#fff;font-weight:600;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.shot.has-img .num,.shot.has-img .unit{text-shadow:0 2px 14px rgba(0,0,0,.7)}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -476,17 +481,17 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   </div>
   <div class="cases-grid">
     <article class="pola">
-      <div class="shot"><span class="tag">ميركاتو · رمضان 2024</span><div><div class="num">48M</div><div class="unit">ريال مبيعات الفترة</div></div></div>
+      <div class="shot has-img" style="background-image:linear-gradient(180deg,rgba(0,0,0,.30),rgba(0,0,0,.82)),url(cases/mercato.jpg)"><span class="tag">ميركاتو</span><div><div class="num">48M</div><div class="unit">ريال مبيعات الفترة</div></div></div>
       <h3>موسم رمضان على شبكة فروع كاملة</h3>
       <p>صرف تسويقي 1.3 مليون ريال وحملة واحدة متسقة على كل الفروع. دوري: قيادة التسويق.</p>
     </article>
     <article class="pola">
-      <div class="shot"><span class="tag">مرسيدس · 2024</span><div><div class="num red">32.8×</div><div class="unit">عائد على الصرف الإعلاني</div></div></div>
+      <div class="shot has-img" style="background-image:linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.80)),url(cases/mercedes.jpg)"><span class="tag">مرسيدس</span><div><div class="num red">32.8×</div><div class="unit">عائد على الصرف الإعلاني</div></div></div>
       <h3>إطلاق سيارة بمعايير براند فاخر</h3>
       <p>ميزانية حملة حوالي 2.7 مليون دولار. دوري: استشاري الحملة ومراجعة الأداء.</p>
     </article>
     <article class="pola">
-      <div class="shot"><span class="tag">عقارات</span><div><div class="num">2.5×</div><div class="unit">تحويل، من 0.8% لحوالي 2%</div></div></div>
+      <div class="shot has-img" style="background-image:linear-gradient(180deg,rgba(0,0,0,.30),rgba(0,0,0,.84)),url(cases/estate.jpg)"><span class="tag">عقارات</span><div><div class="num">2.5×</div><div class="unit">تحويل، من 0.8% لحوالي 2%</div></div></div>
       <h3>مبيعات أكتر من غير زيادة في الإعلانات</h3>
       <p>صلحنا الرد والتأهيل والمعاينات. دوري: إعادة بناء رحلة العميل مع المبيعات.</p>
     </article>
@@ -581,14 +586,14 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="sec" style="padding-top:0"><div class="wrap">
   <article class="cs">
     <div class="cs-head">
-      <div><div class="cs-meta">ميركاتو · أزياء وتجزئة · رمضان 2024</div><h2>موسم رمضان على شبكة فروع كاملة</h2><p>حملة موسمية واحدة متسقة على كل الفروع.</p></div>
+      <div><div class="cs-meta">ميركاتو · أزياء وتجزئة</div><h2>موسم رمضان على شبكة فروع كاملة</h2><p>حملة موسمية واحدة متسقة على كل الفروع.</p></div>
       <div class="cs-nums"><div><b>48M</b><span>ريال مبيعات الفترة</span></div><div><b>1.3M</b><span>ريال صرف تسويقي</span></div></div>
     </div>
     <dl class="cs-grid"><div><dt>التحدي</dt><dd>نلحق موسم الشراء في رمضان بتجربة واحدة للبراند والعروض على فروع كتير.</dd></div><div><dt>الاستراتيجية</dt><dd>تموضع موسمي، وصول من السوشيال، مؤثرين، وربط الحملة بطلب الفروع.</dd></div><div><dt>التنفيذ</dt><dd>تخطيط متكامل، إعلانات سوشيال مدفوعة، مؤثرين، وتنسيق مع إدارة الفروع.</dd></div><div><dt>دوري</dt><dd>قيادة التسويق في المجموعة: الاستراتيجية والتخطيط وإدارة الفرق.</dd></div></dl><p class="cs-foot">الـ 48 مليون مبيعات الفترة كلها، مش منسوبة للإعلانات لوحدها.</p>
   </article>
   <article class="cs">
     <div class="cs-head">
-      <div><div class="cs-meta">مرسيدس · سيارات · 2024</div><h2>إطلاق سيارة بمعايير براند فاخر</h2><p>طلب حقيقي على موديل جديد من غير ما البراند ينزل عن مستواه.</p></div>
+      <div><div class="cs-meta">مرسيدس · سيارات</div><h2>إطلاق سيارة بمعايير براند فاخر</h2><p>طلب حقيقي على موديل جديد من غير ما البراند ينزل عن مستواه.</p></div>
       <div class="cs-nums"><div><b>32.8×</b><span>عائد على الصرف الإعلاني</span></div><div><b>$2.7M</b><span>ميزانية الحملة تقريباً</span></div></div>
     </div>
     <dl class="cs-grid"><div><dt>التحدي</dt><dd>ندعم إطلاق سيارة جديدة بتموضع فاخر واضح ونولّد طلب يتقاس.</dd></div><div><dt>الاستراتيجية</dt><dd>ربط قصة البراند بنية الشراء عند الجمهور في حملة إطلاق واحدة بأولويات واضحة.</dd></div><div><dt>التنفيذ</dt><dd>تخطيط للديجيتال والإنتاج وشركاء الحملة مع مراجعات أداء مستمرة.</dd></div><div><dt>دوري</dt><dd>استشاري: إشراف استراتيجي وتوجيه الحملة ومراجعة الأداء.</dd></div></dl>
