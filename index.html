@@ -333,6 +333,11 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   .rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .stile{grid-template-columns:110px minmax(0,1fr)}
 }
+
+/* ===== v9: film posters ===== */
+.vcard.film .vframe{aspect-ratio:4/5}
+.vcard.film .vframe.playing{aspect-ratio:9/16}
+.stile img{aspect-ratio:4/5}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -473,7 +478,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <h2>بشارك اللي <span class="red">اتعلمته</span></h2>
   </div>
   <div class="series-tiles">
-    <a class="stile" href="#videos"><img src="videos/whatif/ep3-film.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
     <a class="stile" href="#videos"><img src="videos/stick/s1-02.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">20 حلقة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
@@ -639,9 +644,9 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     </div>
   </div>
   <div class="films">
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep1-film.mp4"><img src="videos/whatif/ep1-film.jpg" alt="محمد علي والقلعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: محمد علي والقلعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 1 · 3:34</span><h3>محمد علي والقلعة</h3><button type="button" class="chip trailer" data-video="videos/whatif/ep1-trailer.mp4">شوف التريلر</button></div></article>
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep2-film.mp4"><img src="videos/whatif/ep2-film.jpg" alt="نابليون… ضحية الماركتنج" loading="lazy"><button type="button" class="play" aria-label="شغّل: نابليون… ضحية الماركتنج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 2 · 4:54</span><h3>نابليون… ضحية الماركتنج</h3><button type="button" class="chip trailer" data-video="videos/whatif/ep2-trailer.mp4">شوف التريلر</button></div></article>
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep3-film.mp4"><img src="videos/whatif/ep3-film.jpg" alt="تايتانيك: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="شغّل: تايتانيك: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 3 · 7:13</span><h3>تايتانيك: Unsinkable</h3></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep1-film.mp4"><img src="videos/whatif/ep1-poster.jpg" alt="محمد علي والقلعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: محمد علي والقلعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 1 · 3:34</span><h3>محمد علي والقلعة</h3></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep2-film.mp4"><img src="videos/whatif/ep2-poster.jpg" alt="نابليون… ضحية الماركتنج" loading="lazy"><button type="button" class="play" aria-label="شغّل: نابليون… ضحية الماركتنج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 2 · 4:54</span><h3>نابليون… ضحية الماركتنج</h3></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep3-film.mp4"><img src="videos/whatif/ep3-poster.jpg" alt="تايتانيك: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="شغّل: تايتانيك: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 3 · 7:13</span><h3>تايتانيك: Unsinkable</h3></div></article>
   </div>
   <p class="soon">الحلقة 4: رمسيس التاني ومعركة قادش. قريباً.</p>
 </div></section>
@@ -752,7 +757,7 @@ document.documentElement.setAttribute('lang','ar');
       v.controls=true; v.playsInline=true; v.preload='metadata';
       v.addEventListener('play',function(){ stopAll(v); });
       frame.appendChild(v);
-      var b=frame.querySelector('.play'); if(b) b.hidden=true;
+      var b=frame.querySelector('.play'); if(b) b.hidden=true; frame.classList.add('playing');
     }
     if(v.getAttribute('src')!==src){ v.setAttribute('src',src); }
     v.play();
