@@ -264,6 +264,34 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   .lg{height:96px}
   .svc-grid,.terms,.contact{grid-template-columns:1fr}
 }
+
+/* ===== v6: clients ===== */
+.clients{background:var(--black);color:var(--on-black);padding:48px 44px 44px;box-shadow:10px 10px 0 var(--red)}
+.clients-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 40px;margin-bottom:34px}
+.clients-head h2{font-size:clamp(1.9rem,4.2vw,3.2rem)}
+.clients-head p{color:var(--on-black-muted);max-width:38ch;font-size:1rem}
+.cl-grid{display:grid;gap:1px;background:rgba(255,255,255,.24);border:1px solid rgba(255,255,255,.24)}
+.cl-top{grid-template-columns:repeat(4,minmax(0,1fr))}
+.cl-rest{grid-template-columns:repeat(5,minmax(0,1fr));border-top:0}
+.cl{background:var(--black);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;height:138px;padding:22px;transition:background .25s}
+.cl img{display:block;width:auto;height:auto;max-width:72%;max-height:50px;filter:invert(1);transition:filter .25s,transform .25s}
+.cl.tall img{max-height:82px}
+.cl.big{height:230px}
+.cl.big img{max-width:76%;max-height:86px}
+.cl.big.tall img{max-height:124px}
+.cl span{font-family:var(--ar);font-size:.82rem;font-weight:600;color:var(--on-black-muted);transition:color .25s}
+.cl:hover{background:#fff}
+.cl:hover img{filter:none;transform:scale(1.05)}
+.cl:hover span{color:#555}
+@media (max-width:860px){
+  .clients{padding:30px 20px 22px;box-shadow:6px 6px 0 var(--red)}
+  .cl-top,.cl-rest{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cl{height:112px}
+  .cl.big{height:160px}
+  .cl.big img{max-height:64px}
+  .cl.big.tall img{max-height:92px}
+}
+@media (prefers-reduced-motion:reduce){.cl,.cl img{transition:none}}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -306,23 +334,30 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 </div></div></div>
 
 <section class="brands"><div class="wrap">
-  <div class="kicker"><span>BRANDS I WORKED ON</span><span class="stars">✸✦✤</span></div>
-  <h2 class="brands-title">براندات اشتغلت على تسويقها</h2>
-  <div class="logo-wall">
-    <div class="lg"><img src="logos/mercedes-benz.png" alt="Mercedes-Benz" loading="lazy"></div>
-    <div class="lg tall"><img src="logos/burger-king.png" alt="Burger King" loading="lazy"></div>
-    <div class="lg"><img src="logos/rolex.png" alt="Rolex" loading="lazy"></div>
-    <div class="lg"><img src="logos/ford.png" alt="Ford" loading="lazy"></div>
-    <div class="lg"><img src="logos/victorias-secret.png" alt="Victoria's Secret" loading="lazy"></div>
-    <div class="lg"><img src="logos/byd.png" alt="BYD" loading="lazy"></div>
-    <div class="lg"><img src="logos/le-meridien.png" alt="Le Méridien" loading="lazy"></div>
-    <div class="lg"><img src="logos/saudi-german-hospital.png" alt="Saudi German Health" loading="lazy"></div>
-    <div class="lg"><img src="logos/cottonil.png" alt="Cottonil" loading="lazy"></div>
-    <div class="lg tall"><img src="logos/mercato-ksa.png" alt="Mercato" loading="lazy"></div>
-    <div class="lg tall"><img src="logos/efad-group.png" alt="EFAD Group" loading="lazy"></div>
-    <div class="lg"><img src="logos/gandour.png" alt="Gandour" loading="lazy"></div>
-    <div class="lg"><img src="logos/activ-egypt.png" alt="Activ" loading="lazy"></div>
-    <div class="lg"><img src="logos/ghazi-jamil.png" alt="Ghazi Abdulaziz Jamil" loading="lazy"></div>
+  <div class="kicker"><span>CLIENTS &amp; BRANDS</span><span class="stars">✸✦✤</span></div>
+  <div class="clients">
+    <div class="clients-head">
+      <h2>براندات <span class="red">اشتغلت</span> على تسويقها</h2>
+      <p>من السيارات والساعات الفاخرة للمطاعم والتجزئة والرعاية الصحية، في السعودية ومصر.</p>
+    </div>
+    <div class="cl-grid cl-top">
+      <div class="cl big"><img src="logos/mercedes-benz.png" alt="Mercedes-Benz"><span>سيارات</span></div>
+      <div class="cl big"><img src="logos/rolex.png" alt="Rolex"><span>ساعات فاخرة</span></div>
+      <div class="cl big tall"><img src="logos/burger-king.png" alt="Burger King"><span>مطاعم</span></div>
+      <div class="cl big"><img src="logos/ford.png" alt="Ford"><span>سيارات</span></div>
+    </div>
+    <div class="cl-grid cl-rest">
+      <div class="cl"><img src="logos/victorias-secret.png" alt="Victoria's Secret" loading="lazy"></div>
+      <div class="cl"><img src="logos/byd.png" alt="BYD" loading="lazy"></div>
+      <div class="cl"><img src="logos/le-meridien.png" alt="Le Méridien" loading="lazy"></div>
+      <div class="cl"><img src="logos/saudi-german-hospital.png" alt="Saudi German Health" loading="lazy"></div>
+      <div class="cl"><img src="logos/cottonil.png" alt="Cottonil" loading="lazy"></div>
+      <div class="cl tall"><img src="logos/mercato-ksa.png" alt="Mercato" loading="lazy"></div>
+      <div class="cl tall"><img src="logos/efad-group.png" alt="EFAD Group" loading="lazy"></div>
+      <div class="cl"><img src="logos/gandour.png" alt="Gandour" loading="lazy"></div>
+      <div class="cl"><img src="logos/activ-egypt.png" alt="Activ" loading="lazy"></div>
+      <div class="cl"><img src="logos/ghazi-jamil.png" alt="Ghazi Abdulaziz Jamil" loading="lazy"></div>
+    </div>
   </div>
 </div></section>
 
