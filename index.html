@@ -292,6 +292,47 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   .cl.big.tall img{max-height:92px}
 }
 @media (prefers-reduced-motion:reduce){.cl,.cl img{transition:none}}
+
+/* ===== v8: videos ===== */
+.series-head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px 56px;align-items:end;padding-top:44px;border-top:3px solid var(--line);margin-bottom:36px}
+.series-head h2{font-size:clamp(2.6rem,7vw,5.4rem);line-height:1.25}
+.series-head p{color:var(--muted);font-size:1.02rem;margin-top:10px}
+.series-head p b{color:var(--ink);font-family:var(--ar)}
+.tagline-s{font-family:var(--en);font-stretch:125%;font-weight:800;font-size:.75rem;letter-spacing:.05em;direction:ltr;text-align:right;color:var(--red);margin-bottom:6px}
+.films{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.rail{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:20px}
+.season{margin-top:44px}
+.season-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px;margin-bottom:18px}
+.season-head span{color:var(--muted);font-size:.95rem}
+.vcard{background:var(--sheet);border:2px solid var(--line);display:flex;flex-direction:column;min-width:0}
+.vcard.film{box-shadow:7px 7px 0 var(--black)}
+.vframe{position:relative;aspect-ratio:9/16;max-width:100%;background:#111;overflow:hidden;cursor:pointer}
+.vframe img,.vframe video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.vframe video{object-fit:contain;background:#000}
+.play{position:absolute;inset:0;margin:auto;width:58px;height:58px;border-radius:50%;border:0;background:var(--red);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.6);transition:transform .18s}
+.play svg{width:26px;height:26px;fill:currentColor;margin-inline-start:-2px}
+.vframe:hover .play{transform:scale(1.12)}
+.vcard.film .play{width:76px;height:76px}
+.vcap{padding:12px 14px 16px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.vcap h3{font-size:1rem;line-height:1.5}
+.vcard.film .vcap{padding:16px 18px 20px}
+.vcard.film .vcap h3{font-size:1.25rem}
+.vsub{font-family:var(--en);font-stretch:125%;font-weight:800;font-size:.72rem;color:var(--red);direction:rtl}
+.chip.trailer{font-family:var(--ar);cursor:pointer;margin-top:8px}
+.soon{margin-top:26px;font-family:var(--ar);font-weight:600;color:var(--muted)}
+.series-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.stile{display:grid;grid-template-columns:150px minmax(0,1fr);background:var(--sheet);border:2px solid var(--line);box-shadow:7px 7px 0 var(--black);text-decoration:none;transition:transform .2s,box-shadow .2s}
+.stile:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--red)}
+.stile img{width:100%;height:100%;aspect-ratio:9/14;object-fit:cover;display:block}
+.stile-cap{padding:22px;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.stile-cap h3{font-size:1.6rem}
+.stile-cap p{color:var(--muted);font-size:.95rem}
+@media (max-width:860px){
+  .series-head,.series-tiles{grid-template-columns:1fr}
+  .films{grid-template-columns:1fr;max-width:380px}
+  .rail{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .stile{grid-template-columns:110px minmax(0,1fr)}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -302,6 +343,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <a href="#home" data-route="home">الرئيسية</a>
     <a href="#services" data-route="services">الخدمات</a>
     <a href="#cases" data-route="cases">النتائج</a>
+    <a href="#videos" data-route="videos">الفيديوهات</a>
     <a href="#about" data-route="about">عني</a>
   </nav>
   <a class="ulink cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">احجز اجتماع ↖</a>
@@ -430,11 +472,11 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <div class="kicker"><span>CONTENT</span><span class="stars">✸✦✤</span></div>
     <h2>بشارك اللي <span class="red">اتعلمته</span></h2>
   </div>
-  <div class="tiles">
-    <div class="tile"><div class="frame">▶</div><div class="cap"><h3>ماذا لو</h3><p>أحداث تاريخية بعين مسوّق: مذبحة القلعة، نابليون، تايتانيك.</p></div></div>
-    <div class="tile"><div class="frame">▶</div><div class="cap"><h3>بلاك فرايداي · 14 حلقة</h3><p>إزاي تعمل عرض يكسّبك بدل ما ياكل هامشك.</p></div></div>
-    <div class="tile"><div class="frame">▶</div><div class="cap"><h3>ROAS 17 وخسرنا</h3><p>ليه رقم حلو في لوحة الإعلانات ممكن يخبّي خسارة.</p></div></div>
+  <div class="series-tiles">
+    <a class="stile" href="#videos"><img src="videos/whatif/ep3-film.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/stick/s1-02.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">20 حلقة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
   </div>
+  <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
 </div></section>
 
 <section class="sec" style="padding-top:20px"><div class="wrap faq">
@@ -581,6 +623,70 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 </div></section>
 </div>
 
+<div class="view" id="v-videos">
+<section class="view-hero"><div class="wrap">
+  <div class="kicker"><span>VIDEOS</span><span class="stars">✸✦✤</span></div>
+  <h1 class="mega">الفيديوهات</h1>
+  <p>سلسلتين بشرح فيهم التسويق بطريقتين مختلفتين: أفلام قصيرة من التاريخ، ورسم بسيط في دقيقة.</p>
+</div></section>
+
+<section class="sec series" style="padding-top:0"><div class="wrap">
+  <div class="series-head">
+    <div><div class="tagline-s">SERIES 01 · 3 FILMS</div><h2>ماذا <span class="red">لو…؟</span></h2></div>
+    <div>
+      <p><b>الفكرة:</b> كل حلقة بتاخد حدث تاريخي الناس عارفاه، وأدخل فيه أنا كمسوّق وأسأل: ماذا لو حد كان طبّق مفهوم تسويقي واحد قبل ما القرار يتاخد؟</p>
+      <p><b>الهدف:</b> المفهوم التسويقي يتفهم ويتحفظ من قصة، مش من شرح نظري. كل فيلم بيطلع بدرس واحد تقدر تطبقه في شركتك.</p>
+    </div>
+  </div>
+  <div class="films">
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep1-film.mp4"><img src="videos/whatif/ep1-film.jpg" alt="محمد علي والقلعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: محمد علي والقلعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 1 · 3:34</span><h3>محمد علي والقلعة</h3><button type="button" class="chip trailer" data-video="videos/whatif/ep1-trailer.mp4">شوف التريلر</button></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep2-film.mp4"><img src="videos/whatif/ep2-film.jpg" alt="نابليون… ضحية الماركتنج" loading="lazy"><button type="button" class="play" aria-label="شغّل: نابليون… ضحية الماركتنج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 2 · 4:54</span><h3>نابليون… ضحية الماركتنج</h3><button type="button" class="chip trailer" data-video="videos/whatif/ep2-trailer.mp4">شوف التريلر</button></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep3-film.mp4"><img src="videos/whatif/ep3-film.jpg" alt="تايتانيك: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="شغّل: تايتانيك: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 3 · 7:13</span><h3>تايتانيك: Unsinkable</h3></div></article>
+  </div>
+  <p class="soon">الحلقة 4: رمسيس التاني ومعركة قادش. قريباً.</p>
+</div></section>
+
+<section class="sec series" style="padding-top:0"><div class="wrap">
+  <div class="series-head">
+    <div><div class="tagline-s">SERIES 02 · 20 EPISODES</div><h2>شخبطة <span class="red">تسويق</span></h2></div>
+    <div>
+      <p><b>الفكرة:</b> ورقة كراسة وراجل مرسوم بالعصاية، وفكرة تسويق واحدة في حوالي دقيقة.</p>
+      <p><b>الهدف:</b> صاحب البيزنس يفهم أرقامه وقراراته من غير مصطلحات. كل حلقة بتجاوب سؤال واحد: الخصم ده بيكسّبني؟ الـ ROAS ده كويس؟ أكبّر الإعلان إمتى؟</p>
+    </div>
+  </div>
+  <div class="season">
+    <div class="season-head"><h3>الموسم الأول · بلاك فرايداي</h3><span>14 حلقة عن إزاي تعمل عرض يكسّبك بدل ما ياكل هامشك</span></div>
+    <div class="rail">
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-01.mp4"><img src="videos/stick/s1-01.jpg" alt="ستيك مان" loading="lazy"><button type="button" class="play" aria-label="شغّل: ستيك مان"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">01</span><h3>ستيك مان</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-02.mp4"><img src="videos/stick/s1-02.jpg" alt="خصم 30 بتمن 10" loading="lazy"><button type="button" class="play" aria-label="شغّل: خصم 30 بتمن 10"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">02</span><h3>خصم 30 بتمن 10</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-03.mp4"><img src="videos/stick/s1-03.jpg" alt="المرتجعات" loading="lazy"><button type="button" class="play" aria-label="شغّل: المرتجعات"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">03</span><h3>المرتجعات</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-04.mp4"><img src="videos/stick/s1-04.jpg" alt="السوق السعودي" loading="lazy"><button type="button" class="play" aria-label="شغّل: السوق السعودي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">04</span><h3>السوق السعودي</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-05.mp4"><img src="videos/stick/s1-05.jpg" alt="قبل ما تدوس نشر" loading="lazy"><button type="button" class="play" aria-label="شغّل: قبل ما تدوس نشر"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">05</span><h3>قبل ما تدوس نشر</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-06.mp4"><img src="videos/stick/s1-06.jpg" alt="سباق الحواجز" loading="lazy"><button type="button" class="play" aria-label="شغّل: سباق الحواجز"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">06</span><h3>سباق الحواجز</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-07.mp4"><img src="videos/stick/s1-07.jpg" alt="ميتا عاميه" loading="lazy"><button type="button" class="play" aria-label="شغّل: ميتا عاميه"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">07</span><h3>ميتا عاميه</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-08.mp4"><img src="videos/stick/s1-08.jpg" alt="حمادة وكريم" loading="lazy"><button type="button" class="play" aria-label="شغّل: حمادة وكريم"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">08</span><h3>حمادة وكريم</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-09.mp4"><img src="videos/stick/s1-09.jpg" alt="العميل مش أوردر" loading="lazy"><button type="button" class="play" aria-label="شغّل: العميل مش أوردر"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">09</span><h3>العميل مش أوردر</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-10.mp4"><img src="videos/stick/s1-10.jpg" alt="متبقاش براند خصومات" loading="lazy"><button type="button" class="play" aria-label="شغّل: متبقاش براند خصومات"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">10</span><h3>متبقاش براند خصومات</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-11.mp4"><img src="videos/stick/s1-11.jpg" alt="منتج ولا خدمة" loading="lazy"><button type="button" class="play" aria-label="شغّل: منتج ولا خدمة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">11</span><h3>منتج ولا خدمة</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-12.mp4"><img src="videos/stick/s1-12.jpg" alt="لو بتبيع منتج" loading="lazy"><button type="button" class="play" aria-label="شغّل: لو بتبيع منتج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">12</span><h3>لو بتبيع منتج</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-13.mp4"><img src="videos/stick/s1-13.jpg" alt="لو بتقدم خدمة" loading="lazy"><button type="button" class="play" aria-label="شغّل: لو بتقدم خدمة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">13</span><h3>لو بتقدم خدمة</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s1-14.mp4"><img src="videos/stick/s1-14.jpg" alt="المراجعة النهائية" loading="lazy"><button type="button" class="play" aria-label="شغّل: المراجعة النهائية"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">14</span><h3>المراجعة النهائية</h3></div></article>
+    </div>
+  </div>
+  <div class="season">
+    <div class="season-head"><h3>الموسم التاني · الإعلان الكسبان</h3><span>6 حلقات: الـ ROAS، وبعدها المراحل الأربعة من Testing لحد Scaling</span></div>
+    <div class="rail">
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-01.mp4"><img src="videos/stick/s2-01.jpg" alt="ROAS ده كويس؟" loading="lazy"><button type="button" class="play" aria-label="شغّل: ROAS ده كويس؟"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">01</span><h3>ROAS ده كويس؟</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-02.mp4"><img src="videos/stick/s2-02.jpg" alt="الـ 4 مراحل" loading="lazy"><button type="button" class="play" aria-label="شغّل: الـ 4 مراحل"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">02</span><h3>الـ 4 مراحل</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-03.mp4"><img src="videos/stick/s2-03.jpg" alt="Testing" loading="lazy"><button type="button" class="play" aria-label="شغّل: Testing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">03</span><h3>Testing</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-04.mp4"><img src="videos/stick/s2-04.jpg" alt="Optimization" loading="lazy"><button type="button" class="play" aria-label="شغّل: Optimization"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">04</span><h3>Optimization</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-05.mp4"><img src="videos/stick/s2-05.jpg" alt="Scaling" loading="lazy"><button type="button" class="play" aria-label="شغّل: Scaling"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">05</span><h3>Scaling</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/stick/s2-06.mp4"><img src="videos/stick/s2-06.jpg" alt="الاستراتيجية" loading="lazy"><button type="button" class="play" aria-label="شغّل: الاستراتيجية"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">06</span><h3>الاستراتيجية</h3></div></article>
+    </div>
+  </div>
+</div></section>
+</div>
+
 <section class="band final"><div class="wrap">
   <span class="stars red">✸✦✤</span>
   <h2>يلا <span class="red">نتكلم</span></h2>
@@ -602,7 +708,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 document.documentElement.setAttribute('dir','rtl');
 document.documentElement.setAttribute('lang','ar');
 (function(){
-  var names=['home','services','cases','about'];
+  var names=['home','services','cases','videos','about'];
   function show(){
     var r=(location.hash||'').replace('#','');
     if(names.indexOf(r)<0) r='home';
@@ -634,6 +740,32 @@ document.documentElement.setAttribute('lang','ar');
 </script>
 
 <a class="wa-float" href="https://wa.me/966567054546?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%8A%D9%88%D8%B3%D9%81%D8%8C%20%D8%AC%D8%A7%D9%8A%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" aria-label="كلمني على واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.500 6.500 0 0 1-3.200-2.800c-.2-.4.2-.4.6-1.200.1-.2 0-.3 0-.4l-.7-1.700c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.300-.7.700-1 1.500-1 2.300 0 1.300 1 2.600 1.100 2.800.2.200 2 3.100 4.900 4.300 1.800.700 2.500.800 3.400.600.500-.1 1.400-.600 1.600-1.200.200-.600.200-1.100.100-1.200 0-.100-.200-.200-.400-.300z"/></svg>واتساب</a>
+<script>
+(function(){
+  function stopAll(except){
+    document.querySelectorAll('.vframe video').forEach(function(v){ if(v!==except) v.pause(); });
+  }
+  function playIn(frame, src){
+    var v=frame.querySelector('video');
+    if(!v){
+      v=document.createElement('video');
+      v.controls=true; v.playsInline=true; v.preload='metadata';
+      v.addEventListener('play',function(){ stopAll(v); });
+      frame.appendChild(v);
+      var b=frame.querySelector('.play'); if(b) b.hidden=true;
+    }
+    if(v.getAttribute('src')!==src){ v.setAttribute('src',src); }
+    v.play();
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target.closest('.chip.trailer');
+    if(t){ playIn(t.closest('.vcard').querySelector('.vframe'), t.dataset.video); return; }
+    var f=e.target.closest('.vframe');
+    if(f && !e.target.closest('video')){ playIn(f, f.dataset.video); }
+  });
+  window.addEventListener('hashchange',function(){ stopAll(null); });
+})();
+</script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 <script>
 document.querySelectorAll('a.cal').forEach(function(a){
