@@ -363,7 +363,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 /* ===== v12: bigger home video tiles ===== */
 .stile{display:flex;flex-direction:column}
 .stile img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-bottom:2px solid var(--line)}
-.stile:nth-child(3) img{object-position:center}
+.stile:nth-child(1) img{object-position:center}
 .stile-cap{padding:20px 22px 24px}
 .stile-cap h3{font-size:1.7rem}
 @media (max-width:860px){.stile{display:grid;grid-template-columns:120px minmax(0,1fr)}.stile img{height:100%;border-bottom:0}}
@@ -507,9 +507,9 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <h2>بشارك اللي <span class="red">اتعلمته</span></h2>
   </div>
   <div class="series-tiles">
-    <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p></div></a>
     <a class="stile" href="#videos"><img src="videos/stick/s1-02.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">20 حلقة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
-    <a class="stile" href="#videos"><img src="videos/youssef/intro-main.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
 </div></section>
@@ -662,23 +662,28 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>VIDEOS</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">الفيديوهات</h1>
-  <p>تلات أقسام: أفلام قصيرة من التاريخ، ورسم بسيط في دقيقة، وفيديوهات تعريفية عني.</p>
+  <p>تلات أقسام: فيديوهات تعريفية عني، ورسم بسيط في دقيقة، وأفلام قصيرة من التاريخ.</p>
 </div></section>
 
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
-    <div><div class="tagline-s">SERIES 01 · 3 FILMS</div><h2>ماذا <span class="red">لو…؟</span></h2></div>
+    <div><div class="tagline-s">SERIES 01 · ABOUT ME</div><h2><span class="red">يوسف</span></h2></div>
     <div>
-      <p><b>الفكرة:</b> كل حلقة بتاخد حدث تاريخي الناس عارفاه، وأدخل فيه أنا كمسوّق وأسأل: ماذا لو حد كان طبّق مفهوم تسويقي واحد قبل ما القرار يتاخد؟</p>
-      <p><b>الهدف:</b> المفهوم التسويقي يتفهم ويتحفظ من قصة، مش من شرح نظري. كل فيلم بيطلع بدرس واحد تقدر تطبقه في شركتك.</p>
+      <p><b>الفكرة:</b> فيديوهات تعريفية عني: أنا مين، بدأت منين، وبشتغل إزاي.</p>
+      <p><b>الهدف:</b> تعرفني وتشوف طريقة تفكيري قبل ما نتكلم. وهضيف هنا فيديوهات تعريفية جديدة أول ما تخلص.</p>
     </div>
   </div>
-  <div class="films">
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep1-film.mp4"><img src="videos/whatif/ep1-poster.jpg" alt="محمد علي والقلعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: محمد علي والقلعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 1 · 3:34</span><h3>محمد علي والقلعة</h3></div></article>
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep2-film.mp4"><img src="videos/whatif/ep2-poster.jpg" alt="نابليون… ضحية الماركتنج" loading="lazy"><button type="button" class="play" aria-label="شغّل: نابليون… ضحية الماركتنج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 2 · 4:54</span><h3>نابليون… ضحية الماركتنج</h3></div></article>
-    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep3-film.mp4"><img src="videos/whatif/ep3-poster.jpg" alt="تايتانيك: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="شغّل: تايتانيك: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 3 · 7:13</span><h3>تايتانيك: Unsinkable</h3></div></article>
+  <div class="films wide1">
+    <article class="vcard film wide"><div class="vframe" data-video="videos/youssef/intro-main.mp4"><img src="videos/youssef/intro-main.jpg" alt="الفيديو التعريفي" loading="lazy"><button type="button" class="play" aria-label="شغّل: الفيديو التعريفي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">1:26 · قصتي من 2010 لحد النهارده</span><h3>الفيديو التعريفي</h3></div></article>
   </div>
-  <p class="soon">الحلقة 4: رمسيس التاني ومعركة قادش. قريباً.</p>
+  <div class="season">
+    <div class="season-head"><h3>البداية</h3><span class="count">3 فيديوهات</span><p>أول تلات فيديوهات بدأت بيهم البراند الشخصي في أكتوبر 2026: ليه بدأت، وإيه اللي بؤمن بيه في الشغل.</p></div>
+    <div class="rail">
+      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-1.mp4"><img src="videos/youssef/start-1.jpg" alt="قررت أبني براندي" loading="lazy"><button type="button" class="play" aria-label="شغّل: قررت أبني براندي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">01</span><h3>قررت أبني براندي</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-2.mp4"><img src="videos/youssef/start-2.jpg" alt="إعادة النظر في الاتجاه" loading="lazy"><button type="button" class="play" aria-label="شغّل: إعادة النظر في الاتجاه"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">02</span><h3>إعادة النظر في الاتجاه</h3></div></article>
+      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-3.mp4"><img src="videos/youssef/start-3.jpg" alt="الاتجاه قبل السرعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: الاتجاه قبل السرعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">03</span><h3>الاتجاه قبل السرعة</h3></div></article>
+    </div>
+  </div>
 </div></section>
 
 <section class="sec series" style="padding-top:0"><div class="wrap">
@@ -733,23 +738,18 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
-    <div><div class="tagline-s">SERIES 03 · ABOUT ME</div><h2><span class="red">يوسف</span></h2></div>
+    <div><div class="tagline-s">SERIES 03 · 3 FILMS</div><h2>ماذا <span class="red">لو…؟</span></h2></div>
     <div>
-      <p><b>الفكرة:</b> فيديوهات تعريفية عني: أنا مين، بدأت منين، وبشتغل إزاي.</p>
-      <p><b>الهدف:</b> تعرفني وتشوف طريقة تفكيري قبل ما نتكلم. وهضيف هنا فيديوهات تعريفية جديدة أول ما تخلص.</p>
+      <p><b>الفكرة:</b> كل حلقة بتاخد حدث تاريخي الناس عارفاه، وأدخل فيه أنا كمسوّق وأسأل: ماذا لو حد كان طبّق مفهوم تسويقي واحد قبل ما القرار يتاخد؟</p>
+      <p><b>الهدف:</b> المفهوم التسويقي يتفهم ويتحفظ من قصة، مش من شرح نظري. كل فيلم بيطلع بدرس واحد تقدر تطبقه في شركتك.</p>
     </div>
   </div>
-  <div class="films wide1">
-    <article class="vcard film wide"><div class="vframe" data-video="videos/youssef/intro-main.mp4"><img src="videos/youssef/intro-main.jpg" alt="الفيديو التعريفي" loading="lazy"><button type="button" class="play" aria-label="شغّل: الفيديو التعريفي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">1:26 · قصتي من 2010 لحد النهارده</span><h3>الفيديو التعريفي</h3></div></article>
+  <div class="films">
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep1-film.mp4"><img src="videos/whatif/ep1-poster.jpg" alt="محمد علي والقلعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: محمد علي والقلعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 1 · 3:34</span><h3>محمد علي والقلعة</h3></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep2-film.mp4"><img src="videos/whatif/ep2-poster.jpg" alt="نابليون… ضحية الماركتنج" loading="lazy"><button type="button" class="play" aria-label="شغّل: نابليون… ضحية الماركتنج"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 2 · 4:54</span><h3>نابليون… ضحية الماركتنج</h3></div></article>
+    <article class="vcard film"><div class="vframe" data-video="videos/whatif/ep3-film.mp4"><img src="videos/whatif/ep3-poster.jpg" alt="تايتانيك: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="شغّل: تايتانيك: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">الحلقة 3 · 7:13</span><h3>تايتانيك: Unsinkable</h3></div></article>
   </div>
-  <div class="season">
-    <div class="season-head"><h3>البداية</h3><span class="count">3 فيديوهات</span><p>أول تلات فيديوهات بدأت بيهم البراند الشخصي في أكتوبر 2026: ليه بدأت، وإيه اللي بؤمن بيه في الشغل.</p></div>
-    <div class="rail">
-      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-1.mp4"><img src="videos/youssef/start-1.jpg" alt="قررت أبني براندي" loading="lazy"><button type="button" class="play" aria-label="شغّل: قررت أبني براندي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">01</span><h3>قررت أبني براندي</h3></div></article>
-      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-2.mp4"><img src="videos/youssef/start-2.jpg" alt="إعادة النظر في الاتجاه" loading="lazy"><button type="button" class="play" aria-label="شغّل: إعادة النظر في الاتجاه"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">02</span><h3>إعادة النظر في الاتجاه</h3></div></article>
-      <article class="vcard "><div class="vframe" data-video="videos/youssef/start-3.mp4"><img src="videos/youssef/start-3.jpg" alt="الاتجاه قبل السرعة" loading="lazy"><button type="button" class="play" aria-label="شغّل: الاتجاه قبل السرعة"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">03</span><h3>الاتجاه قبل السرعة</h3></div></article>
-    </div>
-  </div>
+  <p class="soon">الحلقة 4: رمسيس التاني ومعركة قادش. قريباً.</p>
 </div></section>
 </div>
 
