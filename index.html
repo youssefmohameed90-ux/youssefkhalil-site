@@ -13,8 +13,9 @@
 <meta name="theme-color" content="#111111">
 <link rel="canonical" href="https://youssefkhalil.co/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23fff' text-anchor='middle'%3EYK%3C/text%3E%3C/svg%3E">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}.price{display:none!important}/* مؤقت: الأسعار مخفية لحد ما تتحدد */</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@200;400;600;800;900&family=Archivo:wdth,wght@125,800;125,900&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
@@ -96,7 +97,7 @@ h1 .sel::after{bottom:-5px;left:-5px}
 .brand-list li{font-family:var(--en);font-stretch:125%;font-weight:800;font-size:.95rem;direction:ltr;border:2px solid var(--line);border-radius:999px;padding:6px 18px;background:var(--sheet)}
 .brand-list li:nth-child(4n+1){background:var(--black);color:var(--on-black)}
 
-.svc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.svc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .svc{background:var(--sheet);border:2px solid var(--line);padding:30px 26px;display:flex;flex-direction:column;gap:18px;box-shadow:7px 7px 0 var(--black);transition:transform .2s,box-shadow .2s}
 .svc:hover{transform:translate(-3px,-3px);box-shadow:10px 10px 0 var(--red)}
 .svc.star{background:var(--black);color:var(--on-black);box-shadow:7px 7px 0 var(--red)}
@@ -232,6 +233,37 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   .cs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .about .pola{max-width:300px;margin-inline:auto}
 }
+
+/* ===== v5 ===== */
+.logo-wall{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));background:var(--sheet);border:2px solid var(--line);box-shadow:8px 8px 0 var(--black)}
+.lg{height:118px;display:flex;align-items:center;justify-content:center;padding:18px;border-inline-end:1px solid rgba(17,17,17,.14);border-bottom:1px solid rgba(17,17,17,.14);transition:background .25s}
+.lg img{display:block;max-width:78%;max-height:44px;width:auto;height:auto;opacity:.9;transition:opacity .25s,transform .25s}
+.lg.tall img{max-height:70px}
+.lg:hover{background:#F6F6F3}
+.lg:hover img{opacity:1;transform:scale(1.06)}
+.brands-title{font-family:var(--ar);font-weight:800;font-size:1.25rem;margin:0 0 18px}
+.terms{margin-top:36px;padding:26px 28px;border:2px dashed var(--line);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 40px}
+.terms b{font-family:var(--ar);font-weight:800;display:block;margin-bottom:4px}
+.terms p{color:var(--muted);font-size:.97rem}
+.contact{grid-template-columns:repeat(2,minmax(0,1fr))}
+.contact .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;background:none;border:0;padding:0}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--ar);font-weight:700;font-size:.9rem;text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:6px 18px;background:var(--sheet);transition:background .18s,color .18s}
+.chip:hover{background:var(--black);color:var(--on-black)}
+.chip.dark{background:var(--black);color:var(--on-black)}
+.chip.dark:hover{background:var(--red);border-color:var(--red)}
+.final-acts{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+.final .btn.wline{background:none;color:var(--on-black);border-color:var(--on-black)}
+.final .btn.wline:hover{background:var(--red);border-color:var(--red)}
+.social{display:flex;flex-wrap:wrap;gap:6px 20px}
+.social a{text-underline-offset:5px}
+.wa-float{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:max(16px,env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;font-family:var(--ar);font-weight:800;font-size:.92rem;text-decoration:none;background:var(--black);color:var(--on-black);border:2px solid var(--on-black);border-radius:999px;padding:11px 20px;box-shadow:0 10px 26px -10px rgba(0,0,0,.6);transition:background .18s,transform .18s}
+.wa-float:hover{background:var(--red);transform:translateY(-3px)}
+.wa-float svg{width:18px;height:18px;fill:currentColor}
+@media (max-width:860px){
+  .logo-wall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .lg{height:96px}
+  .svc-grid,.terms,.contact{grid-template-columns:1fr}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -244,7 +276,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <a href="#cases" data-route="cases">النتائج</a>
     <a href="#about" data-route="about">عني</a>
   </nav>
-  <a class="ulink" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%AA%D8%B4%D8%AE%D9%8A%D8%B5">احجز مكالمة ↖</a>
+  <a class="ulink cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">احجز اجتماع ↖</a>
 </div></header>
 
 <div class="view" id="v-home">
@@ -258,13 +290,13 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     </div>
     <h1><span class="hello">أهلاً</span>— أنا يوسف خليل. ببني للشركات تسويق <span class="sel">بيكسّب</span> بمستوى البراندات الكبيرة.</h1>
     <div class="hero-actions">
-      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%AA%D8%B4%D8%AE%D9%8A%D8%B5">احجز جلسة تشخيص</a>
+      <a class="btn cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">احجز اجتماع</a>
       <a class="ulink" href="#services">شوف الخدمات ←</a>
     </div>
   </div>
   <div class="hero-photo">
     <img src="youssef-khalil.png" alt="يوسف خليل بقميص أسود، صورة أبيض وأسود" width="418" height="726">
-    <span class="sticker">أول 15 دقيقة مجاناً</span>
+    <span class="sticker">أول مكالمة مجاناً</span>
   </div>
 </div></section>
 
@@ -275,47 +307,47 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 
 <section class="brands"><div class="wrap">
   <div class="kicker"><span>BRANDS I WORKED ON</span><span class="stars">✸✦✤</span></div>
-  <ul class="brand-list">
-    <li>Mercedes-Benz</li><li>Burger King</li><li>Rolex</li><li>Ford</li><li>Victoria's Secret</li><li>BYD</li><li>Le Méridien</li><li>Saudi German Hospital</li><li>Cottonil</li><li>Mercato</li><li>EFAD Group</li>
-  </ul>
+  <h2 class="brands-title">براندات اشتغلت على تسويقها</h2>
+  <div class="logo-wall">
+    <div class="lg"><img src="logos/mercedes-benz.png" alt="Mercedes-Benz" loading="lazy"></div>
+    <div class="lg tall"><img src="logos/burger-king.png" alt="Burger King" loading="lazy"></div>
+    <div class="lg"><img src="logos/rolex.png" alt="Rolex" loading="lazy"></div>
+    <div class="lg"><img src="logos/ford.png" alt="Ford" loading="lazy"></div>
+    <div class="lg"><img src="logos/victorias-secret.png" alt="Victoria's Secret" loading="lazy"></div>
+    <div class="lg"><img src="logos/byd.png" alt="BYD" loading="lazy"></div>
+    <div class="lg"><img src="logos/le-meridien.png" alt="Le Méridien" loading="lazy"></div>
+    <div class="lg"><img src="logos/saudi-german-hospital.png" alt="Saudi German Health" loading="lazy"></div>
+    <div class="lg"><img src="logos/cottonil.png" alt="Cottonil" loading="lazy"></div>
+    <div class="lg tall"><img src="logos/mercato-ksa.png" alt="Mercato" loading="lazy"></div>
+    <div class="lg tall"><img src="logos/efad-group.png" alt="EFAD Group" loading="lazy"></div>
+    <div class="lg"><img src="logos/gandour.png" alt="Gandour" loading="lazy"></div>
+    <div class="lg"><img src="logos/activ-egypt.png" alt="Activ" loading="lazy"></div>
+    <div class="lg"><img src="logos/ghazi-jamil.png" alt="Ghazi Abdulaziz Jamil" loading="lazy"></div>
+  </div>
 </div></section>
 
 <section class="sec"><div class="wrap">
   <div class="sec-head">
-    <div class="kicker"><span>SERVICES</span><span>01 — 03</span></div>
+    <div class="kicker"><span>SERVICES</span><span>01 — 02</span></div>
     <h2>بشتغل معاك <span class="red">إزاي</span></h2>
-    <p>تلات خدمات، كل واحدة ليها تسليم مكتوب ومدة وسعر معلن.</p>
+    <p>طريقتين للتعاقد حسب وضع شركتك. السعر بيتحدد على حجم الشغل وحجم الشركة، وبتستلم عرض مكتوب قبل ما نبدأ.</p>
   </div>
   <div class="svc-grid">
     <article class="svc star">
-      <div><div class="tagline">MARKETING DIAGNOSTIC</div><h3>التشخيص التسويقي</h3></div>
+      <div><div class="tagline">I LEAD YOUR TEAM</div><h3>أقود فريقك</h3></div>
       <dl>
-        <div><dt>لمين</dt><dd>شركة بتصرف على التسويق ومش شايفة العائد اللي المفروض يرجع.</dd></div>
-        <div><dt>هتستلم</dt><dd><ul><li>تقرير بكل مشكلة ومعاها رقمها</li><li>ترتيب الأولويات: إيه يتصلح الأول</li><li>جلسة عرض مع الإدارة</li></ul></dd></div>
-        <div><dt>المدة</dt><dd>5 أيام عمل</dd></div>
+        <div><dt>لمين</dt><dd>شركة عندها فريق تسويق أو وكالة، وناقصها اتجاه وحد يحاسب على الأرقام.</dd></div>
+        <div><dt>بعمل إيه</dt><dd><ul><li>استراتيجية وخطة بأولويات أسبوعية</li><li>متابعة أسبوعية للفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>تقرير شهري للإدارة</li></ul></dd></div>
       </dl>
-      <p class="price">يبدأ من ــــ <small>ريال / جنيه</small></p>
-      <a class="btn inv" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D9%84%D8%AA%D8%B4%D8%AE%D9%8A%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A">اطلب التشخيص</a>
+      <a class="btn inv" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%82%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%B9%D9%86%D8%AF%D9%8A">اطلب عرض سعر</a>
     </article>
     <article class="svc">
-      <div><div class="tagline">90-DAY STRATEGY</div><h3>استراتيجية وخطة 90 يوم</h3></div>
+      <div><div class="tagline">MY TEAM DELIVERS</div><h3>فريقي ينفذلك</h3></div>
       <dl>
-        <div><dt>لمين</dt><dd>إدارة عايزة تعرف هتعمل إيه كل أسبوع، بكام، والمستهدف كام.</dd></div>
-        <div><dt>هتستلم</dt><dd><ul><li>تموضع البراند والعروض والتسعير</li><li>خطة 12 أسبوع بالميزانية والأرقام</li><li>جلسة تسليم مع فريقك</li></ul></dd></div>
-        <div><dt>المدة</dt><dd>10 أيام عمل</dd></div>
+        <div><dt>لمين</dt><dd>شركة معندهاش فريق تسويق، أو عايزة تسلّم التنفيذ كله لجهة واحدة.</dd></div>
+        <div><dt>بنعمل إيه</dt><dd><ul><li>استراتيجية وخطة</li><li>إعلانات مدفوعة</li><li>محتوى وكرييتيف وسوشيال</li><li>قياس وتقرير شهري</li></ul></dd></div>
       </dl>
-      <p class="price">يبدأ من ــــ <small>ريال / جنيه</small></p>
-      <a class="btn line" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%AE%D8%B7%D8%A9%2090%20%D9%8A%D9%88%D9%85">اطلب الخطة</a>
-    </article>
-    <article class="svc">
-      <div><div class="tagline">FRACTIONAL CMO</div><h3>مدير تسويق بدوام جزئي</h3></div>
-      <dl>
-        <div><dt>لمين</dt><dd>شركة محتاجة قيادة تسويق بخبرة 15 سنة من غير تكلفة تعيين مدير كامل.</dd></div>
-        <div><dt>هتستلم</dt><dd><ul><li>قيادة فريقك ووكالاتك كل أسبوع</li><li>مراجعة الحملات قبل الصرف</li><li>تقرير شهري للإدارة</li></ul></dd></div>
-        <div><dt>المدة</dt><dd>تعاقد شهري، حد أدنى 3 شهور</dd></div>
-      </dl>
-      <p class="price">ــــ <small>في الشهر</small></p>
-      <a class="btn line" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D9%85%D8%AF%D9%8A%D8%B1%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A8%D8%AF%D9%88%D8%A7%D9%85%20%D8%AC%D8%B2%D8%A6%D9%8A">اسأل عن التعاقد</a>
+      <a class="btn line" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%81%D8%B1%D9%8A%D9%82%D9%83%20%D9%8A%D9%86%D9%81%D8%B0%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%B9%D9%86%D8%AF%D9%8A">اطلب عرض سعر</a>
     </article>
   </div>
   <p class="more"><a class="ulink" href="#services">تفاصيل كل خدمة ←</a></p>
@@ -352,9 +384,9 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <h2>من أول رسالة <span class="red">للتسليم</span></h2>
   </div>
   <ol class="steps">
-    <li><h3>جلسة تعارف 15 دقيقة</h3><p>مجاناً. أفهم البيزنس والمشكلة وأقولك بصراحة أقدر أفيدك ولا لأ.</p></li>
-    <li><h3>عرض مكتوب</h3><p>نطاق الشغل والتسليمات والمدة والسعر في صفحة واحدة قبل ما نبدأ.</p></li>
-    <li><h3>تسليم في الميعاد</h3><p>تقرير أو خطة مكتوبة، وجلسة أعرضها فيها على الإدارة والفريق.</p></li>
+    <li><h3>جلسة تعارف</h3><p>مجاناً. أفهم البيزنس والمشكلة وأقولك بصراحة أقدر أفيدك ولا لأ.</p></li>
+    <li><h3>عرض مكتوب</h3><p>نطاق الشغل والتسليمات والمدة والسعر في صفحة واحدة. السعر على حجم الشغل وحجم الشركة.</p></li>
+    <li><h3>بنبدأ بتشخيص</h3><p>أول أسبوعين بنراجع الأرقام والحسابات والفريق، وبعدها الخطة والتنفيذ.</p></li>
   </ol>
 </div></section>
 
@@ -375,7 +407,8 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   <details><summary>بتشتغل مع شركات بأي حجم؟</summary><p>من متجر بيصرف على الإعلانات بانتظام لحد مجموعة بفروع. المهم يكون في أرقام أشتغل عليها وصاحب قرار أتكلم معاه.</p></details>
   <details><summary>السعودية ولا مصر؟</summary><p>الاتنين. اشتغلت سنين في السوق السعودي وعارف الفرق بينه وبين المصري.</p></details>
   <details><summary>هتحتاج مني إيه عشان تبدأ؟</summary><p>دخول مشاهدة على حسابات الإعلانات والمتجر أو الـ CRM، وأرقام المبيعات لآخر 3 شهور.</p></details>
-  <details><summary>بتنفذ الحملات بنفسك؟</summary><p>أنا بقود وبخطط وبراجع. التنفيذ اليومي بيعمله فريقك أو وكالتك تحت إشرافي.</p></details>
+  <details><summary>مين اللي بينفذ؟</summary><p>حسب اختيارك. لو عندك فريق أو وكالة، بقودهم وأراجع شغلهم. ولو معندكش، فريقي الخاص بينفذ تحت قيادتي.</p></details>
+  <details><summary>السعر بيتحدد إزاي؟</summary><p>مفيش باقات ثابتة. السعر على حجم الشغل وحجم الشركة، وبتستلم عرض مكتوب بعد جلسة التعارف.</p></details>
 </div></section>
 
 </div>
@@ -384,54 +417,41 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>SERVICES</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">الخدمات</h1>
-  <p>تلات خدمات بتسليم مكتوب ومدة وسعر معلن. أغلب العملاء بيبدأوا بالتشخيص، وبعده بنقرر مع بعض الخطوة الجاية.</p>
+  <p>طريقتين للتعاقد: أقود فريقك الموجود، أو فريقي الخاص ينفذلك الشغل كله تحت قيادتي.</p>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
   <article class="sv">
     <div class="sv-title">
-      <div class="tagline">MARKETING DIAGNOSTIC</div>
-      <h2>التشخيص التسويقي</h2>
-      <p class="pain">بتصرف على التسويق ومش عارف الفلوس بترجع منين وبتضيع فين.</p>
-      <p class="price">يبدأ من ــــ <small>ريال / جنيه</small></p>
-      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A7%D9%84%D8%AA%D8%B4%D8%AE%D9%8A%D8%B5%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%D9%8A">اطلب التشخيص</a>
+      <div class="tagline">I LEAD YOUR TEAM</div>
+      <h2>أقود فريقك</h2>
+      <p class="pain">عندك فريق تسويق أو وكالة شغالين، وناقصهم اتجاه واضح وحد يحاسب على الأرقام.</p>
+      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%82%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%B9%D9%86%D8%AF%D9%8A">اطلب عرض سعر</a>
     </div>
     <div class="sv-body">
-      <ul class="facts"><li>5 أيام عمل</li><li>تقرير + جلسة</li><li>مرة واحدة</li></ul>
-      <div><h3>بغطّي إيه</h3><ul><li>الحسابات الإعلانية: الهيكل والاستهداف والكرييتيف والصرف</li><li>المتجر أو الموقع وصفحات البيع</li><li>العروض والتسعير والهوامش</li><li>رحلة العميل من أول إعلان لحد التحصيل والمرتجعات</li><li>الفريق والوكالات: مين مسؤول عن إيه</li></ul></div>
-      <div><h3>هتستلم إيه</h3><ul><li>تقرير مكتوب بكل مشكلة ومعاها الرقم اللي بيثبتها</li><li>قايمة إصلاحات مرتبة بالأثر والتكلفة</li><li>جلسة عرض 60 دقيقة مع الإدارة</li></ul></div>
-      <div class="fit"><div><b>مناسبة ليك لو</b><p>بتصرف على التسويق بانتظام وعندك أرقام آخر 3 شهور.</p></div><div><b>مش مناسبة لو</b><p>لسه مبدأتش تبيع. الخطة أنسبلك.</p></div></div>
+      <ul class="facts"><li>تعاقد شهري</li><li>متابعة أسبوعية</li><li>تقرير شهري</li></ul>
+      <div><h3>بيشمل إيه</h3><ul><li>الاستراتيجية والتموضع والعروض</li><li>خطة ربع سنوية بأولويات أسبوعية</li><li>اجتماع متابعة أسبوعي مع الفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>تقييم واختيار الموظفين والوكالات</li></ul></div>
+      <div><h3>هتستلم إيه</h3><ul><li>خطة مكتوبة بتتحدث كل شهر</li><li>تقرير شهري للإدارة بالنتائج والقرارات</li><li>فريق عارف أولوياته كل أسبوع</li></ul></div>
+      <div class="fit"><div><b>مناسبة ليك لو</b><p>عندك فريق أو وكالة بتنفذ ومحتاجين قيادة بخبرة.</p></div><div><b>مش مناسبة لو</b><p>معندكش حد ينفذ. ساعتها فريقي أنسبلك.</p></div></div>
     </div>
   </article>
   <article class="sv">
     <div class="sv-title">
-      <div class="tagline">90-DAY STRATEGY</div>
-      <h2>استراتيجية وخطة 90 يوم</h2>
-      <p class="pain">الفريق شغال كل يوم بس من غير اتجاه واضح ولا أرقام مستهدفة.</p>
-      <p class="price">يبدأ من ــــ <small>ريال / جنيه</small></p>
-      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%AE%D8%B7%D8%A9%2090%20%D9%8A%D9%88%D9%85">اطلب الخطة</a>
+      <div class="tagline">MY TEAM DELIVERS</div>
+      <h2>فريقي ينفذلك</h2>
+      <p class="pain">معندكش فريق تسويق، أو عايز تسلّم الشغل كله لجهة واحدة تتحاسب على النتيجة.</p>
+      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%81%D8%B1%D9%8A%D9%82%D9%83%20%D9%8A%D9%86%D9%81%D8%B0%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%B9%D9%86%D8%AF%D9%8A">اطلب عرض سعر</a>
     </div>
     <div class="sv-body">
-      <ul class="facts"><li>10 أيام عمل</li><li>استراتيجية + خطة + موديل</li><li>مرة واحدة</li></ul>
-      <div><h3>بغطّي إيه</h3><ul><li>تموضع البراند والرسالة الأساسية</li><li>العروض والتسعير</li><li>القنوات وتوزيع الميزانية</li><li>خطة المحتوى والحملات</li><li>مؤشرات الأداء اللي هتتابعها كل أسبوع</li></ul></div>
-      <div><h3>هتستلم إيه</h3><ul><li>مستند الاستراتيجية</li><li>خطة 12 أسبوع: كل أسبوع فيه المهام والمسؤول</li><li>موديل ميزانية بالأرقام المستهدفة</li><li>جلسة تسليم مع فريقك</li></ul></div>
-      <div class="fit"><div><b>مناسبة ليك لو</b><p>عندك منتج بيتباع وفريق أو وكالة تنفذ، وناقصك الاتجاه.</p></div><div><b>مش مناسبة لو</b><p>محتاج حد ينفذ الخطة بإيده.</p></div></div>
+      <ul class="facts"><li>تعاقد شهري</li><li>فريق كامل</li><li>مسؤول واحد تكلمه</li></ul>
+      <div><h3>بيشمل إيه</h3><ul><li>الاستراتيجية والخطة</li><li>الإعلانات المدفوعة</li><li>المحتوى والكرييتيف</li><li>إدارة السوشيال ميديا</li><li>القياس والتقارير</li></ul></div>
+      <div><h3>هتستلم إيه</h3><ul><li>فريق متخصص شغال تحت قيادتي</li><li>خطة شهرية وتنفيذها</li><li>تقرير شهري بالأرقام والخطوة الجاية</li></ul></div>
+      <div class="fit"><div><b>مناسبة ليك لو</b><p>عايز نتيجة من غير ما تبني قسم تسويق جوه الشركة.</p></div><div><b>مش مناسبة لو</b><p>عندك فريق قوي ومحتاج قيادة بس.</p></div></div>
     </div>
   </article>
-  <article class="sv">
-    <div class="sv-title">
-      <div class="tagline">FRACTIONAL CMO</div>
-      <h2>مدير تسويق بدوام جزئي</h2>
-      <p class="pain">محتاج قيادة تسويق بخبرة، ومش وقت تعيين مدير بمرتب كامل.</p>
-      <p class="price">ــــ <small>في الشهر</small></p>
-      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D9%85%D8%AF%D9%8A%D8%B1%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A8%D8%AF%D9%88%D8%A7%D9%85%20%D8%AC%D8%B2%D8%A6%D9%8A">اسأل عن التعاقد</a>
-    </div>
-    <div class="sv-body">
-      <ul class="facts"><li>تعاقد شهري</li><li>حد أدنى 3 شهور</li><li>عدد عملاء محدود</li></ul>
-      <div><h3>بغطّي إيه</h3><ul><li>اجتماع أسبوعي مع الفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>اختيار وتقييم الموظفين والوكالات</li><li>قرارات التسعير والعروض الموسمية</li><li>متاح على واتساب للقرارات السريعة</li></ul></div>
-      <div><h3>هتستلم إيه</h3><ul><li>خطة ربع سنوية بتتحدث كل شهر</li><li>تقرير شهري للإدارة بالنتائج والقرارات</li><li>فريق عارف أولوياته كل أسبوع</li></ul></div>
-      <div class="fit"><div><b>مناسبة ليك لو</b><p>عندك فريق أو وكالة بتنفذ ومحتاجين حد يقودهم.</p></div><div><b>مش مناسبة لو</b><p>محتاج منفذ يومي للإعلانات أو المحتوى.</p></div></div>
-    </div>
-  </article>
+  <div class="terms">
+    <div><b>السعر</b><p>مفيش باقات ثابتة. السعر بيتحدد على حجم الشغل وحجم الشركة، وبتستلم عرض مكتوب قبل ما نبدأ.</p></div>
+    <div><b>البداية</b><p>كل تعاقد بيبدأ بتشخيص: مراجعة للأرقام والحسابات والفريق، عشان الخطة تتبني على اللي موجود فعلاً.</p></div>
+  </div>
 </div></section>
 </div>
 
@@ -487,7 +507,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap about">
   <figure class="pola" style="margin:0">
-    <img src="youssef-khalil-portrait.jpg" alt="يوسف خليل بيبتسم، صورة أبيض وأسود" width="600" height="720">
+    <img src="youssef-khalil-portrait.jpg" alt="يوسف خليل بقميص أسود، صورة أبيض وأسود" width="560" height="700">
     <figcaption>يوسف خليل · القاهرة</figcaption>
   </figure>
   <div class="story">
@@ -518,9 +538,10 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-head"><div class="kicker"><span>CONTACT</span><span></span></div><h2>تواصل <span class="red">معايا</span></h2></div>
   <div class="contact">
-    <div><b>واتساب · السعودية</b><span class="ltr">+966 56 705 4546</span><p>أسرع طريقة. بارد في نفس اليوم.</p></div>
-    <div><b>القاهرة</b><span class="ltr">+20 100 054 5100</span><p>للمكالمات من مصر.</p></div>
-    <div><b>السوشيال</b><p><a class="ulink" href="https://www.linkedin.com/in/youssef-khalil-350ab9145/">لينكدإن</a> · <a class="ulink" href="https://www.instagram.com/youssefkhaliltalks/">إنستجرام</a> · <a class="ulink" href="https://www.tiktok.com/@youssefkhaliltalks">تيك توك</a></p></div>
+    <div><b>السعودية</b><span class="ltr">+966 56 705 4546</span><div class="acts"><a class="chip dark" href="https://wa.me/966567054546" target="_blank" rel="noopener">واتساب</a><a class="chip" href="tel:+966567054546">اتصال</a></div></div>
+    <div><b>مصر</b><span class="ltr">+20 100 054 5100</span><div class="acts"><a class="chip dark" href="https://wa.me/201000545100" target="_blank" rel="noopener">واتساب</a><a class="chip" href="tel:+201000545100">اتصال</a></div></div>
+    <div><b>احجز اجتماع</b><p>استشارة تسويق 60 دقيقة على Google Meet. اختار الميعاد اللي يناسبك.</p><div class="acts"><a class="chip dark cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">افتح المواعيد</a></div></div>
+    <div><b>السوشيال</b><div class="acts"><a class="chip" href="https://www.linkedin.com/in/youssef-khalil-350ab9145/" target="_blank" rel="noopener">لينكدإن</a><a class="chip" href="https://www.instagram.com/youssefkhaliltalks/" target="_blank" rel="noopener">إنستجرام</a><a class="chip" href="https://www.facebook.com/profile.php?id=61594907297633" target="_blank" rel="noopener">فيسبوك</a><a class="chip" href="https://www.tiktok.com/@youssefkhaliltalks" target="_blank" rel="noopener">تيك توك</a></div></div>
   </div>
 </div></section>
 </div>
@@ -528,14 +549,16 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="band final"><div class="wrap">
   <span class="stars red">✸✦✤</span>
   <h2>يلا <span class="red">نتكلم</span></h2>
-  <p>جلسة تعارف 15 دقيقة مجاناً. لو مش هقدر أضيفلك هقولك من أولها.</p>
-  <a class="btn inv" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%AC%D9%84%D8%B3%D8%A9%20%D8%AA%D8%B4%D8%AE%D9%8A%D8%B5">احجز على واتساب</a>
-  <span class="wa en">+966 56 705 4546</span>
+  <p>أول مكالمة تعارف مجاناً. لو مش هقدر أضيفلك هقولك من أولها.</p>
+  <div class="final-acts">
+    <a class="btn inv cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">احجز اجتماع</a>
+    <a class="btn wline" href="https://wa.me/966567054546?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%8A%D9%88%D8%B3%D9%81%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AA%D9%83%D9%84%D9%85%20%D8%B9%D9%86%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D9%81%D9%8A%20%D8%B4%D8%B1%D9%83%D8%AA%D9%8A" target="_blank" rel="noopener">كلمني واتساب</a>
+  </div>
 </div></section>
 
 <footer><div class="wrap">
   <span>يوسف خليل · مستشار تسويق</span>
-  <span>English · السيرة الذاتية · لينكدإن · إنستجرام · تيك توك</span>
+  <span class="social"><a href="https://www.linkedin.com/in/youssef-khalil-350ab9145/" target="_blank" rel="noopener">لينكدإن</a><a href="https://www.instagram.com/youssefkhaliltalks/" target="_blank" rel="noopener">إنستجرام</a><a href="https://www.facebook.com/profile.php?id=61594907297633" target="_blank" rel="noopener">فيسبوك</a><a href="https://www.tiktok.com/@youssefkhaliltalks" target="_blank" rel="noopener">تيك توك</a></span>
 </div></footer>
 
 </div>
@@ -575,5 +598,14 @@ document.documentElement.setAttribute('lang','ar');
 })();
 </script>
 
+<a class="wa-float" href="https://wa.me/966567054546?text=%D8%A3%D9%87%D9%84%D8%A7%D9%8B%20%D9%8A%D9%88%D8%B3%D9%81%D8%8C%20%D8%AC%D8%A7%D9%8A%20%D9%85%D9%86%20%D8%A7%D9%84%D9%85%D9%88%D9%82%D8%B9" target="_blank" rel="noopener" aria-label="كلمني على واتساب"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.500 6.500 0 0 1-3.200-2.800c-.2-.4.2-.4.6-1.200.1-.2 0-.3 0-.4l-.7-1.700c-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.300-.7.700-1 1.500-1 2.300 0 1.300 1 2.600 1.100 2.800.2.200 2 3.100 4.900 4.300 1.800.700 2.500.800 3.400.600.500-.1 1.400-.600 1.600-1.200.200-.600.200-1.100.100-1.200 0-.100-.200-.200-.400-.300z"/></svg>واتساب</a>
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+document.querySelectorAll('a.cal').forEach(function(a){
+  a.addEventListener('click',function(e){
+    if(window.Calendly&&Calendly.initPopupWidget){ e.preventDefault(); Calendly.initPopupWidget({url:a.href}); }
+  });
+});
+</script>
 </body>
 </html>
