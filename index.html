@@ -338,6 +338,18 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 .vcard.film .vframe{aspect-ratio:4/5}
 .vcard.film .vframe.playing{aspect-ratio:9/16}
 .stile img{aspect-ratio:4/5}
+
+/* ===== v10: Youssef videos + 3 home tiles ===== */
+.series-tiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.stile{grid-template-columns:118px minmax(0,1fr)}
+.stile-cap{padding:16px}
+.stile-cap h3{font-size:1.35rem}
+.films.wide2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.vcard.film.wide .vframe,.vcard.film.wide .vframe.playing{aspect-ratio:16/9}
+@media (max-width:860px){
+  .series-tiles{grid-template-columns:1fr}
+  .films.wide2{grid-template-columns:1fr;max-width:none}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -480,6 +492,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   <div class="series-tiles">
     <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
     <a class="stile" href="#videos"><img src="videos/stick/s1-02.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">20 حلقة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/youssef/intro-main.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
 </div></section>
@@ -632,7 +645,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>VIDEOS</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">الفيديوهات</h1>
-  <p>سلسلتين بشرح فيهم التسويق بطريقتين مختلفتين: أفلام قصيرة من التاريخ، ورسم بسيط في دقيقة.</p>
+  <p>تلات أقسام: أفلام قصيرة من التاريخ، ورسم بسيط في دقيقة، وفيديوهات تعريفية عني.</p>
 </div></section>
 
 <section class="sec series" style="padding-top:0"><div class="wrap">
@@ -688,6 +701,20 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
       <article class="vcard "><div class="vframe" data-video="videos/stick/s2-05.mp4"><img src="videos/stick/s2-05.jpg" alt="Scaling" loading="lazy"><button type="button" class="play" aria-label="شغّل: Scaling"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">05</span><h3>Scaling</h3></div></article>
       <article class="vcard "><div class="vframe" data-video="videos/stick/s2-06.mp4"><img src="videos/stick/s2-06.jpg" alt="الاستراتيجية" loading="lazy"><button type="button" class="play" aria-label="شغّل: الاستراتيجية"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">06</span><h3>الاستراتيجية</h3></div></article>
     </div>
+  </div>
+</div></section>
+
+<section class="sec series" style="padding-top:0"><div class="wrap">
+  <div class="series-head">
+    <div><div class="tagline-s">SERIES 03 · ABOUT ME</div><h2><span class="red">يوسف</span></h2></div>
+    <div>
+      <p><b>الفكرة:</b> فيديوهات تعريفية عني: أنا مين، بدأت منين، وبشتغل إزاي.</p>
+      <p><b>الهدف:</b> تعرفني وتشوف طريقة تفكيري قبل ما نتكلم. وهضيف هنا فيديوهات تعريفية جديدة أول ما تخلص.</p>
+    </div>
+  </div>
+  <div class="films wide2">
+    <article class="vcard film wide"><div class="vframe" data-video="videos/youssef/intro-main.mp4"><img src="videos/youssef/intro-main.jpg" alt="الفيديو التعريفي" loading="lazy"><button type="button" class="play" aria-label="شغّل: الفيديو التعريفي"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">1:26 · قصتي من 2010 لحد النهارده</span><h3>الفيديو التعريفي</h3></div></article>
+    <article class="vcard film wide"><div class="vframe" data-video="videos/youssef/intro-short.mp4"><img src="videos/youssef/intro-short.jpg" alt="التعريفي القصير" loading="lazy"><button type="button" class="play" aria-label="شغّل: التعريفي القصير"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">0:36 · من ورا الكاميرا</span><h3>التعريفي القصير</h3></div></article>
   </div>
 </div></section>
 </div>
