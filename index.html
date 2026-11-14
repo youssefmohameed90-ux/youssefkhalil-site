@@ -359,6 +359,14 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 .season-head p{color:var(--muted);font-size:1rem;grid-column:1/-1}
 .films.wide1{grid-template-columns:minmax(0,1fr);max-width:820px}
 @media (max-width:860px){.films.wide1{max-width:none}}
+
+/* ===== v12: bigger home video tiles ===== */
+.stile{display:flex;flex-direction:column}
+.stile img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-bottom:2px solid var(--line)}
+.stile:nth-child(3) img{object-position:center}
+.stile-cap{padding:20px 22px 24px}
+.stile-cap h3{font-size:1.7rem}
+@media (max-width:860px){.stile{display:grid;grid-template-columns:120px minmax(0,1fr)}.stile img{height:100%;border-bottom:0}}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -499,7 +507,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <h2>بشارك اللي <span class="red">اتعلمته</span></h2>
   </div>
   <div class="series-tiles">
-    <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
+    <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
     <a class="stile" href="#videos"><img src="videos/stick/s1-02.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">20 حلقة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
     <a class="stile" href="#videos"><img src="videos/youssef/intro-main.jpg" alt="" loading="lazy"><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p></div></a>
   </div>
