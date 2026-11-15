@@ -697,6 +697,15 @@ h1 .sel{font-weight:900}
 .vcard.film:has(.vframe.playing) .vcap::after{display:none}
 @media (max-width:860px){.vcard.film .vcap{padding-inline-end:76px}.vcard.film .vcap::after{width:48px;height:48px;margin-top:-24px;inset-inline-end:14px}}
 
+/* ===== v30: lesson carousels under the short films ===== */
+.lesson{margin-top:60px}
+.lesson-block{margin-top:30px}
+.lesson-block h4{font-family:var(--ar);font-weight:900;font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.4}
+.lesson-sub{color:var(--muted);margin-top:4px;max-width:62ch}
+.crail{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:16px 2px 14px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--black) transparent}
+.crail img{flex:0 0 auto;width:min(300px,74vw);height:auto;aspect-ratio:4/5;scroll-snap-align:start;border:2px solid var(--line);display:block;background:#111}
+.crail:focus-visible{outline:2px solid var(--red);outline-offset:4px}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -733,6 +742,7 @@ nav{font-weight:800;font-size:.86rem}
 .cp-lesson{font-size:1.2rem;line-height:1.4}
 .cp-next b{line-height:1.25}
 .stile-go{font-family:var(--en),var(--ar);font-stretch:112%}
+.lesson-block h4{font-family:var(--en),var(--ar);font-stretch:112%}
 @media (max-width:860px){.cx h2{font-size:1rem;line-height:1.3}}
 @media (max-width:860px){
   .hero-text{padding:12px 0 8px}
@@ -883,8 +893,8 @@ nav{font-weight:800;font-size:.86rem}
   </div>
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img src="../videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p></div></a>
-    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">20 episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p></div></a>
-    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p></div></a>
+    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p></div></a>
+    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">Short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">See all videos →</a></p>
 </div></section>
@@ -1715,8 +1725,8 @@ nav{font-weight:800;font-size:.86rem}
 <section class="sec vhub" style="padding-top:0"><div class="wrap">
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img src="../videos/youssef/intro-main.jpg" alt="Youssef Khalil in the intro video"><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
-    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">20 episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
-    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt="Poster of the film Muhammad Ali and the Citadel"><div class="stile-cap"><span class="vsub">3 short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt="Poster of the film Muhammad Ali and the Citadel"><div class="stile-cap"><span class="vsub">Short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
   </div>
 </div></section>
 </div>
@@ -1741,7 +1751,7 @@ nav{font-weight:800;font-size:.86rem}
 <div class="wrap vsub-top"><a class="cp-back" href="#videos">← All series</a></div>
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
-    <div class="with-cover"><img class="series-cover" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div><div class="tagline-s">SERIES 02 · 20 EPISODES</div><h2>Marketing <span class="red">Doodles</span></h2></div></div>
+    <div class="with-cover"><img class="series-cover" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div><div class="tagline-s">SERIES 02 · MARKETING SKETCHES</div><h2>Marketing <span class="red">Doodles</span></h2></div></div>
     <div>
       <p><b>The idea:</b> A notebook page, a stick figure, and one marketing idea in about a minute.</p>
       <p><b>The goal:</b> Business owners understand their numbers and decisions without jargon. Each episode answers one question: does this discount make me money? Is this ROAS good? When do I scale the ad?</p>
@@ -1794,7 +1804,7 @@ nav{font-weight:800;font-size:.86rem}
 <div class="wrap vsub-top"><a class="cp-back" href="#videos">← All series</a></div>
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
-    <div><div class="tagline-s">SERIES 03 · 3 FILMS</div><h2>What <span class="red">If…?</span></h2></div>
+    <div><div class="tagline-s">SERIES 03 · SHORT FILMS</div><h2>What <span class="red">If…?</span></h2></div>
     <div>
       <p><b>The idea:</b> Each episode takes a historic event people know, puts me in it as a marketer, and asks: what if someone had applied one marketing concept before the decision was made?</p>
       <p><b>The goal:</b> A marketing concept is understood and remembered through a story, not a lecture. Each film leaves you with one lesson you can apply in your company.</p>
@@ -1804,6 +1814,11 @@ nav{font-weight:800;font-size:.86rem}
     <article class="vcard film"><div class="vframe" data-video="../videos/whatif/ep1-film.mp4"><img src="../videos/whatif/ep1-poster.jpg" alt="Muhammad Ali and the Citadel" loading="lazy"><button type="button" class="play" aria-label="Play: Muhammad Ali and the Citadel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">Episode 1 · 3:34</span><h3>Muhammad Ali and the Citadel</h3></div></article>
     <article class="vcard film"><div class="vframe" data-video="../videos/whatif/ep2-film.mp4"><img src="../videos/whatif/ep2-poster.jpg" alt="Napoleon… a victim of marketing" loading="lazy"><button type="button" class="play" aria-label="Play: Napoleon… a victim of marketing"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">Episode 2 · 4:54</span><h3>Napoleon… a victim of marketing</h3></div></article>
     <article class="vcard film"><div class="vframe" data-video="../videos/whatif/ep3-film.mp4"><img src="../videos/whatif/ep3-poster.jpg" alt="Titanic: Unsinkable" loading="lazy"><button type="button" class="play" aria-label="Play: Titanic: Unsinkable"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">Episode 3 · 7:13</span><h3>Titanic: Unsinkable</h3></div></article>
+  </div>
+  <div class="lesson">
+    <div class="season-head"><h3>The lesson in each film</h3><p>Each film comes with a carousel explaining the marketing ideas in it. Swipe through. The slides are in Arabic.</p></div>
+    <div class="lesson-block"><h4>Muhammad Ali and the Citadel</h4><p class="lesson-sub">Youssef’s dictionary for the Pasha: 10 marketing terms from the film, with the real lesson on the last slide.</p><div class="crail" role="group" tabindex="0" aria-label="Carousel: Youssef’s dictionary for the Pasha"><img src="../videos/whatif/c1-01.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-02.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-03.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-04.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-05.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-06.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-07.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-08.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c1-09.jpg" alt="" width="864" height="1080" loading="lazy"></div></div>
+    <div class="lesson-block"><h4>Napoleon… a victim of marketing</h4><p class="lesson-sub">Youssef’s advice to the Emperor: 10 marketing tips, each with a mistake in it and the right version beside it.</p><div class="crail" role="group" tabindex="0" aria-label="Carousel: Youssef’s advice to the Emperor"><img src="../videos/whatif/c2-01.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-02.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-03.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-04.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-05.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-06.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-07.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-08.jpg" alt="" width="864" height="1080" loading="lazy"><img src="../videos/whatif/c2-09.jpg" alt="" width="864" height="1080" loading="lazy"></div></div>
   </div>
   <p class="soon">Episode 4: Ramses II and the Battle of Kadesh. Coming soon.</p>
 </div></section>
