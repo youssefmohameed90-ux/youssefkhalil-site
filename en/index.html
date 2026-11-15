@@ -687,6 +687,16 @@ h1 .sel{font-weight:900}
 }
 .cp-top .cp-note{margin-top:12px}
 
+/* ===== v29: film play button sits in the caption box, poster stays fully visible ===== */
+.vcard.film .play{inset:0;width:100%;height:100%;margin:0;border-radius:0;opacity:0;box-shadow:none;background:transparent}
+.vcard.film .play[hidden]{display:none}
+.vcard.film .vcap{position:relative;padding-inline-end:88px;cursor:pointer}
+.vcard.film .vcap::after{content:"";position:absolute;inset-inline-end:18px;top:50%;width:54px;height:54px;margin-top:-27px;border-radius:50%;background:var(--red) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M8 5v14l11-7z'/%3E%3C/svg%3E") 54% 50%/24px no-repeat;box-shadow:0 6px 16px -6px rgba(0,0,0,.5);transition:transform .2s}
+.vcard.film:hover .vcap::after{transform:scale(1.1)}
+.vcard.film:has(.vframe.playing) .vcap{padding-inline-end:18px;cursor:default}
+.vcard.film:has(.vframe.playing) .vcap::after{display:none}
+@media (max-width:860px){.vcard.film .vcap{padding-inline-end:76px}.vcard.film .vcap::after{width:48px;height:48px;margin-top:-24px;inset-inline-end:14px}}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -1874,6 +1884,8 @@ document.documentElement.setAttribute('lang','en');
   document.addEventListener('click',function(e){
     var t=e.target.closest('.chip.trailer');
     if(t){ playIn(t.closest('.vcard').querySelector('.vframe'), t.dataset.video); return; }
+    var c=e.target.closest('.vcard.film .vcap');
+    if(c){ var fr=c.parentNode.querySelector('.vframe'); if(fr && !fr.classList.contains('playing')) playIn(fr, fr.dataset.video); return; }
     var f=e.target.closest('.vframe');
     if(f && !e.target.closest('video')){ playIn(f, f.dataset.video); }
   });
