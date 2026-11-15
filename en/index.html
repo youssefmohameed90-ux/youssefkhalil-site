@@ -589,6 +589,14 @@ h1 .sel{font-weight:900}
 
 @media (min-width:861px){.cases-grid .pola:first-child .clg-num{font-size:clamp(2.1rem,3.9vw,3.2rem)}}
 
+/* ===== v25: case numbers stay on one row ===== */
+.cs-head{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.cs-nums{gap:12px 30px;flex-wrap:nowrap}
+.cs-nums div{min-width:0}
+.cs-nums b{font-size:clamp(1.8rem,3.3vw,2.8rem);white-space:nowrap}
+.cs-nums span{font-size:.82rem;line-height:1.4}
+@media (max-width:860px){.cs-nums{flex-wrap:wrap}.cs-nums b{font-size:2.2rem}}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
