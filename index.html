@@ -833,6 +833,14 @@ h1 .sel{font-weight:900}
   .hero-actions .btn{display:none}
   .hero-actions{margin-top:14px}
 }
+
+/* ===== v35: smaller value line under the greeting ===== */
+h1{font-size:clamp(1.25rem,2.1vw,1.75rem);line-height:1.6;font-weight:700;max-width:30ch}
+h1 .hello{max-width:none}
+@media (max-width:860px){
+  h1{font-size:1.12rem;line-height:1.65;max-width:none}
+  h1 .hello{font-size:3rem;line-height:1.25}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -846,7 +854,7 @@ h1 .sel{font-weight:900}
     <a href="#videos" data-route="videos">الفيديوهات</a>
     <a href="#about" data-route="about">عني</a>
   </nav>
-  <span class="top-acts"><a class="lang" href="en/" lang="en" aria-label="English version">EN</a><a class="ulink cal" href="https://calendly.com/youssefmohameed90/marketing-consultation" target="_blank" rel="noopener">احجز اجتماع مجاني ↖</a></span>
+  <span class="top-acts"><a class="lang" href="en/" lang="en" aria-label="English version">EN</a></span>
 </div></header>
 
 <div class="view" id="v-home">
