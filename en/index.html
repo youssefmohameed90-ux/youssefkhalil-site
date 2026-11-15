@@ -587,6 +587,8 @@ h1 .sel{font-weight:900}
 @media (max-width:1020px){.cases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:860px){.cases-grid{grid-template-columns:1fr}.cases-grid .clg-num{font-size:4.4rem}.cases-grid .stk{width:84px;height:84px;font-size:.82rem}.cases-grid .clg-strip{font-size:.95rem}}
 
+@media (min-width:861px){.cases-grid .pola:first-child .clg-num{font-size:clamp(2.1rem,3.9vw,3.2rem)}}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -611,6 +613,9 @@ h1 .hello{font-size:clamp(2.4rem,5vw,4rem);line-height:1.15}
 .sticker{font-size:.78rem;line-height:1.25;top:9%;bottom:auto;left:-5%;right:auto}
 .clg-strip{font-size:.86rem}
 .btn{font-weight:800}
+.cases-grid .stk{font-size:.56rem}
+.cases-grid .shot.clg.dark .stk{font-size:.56rem}
+.cases-grid .clg-strip{font-size:.7rem}
 nav{font-weight:800;font-size:.86rem}
 .lang{font-family:var(--ar)}
 @media (max-width:860px){
@@ -624,12 +629,9 @@ nav{font-weight:800;font-size:.86rem}
   .mini div{max-width:30%}
   .mini span{font-size:.74rem;line-height:1.35}
   .sticker{font-size:.68rem;top:4%;bottom:auto;left:0;right:auto}
+  .cases-grid .stk{font-size:.68rem}
+  .cases-grid .clg-strip{font-size:.84rem}
 }
-
-.cases-grid .stk{font-size:.56rem}
-.cases-grid .shot.clg.dark .stk{font-size:.56rem}
-.cases-grid .clg-strip{font-size:.7rem}
-@media (max-width:860px){.cases-grid .stk{font-size:.68rem}.cases-grid .clg-strip{font-size:.84rem}}
 </style>
 
 <div class="page" dir="ltr" lang="en">
