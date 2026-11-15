@@ -546,6 +546,24 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   .cl.tall img,.cl.big.tall img{max-height:46px}
   .strip{padding-block:0 60px}
 }
+
+/* ===== v23: merged About + stronger hero line ===== */
+.journey{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:30px 60px;align-items:start}
+.journey-pics{display:flex;flex-direction:column;gap:26px}
+.journey-pics .pola{max-width:none;transform:none}
+.journey-pics .pola img{display:block;width:100%;height:auto}
+.quote-wrap{margin-top:70px;padding-top:50px;border-top:3px solid var(--line)}
+.caps-label{font-family:var(--ar);font-weight:800;margin:40px 0 14px}
+h1{font-weight:800;font-size:clamp(1.9rem,3.6vw,3rem);line-height:1.5}
+h1 .hello{font-weight:900;font-size:clamp(2.6rem,5.6vw,4.4rem);line-height:1.3;letter-spacing:-.02em;margin-bottom:.1em}
+h1 .sel{font-weight:900}
+.hero-text{gap:26px}
+@media (max-width:860px){
+  .journey{grid-template-columns:1fr}
+  h1{font-size:1.75rem;line-height:1.55}
+  h1 .hello{font-size:3.2rem;line-height:1.3}
+  .quote-wrap{margin-top:46px;padding-top:36px}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -840,8 +858,9 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>THE JOURNEY</span><span class="stars">✸✦✤</span></div><h2>المشوار <span class="red">باختصار</span></h2></div>
-  <ol class="timeline">
+  <div class="sec-head"><h2>المشوار <span class="red">باختصار</span></h2></div>
+  <div class="journey">
+    <ol class="timeline">
     <li><span class="tl-k">2010</span><h3>البداية من التنفيذ</h3><p>متخصص سوشيال ميديا، بكتب وبصمم وبنزّل الحملات بنفسي. من هنا عرفت إيه اللي بيشتغل على الأرض وإيه اللي بيتقال في الاجتماعات بس.</p></li>
     <li><span class="tl-k">القيادة</span><h3>7 سنين قيادة تسويق إقليمية</h3><p>بقيت مسؤول عن أكتر من سوق في نفس الوقت: براندات بتتبني، حملات متكاملة، وفرق فيها كل التخصصات.</p></li>
     <li><span class="tl-k">المجموعة</span><h3>تسويق مجموعة كاملة</h3><p>قدت تسويق واحدة من أكبر المجموعات في السعودية، بشركات مختلفة تماماً تحت سقف واحد: تجزئة وأزياء، رعاية صحية، تكنولوجيا، عقارات، خدمات تنقل، وإنتاج إعلامي.</p></li>
@@ -849,51 +868,35 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <li><span class="tl-k">التدريب</span><h3>مدرّب لأصحاب البيزنس وطلاب التسويق</h3><p>دربت أصحاب بيزنس وطلاب تسويق في محافل وشركات كبيرة في منطقة الخليج، ونقلتلهم اللي اتعلمته من الشغل نفسه مش من الكتب.</p></li>
     <li><span class="tl-k">النهارده</span><h3>مستشار بفريق خاص</h3><p>بقود فريق التسويق عند العميل، أو فريقي بينفذ الشغل كله تحت قيادتي. في الحالتين أنا المسؤول عن النتيجة.</p></li>
   </ol>
+    <div class="journey-pics">
+      <figure class="pola" style="margin:0"><img src="speak-1.jpg" alt="يوسف خليل بيتكلم على مسرح وماسك مايكروفون قدام الحضور" loading="lazy" width="1400" height="933"></figure>
+      <figure class="pola" style="margin:0"><img src="speak-2.jpg" alt="يوسف خليل ماسك مايكروفون وبيتكلم في قاعة مؤتمرات" loading="lazy" width="1100" height="1467"></figure>
+    </div>
+  </div>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>WHY ME</span><span></span></div><h2>ليه <span class="red">تشتغل معايا</span></h2></div>
+  <div class="sec-head"><h2>ليه <span class="red">تشتغل معايا</span></h2></div>
   <div class="cols">
     <div><h3>ببدأ من مشكلة البيزنس</h3><p>مش بسألك عايز إعلان إيه. بسألك عايز توصل لإيه، وبرجع من الهدف ده للخطة.</p></div>
     <div><h3>شوفت المشكلة دي قبل كده</h3><p>20 قطاع وأكتر من سوق معناهم إن أغلب اللي بيقابلك أنا قابلته، وعارف إيه اللي نفع وإيه اللي ضيّع فلوس.</p></div>
     <div><h3>الخطة عندي بتتنفذ</h3><p>قدت فرق لحد 35 فرد. الاستراتيجية بتتحول لأولويات أسبوعية ومسؤول واضح عن كل حاجة.</p></div>
   </div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>HOW I LEAD</span><span></span></div><h2>طريقتي في <span class="red">القيادة</span></h2></div>
-  <div class="cols">
-    <div><h3>اتجاه واضح</h3><p>كل الفريق عارف إحنا رايحين فين وليه، قبل ما حد يبدأ يجري.</p></div>
-    <div><h3>فريق متفق</h3><p>الكرييتيف والميديا والمحتوى والمبيعات على هدف واحد، مش كل قسم بيحتفل برقمه لوحده.</p></div>
-    <div><h3>أرقام تهم</h3><p>مش بقف عند اللايكات والليدز. ببص على جودة العميل، التحويل، تكلفة الاكتساب، ومين رجع يشتري تاني.</p></div>
+  <div class="quote-wrap">
+    <p class="quote">الحملة مش خط النهاية. اللي بيحصل للعميل وللبيزنس <span class="red">بعد الحملة</span> هو المهم.</p>
+    <p class="quote-sub">عشان كده بمسك الرحلة كلها: من أول ما العميل يشوفك، لحد ما يدفع، لحد ما يرجع يشتري تاني.</p>
   </div>
 </div></section>
 
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>ON STAGE</span><span class="stars">✸✦✤</span></div><h2>بدرّب <span class="red">وبتكلم</span></h2><p>دربت أصحاب بيزنس وطلاب تسويق في محافل وشركات كبيرة في منطقة الخليج. بشرح التسويق بالأرقام والأمثلة من شغل حقيقي.</p></div>
-  <div class="speak">
-    <figure class="pola" style="margin:0"><img src="speak-1.jpg" alt="يوسف خليل بيتكلم على مسرح وماسك مايكروفون قدام الحضور" loading="lazy" width="1400" height="933"></figure>
-    <figure class="pola" style="margin:0"><img src="speak-2.jpg" alt="يوسف خليل ماسك مايكروفون وبيتكلم في قاعة مؤتمرات" loading="lazy" width="1100" height="1467"></figure>
-  </div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <p class="quote">الحملة مش خط النهاية. اللي بيحصل للعميل وللبيزنس <span class="red">بعد الحملة</span> هو المهم.</p>
-  <p class="quote-sub">عشان كده بمسك الرحلة كلها: من أول ما العميل يشوفك، لحد ما يدفع، لحد ما يرجع يشتري تاني.</p>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>INDUSTRIES</span><span class="stars">✸✦✤</span></div><h2>قطاعات <span class="red">اشتغلت فيها</span></h2><p>قطاعات مختلفة وعقلية تجارية واحدة.</p></div>
+  <div class="sec-head"><h2>قطاعات <span class="red">اشتغلت فيها</span></h2></div>
   <div class="sectors">
     <div><h3>الضيافة والسياحة والرياضة</h3><ul><li>الفنادق والضيافة</li><li>السياحة</li><li>الرياضة وأندية الكرة</li><li>خدمات تنقل الحج والعمرة</li><li>الإنتاج الإعلامي والفيديو</li></ul></div>
     <div><h3>المستهلك والفاخر</h3><ul><li>السيارات والوكالات</li><li>الساعات والمجوهرات الفاخرة</li><li>الأزياء والتجزئة والفرنشايز</li><li>المطاعم والوجبات السريعة</li><li>السلع الاستهلاكية والعناية الشخصية</li></ul></div>
     <div><h3>الصحة</h3><ul><li>المستشفيات والمراكز الطبية</li><li>الأدوية والمنتجات الطبية</li><li>تسويق الأطباء والعيادات</li><li>المبادرات المجتمعية</li></ul></div>
     <div><h3>الأعمال والتكنولوجيا</h3><ul><li>البرمجيات والتكنولوجيا</li><li>الأجهزة الذكية</li><li>العقارات والإنشاءات</li><li>التصنيع والاستيراد والتوزيع</li><li>البراند الشخصي والشخصيات العامة</li></ul></div>
   </div>
-</div></section>
-
-<section class="sec" style="padding-top:0"><div class="wrap">
-  <div class="sec-head"><div class="kicker"><span>CAPABILITIES</span><span></span></div><h2>بشتغل <span class="red">على إيه</span></h2></div>
+  <p class="caps-label">وبشتغل على:</p>
   <ul class="facts caps"><li>استراتيجية البراند</li><li>خطط التسويق</li><li>دخول الأسواق</li><li>الحملات المتكاملة</li><li>التسويق بالأداء</li><li>نمو البيزنس</li><li>الاستراتيجية التجارية</li><li>تجربة العميل</li><li>قيادة الفرق</li><li>إدارة الوكالات</li><li>تدريب الفرق وأصحاب البيزنس</li></ul>
 </div></section>
 
