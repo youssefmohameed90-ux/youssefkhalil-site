@@ -574,6 +574,18 @@ h1 .sel{font-weight:900}
 .top-acts{display:flex;align-items:center;gap:14px}
 .lang{font-family:var(--en),var(--ar);font-weight:800;font-size:.82rem;line-height:1;text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:6px 12px;transition:background .18s,color .18s}
 .lang:hover{background:var(--black);color:var(--on-black)}
+
+/* ===== v24: four result cards ===== */
+.cases-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.cases-grid .clg-num{font-size:clamp(2.6rem,4.9vw,4rem)}
+.cases-grid .stk{width:70px;height:70px;font-size:.72rem;line-height:1.25}
+.cases-grid .shot.clg.dark .stk{font-size:.7rem}
+.cases-grid .clg-strip{font-size:.82rem;padding:11px 20px 13px}
+.cases-grid .clg-stars{font-size:1.2rem}
+.cases-grid .pola h3{font-size:1rem}
+.cases-grid .pola p{font-size:.88rem}
+@media (max-width:1020px){.cases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.cases-grid{grid-template-columns:1fr}.cases-grid .clg-num{font-size:4.4rem}.cases-grid .stk{width:84px;height:84px;font-size:.82rem}.cases-grid .clg-strip{font-size:.95rem}}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -679,17 +691,22 @@ h1 .sel{font-weight:900}
   </div>
   <div class="cases-grid">
     <article class="pola">
+      <div class="shot clg dark" role="img" aria-label="الحج والعمرة: 180M ريال رعاية لخدمة واحدة"><span class="stk">الحج والعمرة</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">180<i>M</i></div><div class="clg-strip">ريال رعاية لخدمة واحدة</div></div>
+      <h3>خدمة بقت هي نفسها البراند</h3>
+      <p>حل تنقل لكبار السن وذوي الإعاقة في الحج والعمرة. دوري: طورت الفكرة وجبت الراعي.</p>
+    </article>
+    <article class="pola">
       <div class="shot clg" role="img" aria-label="ريتيل: 48M ريال مبيعات الفترة"><span class="stk">ريتيل</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">48<i>M</i></div><div class="clg-strip">ريال مبيعات الفترة</div></div>
       <h3>موسم رمضان على شبكة فروع كاملة</h3>
       <p>صرف تسويقي 1.3 مليون ريال وحملة واحدة متسقة على كل الفروع. دوري: قيادة التسويق.</p>
     </article>
     <article class="pola">
-      <div class="shot clg dark" role="img" aria-label="أوتوموتيف: 32.8× عائد على الصرف الإعلاني"><span class="stk">أوتوموتيف</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">عائد على الصرف الإعلاني</div></div>
+      <div class="shot clg redstrip" role="img" aria-label="أوتوموتيف: 32.8× عائد على الصرف الإعلاني"><span class="stk">أوتوموتيف</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">عائد على الصرف الإعلاني</div></div>
       <h3>إطلاق سيارة بمعايير براند فاخر</h3>
       <p>ميزانية حملة حوالي 2.7 مليون دولار. دوري: استشاري الحملة ومراجعة الأداء.</p>
     </article>
     <article class="pola">
-      <div class="shot clg redstrip" role="img" aria-label="عقارات: 2.5× تحويل، من 0.8% لحوالي 2%"><span class="stk">عقارات</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2.5<i>×</i></div><div class="clg-strip">تحويل، من 0.8% لحوالي 2%</div></div>
+      <div class="shot clg" role="img" aria-label="عقارات: 2.5× تحويل، من 0.8% لحوالي 2%"><span class="stk">عقارات</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2.5<i>×</i></div><div class="clg-strip">تحويل، من 0.8% لحوالي 2%</div></div>
       <h3>مبيعات أكتر من غير زيادة في الإعلانات</h3>
       <p>صلحنا الرد والتأهيل والمعاينات. دوري: إعادة بناء رحلة العميل مع المبيعات.</p>
     </article>

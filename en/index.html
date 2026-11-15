@@ -575,6 +575,18 @@ h1 .sel{font-weight:900}
 .lang{font-family:var(--en),var(--ar);font-weight:800;font-size:.82rem;line-height:1;text-decoration:none;border:2px solid var(--line);border-radius:999px;padding:6px 12px;transition:background .18s,color .18s}
 .lang:hover{background:var(--black);color:var(--on-black)}
 
+/* ===== v24: four result cards ===== */
+.cases-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.cases-grid .clg-num{font-size:clamp(2.6rem,4.9vw,4rem)}
+.cases-grid .stk{width:70px;height:70px;font-size:.72rem;line-height:1.25}
+.cases-grid .shot.clg.dark .stk{font-size:.7rem}
+.cases-grid .clg-strip{font-size:.82rem;padding:11px 20px 13px}
+.cases-grid .clg-stars{font-size:1.2rem}
+.cases-grid .pola h3{font-size:1rem}
+.cases-grid .pola p{font-size:.88rem}
+@media (max-width:1020px){.cases-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.cases-grid{grid-template-columns:1fr}.cases-grid .clg-num{font-size:4.4rem}.cases-grid .stk{width:84px;height:84px;font-size:.82rem}.cases-grid .clg-strip{font-size:.95rem}}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -613,6 +625,11 @@ nav{font-weight:800;font-size:.86rem}
   .mini span{font-size:.74rem;line-height:1.35}
   .sticker{font-size:.68rem;top:4%;bottom:auto;left:0;right:auto}
 }
+
+.cases-grid .stk{font-size:.56rem}
+.cases-grid .shot.clg.dark .stk{font-size:.56rem}
+.cases-grid .clg-strip{font-size:.7rem}
+@media (max-width:860px){.cases-grid .stk{font-size:.68rem}.cases-grid .clg-strip{font-size:.84rem}}
 </style>
 
 <div class="page" dir="ltr" lang="en">
@@ -718,17 +735,22 @@ nav{font-weight:800;font-size:.86rem}
   </div>
   <div class="cases-grid">
     <article class="pola">
+      <div class="shot clg dark" role="img" aria-label="Hajj & Umrah: SAR 180M sponsorship for one service"><span class="stk">Hajj & Umrah</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">180<i>M</i></div><div class="clg-strip">SAR sponsorship for one service</div></div>
+      <h3>A service that became the brand itself</h3>
+      <p>A mobility solution for the elderly and people with disabilities during Hajj and Umrah. My role: I developed the concept and secured the sponsor.</p>
+    </article>
+    <article class="pola">
       <div class="shot clg" role="img" aria-label="Retail: SAR 48M in sales over the period"><span class="stk">Retail</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">48<i>M</i></div><div class="clg-strip">SAR in sales over the period</div></div>
       <h3>A Ramadan season across a full branch network</h3>
       <p>SAR 1.3M in marketing spend and one consistent campaign across every branch. My role: marketing leadership.</p>
     </article>
     <article class="pola">
-      <div class="shot clg dark" role="img" aria-label="Automotive: 32.8× return on ad spend"><span class="stk">Automotive</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">return on ad spend</div></div>
+      <div class="shot clg redstrip" role="img" aria-label="Automotive: 32.8× return on ad spend"><span class="stk">Automotive</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">return on ad spend</div></div>
       <h3>A car launch at luxury-brand standards</h3>
       <p>A campaign budget of about USD 2.7M. My role: campaign consultant and performance review.</p>
     </article>
     <article class="pola">
-      <div class="shot clg redstrip" role="img" aria-label="Real estate: 2.5× conversion, from 0.8% to about 2%"><span class="stk">Real estate</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2.5<i>×</i></div><div class="clg-strip">conversion, from 0.8% to about 2%</div></div>
+      <div class="shot clg" role="img" aria-label="Real estate: 2.5× conversion, from 0.8% to about 2%"><span class="stk">Real estate</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2.5<i>×</i></div><div class="clg-strip">conversion, from 0.8% to about 2%</div></div>
       <h3>More sales with no extra ad spend</h3>
       <p>We fixed response, qualification and site visits. My role: rebuilding the customer journey with sales.</p>
     </article>
