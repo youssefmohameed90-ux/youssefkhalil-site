@@ -503,6 +503,49 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
 @media (max-width:860px){.shots{grid-template-columns:1fr}.shots .shotcard:nth-child(3):last-child{grid-column:auto}}
 
 .shots.one{grid-template-columns:minmax(0,1fr);max-width:900px}
+
+/* ===== v22: calmer brand pass ===== */
+.sec{padding-block:104px}
+.sec-head .kicker,.brands .kicker{display:none}
+.sec-head{margin-bottom:38px}
+/* compact client logos: one uniform 7x2 grid */
+.brands{padding-block:70px 20px}
+.clients{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));padding:38px 38px 34px;box-shadow:none}
+.clients-head{grid-column:1/-1;margin-bottom:26px}
+.clients-head h2{font-size:clamp(1.6rem,3vw,2.3rem)}
+.cl-grid{display:contents}
+.cl,.cl.big{height:108px;padding:16px;gap:0;border:1px solid rgba(255,255,255,.2);margin:-.5px}
+.cl span{display:none}
+.cl img,.cl.big img{max-width:74%;max-height:42px}
+.cl.tall img,.cl.big.tall img{max-height:62px}
+/* fewer tilted cards and softer shadows */
+.cases-grid .pola,.speak .pola{transform:none!important}
+.cases-grid .pola:nth-child(2){margin-top:0}
+.svc{box-shadow:4px 4px 0 var(--black)}
+.svc:hover{box-shadow:6px 6px 0 var(--black)}
+.cs,.cs:nth-of-type(even){box-shadow:5px 5px 0 var(--black)}
+.sectors > div,.sectors > div:nth-child(even){box-shadow:4px 4px 0 var(--black)}
+.shotcard,.vcard.film,.stile{box-shadow:4px 4px 0 var(--black)}
+.stile:hover{box-shadow:6px 6px 0 var(--black)}
+/* home videos as a slim strip */
+.strip{padding-block:0 96px}
+.strip .sec-head{margin-bottom:22px}
+.strip h2{font-size:clamp(1.5rem,2.8vw,2.1rem)}
+.strip .series-tiles{gap:18px}
+.strip .stile{display:grid;grid-template-columns:92px minmax(0,1fr);align-items:center}
+.strip .stile img{width:92px;height:auto;aspect-ratio:4/5;object-fit:cover;border-bottom:0;border-inline-end:2px solid var(--line)}
+.strip .stile-cap{padding:12px 16px;gap:2px}
+.strip .stile-cap h3{font-size:1.15rem}
+.strip .stile-cap p{display:none}
+.strip .more{margin-top:20px}
+@media (max-width:860px){
+  .sec{padding-block:64px}
+  .clients{grid-template-columns:repeat(3,minmax(0,1fr));padding:26px 18px 20px}
+  .cl,.cl.big{height:84px;padding:10px}
+  .cl img,.cl.big img{max-height:30px;max-width:82%}
+  .cl.tall img,.cl.big.tall img{max-height:46px}
+  .strip{padding-block:0 60px}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -626,19 +669,7 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
   <p class="more"><a class="ulink" href="#cases">كل دراسات الحالة ←</a></p>
 </div></section>
 
-<section class="sec" style="padding-top:20px"><div class="wrap">
-  <div class="sec-head">
-    <div class="kicker"><span>HOW IT WORKS</span><span>3 STEPS</span></div>
-    <h2>من أول رسالة <span class="red">للتسليم</span></h2>
-  </div>
-  <ol class="steps">
-    <li><h3>جلسة تعارف</h3><p>مجاناً. أفهم البيزنس والمشكلة وأقولك بصراحة أقدر أفيدك ولا لأ.</p></li>
-    <li><h3>عرض مكتوب</h3><p>نطاق الشغل والتسليمات والمدة والسعر في صفحة واحدة. السعر حسب احتياجك.</p></li>
-    <li><h3>بنبدأ بتشخيص</h3><p>أول أسبوعين بنراجع الأرقام والحسابات والفريق، وبعدها الخطة والتنفيذ.</p></li>
-  </ol>
-</div></section>
-
-<section class="sec" style="padding-top:20px"><div class="wrap">
+<section class="sec strip" style="padding-top:20px"><div class="wrap">
   <div class="sec-head">
     <div class="kicker"><span>CONTENT</span><span class="stars">✸✦✤</span></div>
     <h2>تسويق يتشاف <span class="red">مش يتشرح</span></h2>
@@ -649,15 +680,6 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <a class="stile" href="#videos"><img src="videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
-</div></section>
-
-<section class="sec" style="padding-top:20px"><div class="wrap faq">
-  <div class="sec-head"><div class="kicker"><span>FAQ</span><span></span></div><h2>قبل ما تكلمني</h2></div>
-  <details><summary>بتشتغل مع شركات بأي حجم؟</summary><p>من متجر بيصرف على الإعلانات بانتظام لحد مجموعة بفروع. المهم يكون في أرقام أشتغل عليها وصاحب قرار أتكلم معاه.</p></details>
-  <details><summary>بتشتغل في أنهي أسواق؟</summary><p>اشتغلت في مصر والسعودية والإمارات وأوروبا. كل سوق ليه أسعاره وسلوك عميله، وبشتغل مع كل عميل على السوق اللي بيبيع فيه.</p></details>
-  <details><summary>هتحتاج مني إيه عشان تبدأ؟</summary><p>دخول مشاهدة على حسابات الإعلانات والمتجر أو الـ CRM، وأرقام المبيعات لآخر 3 شهور.</p></details>
-  <details><summary>مين اللي بينفذ؟</summary><p>حسب اختيارك. لو عندك فريق أو وكالة، بقودهم وأراجع شغلهم. ولو معندكش، فريقي الخاص بينفذ تحت قيادتي.</p></details>
-  <details><summary>السعر بيتحدد إزاي؟</summary><p>مفيش باقات ثابتة. كل عميل ليه احتياج مختلف، فالسعر بيتحدد على احتياجك انت، وبتستلم عرض مكتوب بعد جلسة التعارف.</p></details>
 </div></section>
 
 </div>
@@ -701,6 +723,26 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:6px;t
     <div><b>السعر</b><p>مفيش باقات ثابتة. السعر بيتحدد حسب احتياج كل عميل، وبتستلم عرض مكتوب قبل ما نبدأ.</p></div>
     <div><b>البداية</b><p>كل تعاقد بيبدأ بتشخيص: مراجعة للأرقام والحسابات والفريق، عشان الخطة تتبني على اللي موجود فعلاً.</p></div>
   </div>
+</div></section>
+<section class="sec" style="padding-top:20px"><div class="wrap">
+  <div class="sec-head">
+    <div class="kicker"><span>HOW IT WORKS</span><span>3 STEPS</span></div>
+    <h2>من أول رسالة <span class="red">للتسليم</span></h2>
+  </div>
+  <ol class="steps">
+    <li><h3>جلسة تعارف</h3><p>مجاناً. أفهم البيزنس والمشكلة وأقولك بصراحة أقدر أفيدك ولا لأ.</p></li>
+    <li><h3>عرض مكتوب</h3><p>نطاق الشغل والتسليمات والمدة والسعر في صفحة واحدة. السعر حسب احتياجك.</p></li>
+    <li><h3>بنبدأ بتشخيص</h3><p>أول أسبوعين بنراجع الأرقام والحسابات والفريق، وبعدها الخطة والتنفيذ.</p></li>
+  </ol>
+</div></section>
+
+<section class="sec" style="padding-top:20px"><div class="wrap faq">
+  <div class="sec-head"><div class="kicker"><span>FAQ</span><span></span></div><h2>قبل ما تكلمني</h2></div>
+  <details><summary>بتشتغل مع شركات بأي حجم؟</summary><p>من متجر بيصرف على الإعلانات بانتظام لحد مجموعة بفروع. المهم يكون في أرقام أشتغل عليها وصاحب قرار أتكلم معاه.</p></details>
+  <details><summary>بتشتغل في أنهي أسواق؟</summary><p>اشتغلت في مصر والسعودية والإمارات وأوروبا. كل سوق ليه أسعاره وسلوك عميله، وبشتغل مع كل عميل على السوق اللي بيبيع فيه.</p></details>
+  <details><summary>هتحتاج مني إيه عشان تبدأ؟</summary><p>دخول مشاهدة على حسابات الإعلانات والمتجر أو الـ CRM، وأرقام المبيعات لآخر 3 شهور.</p></details>
+  <details><summary>مين اللي بينفذ؟</summary><p>حسب اختيارك. لو عندك فريق أو وكالة، بقودهم وأراجع شغلهم. ولو معندكش، فريقي الخاص بينفذ تحت قيادتي.</p></details>
+  <details><summary>السعر بيتحدد إزاي؟</summary><p>مفيش باقات ثابتة. كل عميل ليه احتياج مختلف، فالسعر بيتحدد على احتياجك انت، وبتستلم عرض مكتوب بعد جلسة التعارف.</p></details>
 </div></section>
 </div>
 
