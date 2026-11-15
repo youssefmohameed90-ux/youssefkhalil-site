@@ -732,6 +732,87 @@ h1 .sel{font-weight:900}
   .cases-grid .pola:first-child .clg-num{font-size:1.7rem!important}
 }
 
+/* ===== v32: third service, service picker, results filter, accordions, calmer mobile ===== */
+@media (min-width:861px){.svc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.acc summary{pointer-events:none}}
+.pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px;max-width:980px}
+.pick-b{text-align:start;background:var(--sheet);border:2px solid var(--line);padding:14px 16px;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;gap:2px;transition:background .18s,color .18s}
+.pick-b b{font-family:var(--ar);font-weight:900;font-size:1.08rem}
+.pick-b span{color:var(--muted);font-size:.88rem}
+.pick-b:hover,.pick-b:focus-visible{background:var(--black);color:var(--on-black)}
+.pick-b:hover span,.pick-b:focus-visible span{color:var(--on-black-muted)}
+.sv{scroll-margin-top:16px}
+.acc summary{font-family:var(--ar);font-weight:800;font-size:1.05rem;margin-bottom:8px;list-style:none}
+.acc summary::-webkit-details-marker{display:none}
+.sectors > details{background:var(--sheet);border:2px solid var(--line);padding:22px;box-shadow:4px 4px 0 var(--black)}
+.sectors summary{font-size:1.08rem;margin-bottom:10px}
+.cx-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.cf{font-family:var(--ar);font-weight:700;font-size:.88rem;border:2px solid var(--line);border-radius:999px;padding:6px 16px;background:var(--sheet);color:var(--ink);cursor:pointer;transition:background .18s,color .18s}
+.cf.on{background:var(--black);color:var(--on-black)}
+.cx[hidden]{display:none}
+#v-videos .mega{font-size:clamp(3rem,11vw,8rem)}
+@media (max-width:860px){
+  .mini{flex-wrap:nowrap;gap:0 10px;justify-content:space-between}
+  .mini div{flex:1 1 0;max-width:none;min-width:0}
+  .mini b{font-size:1.2rem}
+  .mini span{font-size:.66rem;line-height:1.35}
+  .view-hero .mega{font-size:clamp(2.6rem,15vw,3.6rem);line-height:1.3;padding-bottom:.1em}
+  #v-videos .mega{font-size:12.5vw}
+  .sec{padding-block:44px}
+  .sec-head{margin-bottom:20px}
+  .svc-grid{gap:12px}
+  .svc{padding:16px 16px 14px;gap:10px;box-shadow:3px 3px 0 var(--black)}
+  .svc.star{box-shadow:3px 3px 0 var(--red)}
+  .svc h3{font-size:1.25rem}
+  .svc dl div:nth-child(2),.svc dt{display:none}
+  .svc dd{font-size:.92rem}
+  .svc .btn{padding-block:10px;font-size:.9rem}
+  .pick{grid-template-columns:1fr;gap:8px;margin-top:16px}
+  .pick-b{padding:11px 14px}
+  .sv{padding-block:28px;gap:16px}
+  .sv-body{gap:0}
+  .sv-body .facts{margin-bottom:14px;gap:6px 8px}
+  .sv-body .facts li{font-size:.8rem;padding:3px 12px}
+  .acc{border-top:2px solid var(--line)}
+  .acc summary{display:flex;justify-content:space-between;align-items:center;padding:13px 0;margin:0;cursor:pointer}
+  .acc summary::after{content:"+";font-family:var(--en);font-weight:900;font-size:1.3rem;line-height:1;color:var(--red)}
+  .acc[open] summary::after{content:"\2013"}
+  .acc > ul{padding-bottom:14px}
+  .sv-body .fit{margin-top:16px;gap:10px;border-top:2px solid var(--line);padding-top:16px}
+  .fit div{padding:12px 14px}
+  .terms{padding:16px;margin-top:20px;gap:12px}
+  .sectors{grid-template-columns:1fr;gap:0;border-bottom:2px solid var(--line)}
+  .sectors > details{padding:0;box-shadow:none;border:0;border-top:2px solid var(--line);background:none}
+  .sectors summary{font-size:1.02rem}
+  .story .big3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:2px solid var(--line);background:var(--sheet);margin-top:18px}
+  .story .big3 div{padding:12px 14px;border-bottom:1px solid rgba(17,17,17,.16)}
+  .story .big3 div:nth-child(odd){border-inline-end:1px solid rgba(17,17,17,.16)}
+  .story .big3 div:nth-last-child(-n+2){border-bottom:0}
+  .story .big3 b{font-size:1.9rem}
+  .story .big3 span{font-size:.8rem}
+  .timeline{gap:18px}
+  .timeline li{padding-inline-start:20px}
+  .timeline h3{font-size:1.05rem}
+  .timeline p{font-size:.93rem}
+  .journey-pics{flex-direction:row;gap:10px}
+  .journey-pics .pola{flex:1 1 0;min-width:0;padding:6px 6px 8px}
+  .journey-pics .pola img{aspect-ratio:4/5;object-fit:cover}
+  .cols{gap:0}
+  .cols div{padding:14px 0}
+  .caps{gap:6px 8px}
+  .caps li{font-size:.8rem;padding:3px 12px}
+  .cx-filter{flex-wrap:nowrap;overflow-x:auto;margin-bottom:14px;padding-bottom:4px;scrollbar-width:none}
+  .cx-filter::-webkit-scrollbar{display:none}
+  .cf{white-space:nowrap;flex:0 0 auto;font-size:.82rem;padding:5px 14px}
+  .cx-grid{gap:10px}
+  .cx{grid-template-columns:84px minmax(0,1fr)}
+  .cx-body{padding:9px 12px}
+  .cx .cs-meta{font-size:.7rem}
+  .cx h2{font-size:.95rem!important;line-height:1.4}
+  .cx-num{border-top:0;padding-top:0;margin-top:2px;align-items:baseline}
+  .cx-num b{font-size:1.1rem;color:var(--red)}
+  .cx-num span{font-size:.74rem}
+}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -768,6 +849,8 @@ nav{font-weight:800;font-size:.86rem}
 .cp-lesson{font-size:1.2rem;line-height:1.4}
 .cp-next b{line-height:1.25}
 .stile-go{font-family:var(--en),var(--ar);font-stretch:112%}
+.pick-b b,.cf,.acc summary{font-family:var(--en),var(--ar);font-stretch:112%}
+.svc h3{font-size:1.35rem;line-height:1.2}
 .lesson-block h4{font-family:var(--en),var(--ar);font-stretch:112%}
 @media (max-width:860px){.cx h2{font-size:1rem;line-height:1.3}}
 @media (max-width:860px){
@@ -859,9 +942,9 @@ nav{font-weight:800;font-size:.86rem}
 
 <section class="sec"><div class="wrap">
   <div class="sec-head">
-    <div class="kicker"><span>SERVICES</span><span>01 — 02</span></div>
+    <div class="kicker"><span>SERVICES</span><span>01 — 03</span></div>
     <h2>How I <span class="red">work with you</span></h2>
-    <p>Two ways to engage, depending on where your company stands. Pricing is set around each client's needs, and you get a written proposal before we start.</p>
+    <p>Three ways to work together, depending on where your company stands. Pricing depends on each client’s needs, and you get a written proposal before we start.</p>
   </div>
   <div class="svc-grid">
     <article class="svc star">
@@ -871,6 +954,14 @@ nav{font-weight:800;font-size:.86rem}
         <div><dt>What I do</dt><dd><ul><li>Strategy and a plan with weekly priorities</li><li>Weekly follow-up with your team and agencies</li><li>Reviewing campaigns and budgets before money is spent</li><li>A monthly report for management</li></ul></dd></div>
       </dl>
       <a class="btn inv" href="https://wa.me/966567054546?text=Hello%20Youssef%2C%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20talk%20about%20marketing%20for%20my%20company.">Request a proposal</a>
+    </article>
+    <article class="svc">
+      <div><div class="tagline">PART-TIME MARKETING MANAGER</div><h3>Part-time marketing manager</h3></div>
+      <dl>
+        <div><dt>Who it's for</dt><dd>A company that needs an experienced marketing manager inside its management team, but not full time.</dd></div>
+        <div><dt>What I do</dt><dd><ul><li>Fixed days with you every week</li><li>I own the marketing plan and budget</li><li>I build and manage the team and choose the agencies</li><li>Accountable to management for the marketing numbers</li></ul></dd></div>
+      </dl>
+      <a class="btn line" href="https://wa.me/966567054546?text=Hello%20Youssef%2C%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20talk%20about%20marketing%20for%20my%20company.">Request a proposal</a>
     </article>
     <article class="svc">
       <div><div class="tagline">MY TEAM DELIVERS</div><h3>My team delivers</h3></div>
@@ -921,7 +1012,7 @@ nav{font-weight:800;font-size:.86rem}
   </div>
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img loading="lazy" decoding="async" src="../videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p></div></a>
-    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p></div></a>
+    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>A series of sketch videos. Each one explains a single marketing idea in a minute.</p></div></a>
     <a class="stile" href="#videos-whatif"><img loading="lazy" decoding="async" src="../videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">Short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">See all videos →</a></p>
@@ -933,10 +1024,11 @@ nav{font-weight:800;font-size:.86rem}
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>SERVICES</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">Services</h1>
-  <p>Two ways to engage: I lead your existing team, or my own team delivers all the work under my leadership.</p>
+  <p>Three ways to work together. Pick the one that sounds like you:</p>
+  <div class="pick"><button type="button" class="pick-b" data-go="sv-lead"><b>I lead your team</b><span>I have a team or agency and need leadership</span></button><button type="button" class="pick-b" data-go="sv-part"><b>Part-time marketing manager</b><span>I need a marketing manager, not full time</span></button><button type="button" class="pick-b" data-go="sv-team"><b>My team delivers</b><span>I have no team and need the work done</span></button></div>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <article class="sv">
+  <article class="sv" id="sv-lead">
     <div class="sv-title">
       <div class="tagline">I LEAD YOUR TEAM</div>
       <h2>I lead your team</h2>
@@ -945,12 +1037,26 @@ nav{font-weight:800;font-size:.86rem}
     </div>
     <div class="sv-body">
       <ul class="facts"><li>Monthly engagement</li><li>Weekly follow-up</li><li>Monthly report</li></ul>
-      <div><h3>What it covers</h3><ul><li>Strategy, positioning and offers</li><li>A quarterly plan with weekly priorities</li><li>A weekly follow-up meeting with the team and agencies</li><li>Reviewing campaigns and budgets before money is spent</li><li>Assessing and selecting staff and agencies</li></ul></div>
-      <div><h3>What you get</h3><ul><li>A written plan, updated every month</li><li>A monthly management report with results and decisions</li><li>A team that knows its priorities every week</li></ul></div>
+      <details class="acc" open><summary>What it covers</summary><ul><li>Strategy, positioning and offers</li><li>A quarterly plan with weekly priorities</li><li>A weekly follow-up meeting with the team and agencies</li><li>Reviewing campaigns and budgets before money is spent</li><li>Assessing and selecting staff and agencies</li></ul></details>
+      <details class="acc" open><summary>What you get</summary><ul><li>A written plan, updated every month</li><li>A monthly management report with results and decisions</li><li>A team that knows its priorities every week</li></ul></details>
       <div class="fit"><div><b>It fits if</b><p>You have a team or agency executing and they need experienced leadership.</p></div><div><b>It doesn't fit if</b><p>You have no one to execute. In that case, my team is the better fit.</p></div></div>
     </div>
   </article>
-  <article class="sv">
+    <article class="sv" id="sv-part">
+    <div class="sv-title">
+      <div class="tagline">PART-TIME MARKETING MANAGER</div>
+      <h2>Part-time marketing manager</h2>
+      <p class="pain">You need an experienced marketing manager as part of your management, but the workload does not yet call for a full-time hire.</p>
+      <a class="btn" href="https://wa.me/966567054546?text=Hello%20Youssef%2C%20I%20found%20you%20through%20your%20website%20and%20would%20like%20to%20talk%20about%20marketing%20for%20my%20company.">Request a proposal</a>
+    </div>
+    <div class="sv-body">
+      <ul class="facts"><li>Monthly engagement</li><li>Fixed days each week</li><li>Part of the management team</li></ul>
+      <details class="acc" open><summary>What it covers</summary><ul><li>Fixed days every week, on site or online</li><li>The marketing plan, its budget and day-to-day decisions</li><li>Building and managing the team and choosing agencies</li><li>Attending management meetings</li><li>A monthly report with the numbers</li></ul></details>
+      <details class="acc" open><summary>What you get</summary><ul><li>A marketing manager with 15 years of experience without the full-time cost</li><li>A marketing function running on a system with clear priorities</li><li>One person accountable to you for the marketing numbers</li></ul></details>
+      <div class="fit"><div><b>It fits if</b><p>Your company has grown and needs a marketing manager, but it is too early for a full-time hire.</p></div><div><b>It doesn't fit if</b><p>You need someone present every day of the week.</p></div></div>
+    </div>
+  </article>
+<article class="sv" id="sv-team">
     <div class="sv-title">
       <div class="tagline">MY TEAM DELIVERS</div>
       <h2>My team delivers</h2>
@@ -959,8 +1065,8 @@ nav{font-weight:800;font-size:.86rem}
     </div>
     <div class="sv-body">
       <ul class="facts"><li>Monthly engagement</li><li>A full team</li><li>One point of contact</li></ul>
-      <div><h3>What it covers</h3><ul><li>Strategy and planning</li><li>Paid advertising</li><li>Content and creative</li><li>Social media management</li><li>Measurement and reporting</li></ul></div>
-      <div><h3>What you get</h3><ul><li>A specialist team working under my leadership</li><li>A monthly plan, executed</li><li>A monthly report with the numbers and the next step</li></ul></div>
+      <details class="acc" open><summary>What it covers</summary><ul><li>Strategy and planning</li><li>Paid advertising</li><li>Content and creative</li><li>Social media management</li><li>Measurement and reporting</li></ul></details>
+      <details class="acc" open><summary>What you get</summary><ul><li>A specialist team working under my leadership</li><li>A monthly plan, executed</li><li>A monthly report with the numbers and the next step</li></ul></details>
       <div class="fit"><div><b>It fits if</b><p>You want results without building a marketing department in-house.</p></div><div><b>It doesn't fit if</b><p>You have a strong team and only need leadership.</p></div></div>
     </div>
   </article>
@@ -998,8 +1104,9 @@ nav{font-weight:800;font-size:.86rem}
   <p>A selection from 15 years of work. Open any case for the full story: the problem, the decision, what was done, and the number.</p>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
+<div class="cx-filter" role="group" aria-label="Choose a sector"><button type="button" class="cf on" data-cat="all" aria-pressed="true">All</button><button type="button" class="cf" data-cat="retail" aria-pressed="false">Retail & e-commerce</button><button type="button" class="cf" data-cat="estate" aria-pressed="false">Real estate & automotive</button><button type="button" class="cf" data-cat="health" aria-pressed="false">Health & beauty</button><button type="button" class="cf" data-cat="hosp" aria-pressed="false">Hospitality & tourism</button><button type="button" class="cf" data-cat="b2b" aria-pressed="false">B2B & technology</button></div>
 <div class="cx-grid">
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="../cases/sponsorship-s.webp" alt="An elderly pilgrim in a wheelchair with an attendant in a wide marble courtyard" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Hajj and Umrah · Saudi Arabia</div>
@@ -1008,7 +1115,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/retail-s.webp" alt="Shoppers in a busy clothing store during Ramadan" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Retail · Fashion · Saudi Arabia</div>
@@ -1017,7 +1124,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="../cases/automotive-s.webp" alt="A new car under a cover moments before its reveal at a launch event" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Mercedes · Automotive</div>
@@ -1026,7 +1133,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="../cases/qsr-s.webp" alt="Customers at the counter of a busy fast-food restaurant at night" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Burger King · Restaurants · Saudi Arabia</div>
@@ -1035,7 +1142,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="../cases/realestate-s.webp" alt="Buyers looking at a property development model with a sales agent" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Real estate · Lead management</div>
@@ -1044,7 +1151,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/perfumes-s.webp" alt="A hand presenting a luxury perfume bottle on a marble counter" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Luxury perfumes · Saudi Arabia</div>
@@ -1053,7 +1160,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/skincare-s.webp" alt="Skincare products lined up on a shelf with a hand reaching for one" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Skincare · Egypt, UAE & Saudi Arabia</div>
@@ -1062,7 +1169,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="../cases/ramadan-s.webp" alt="A handshake over a contract and apartment keys beside a window overlooking buildings" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Real estate · Ramadan season · Cairo</div>
@@ -1071,7 +1178,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="../cases/mfg-s.webp" alt="Empty plastic bottles on a factory production line" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Manufacturing · Egypt</div>
@@ -1080,7 +1187,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="../cases/b2g-s.webp" alt="A maintenance technician checking a control panel in an office building corridor" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Government tenders · Saudi Arabia</div>
@@ -1089,7 +1196,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="../cases/pharma-s.webp" alt="A pharmacist arranging medicine boxes on a pharmacy shelf" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Pharma · Saudi Arabia</div>
@@ -1098,7 +1205,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="../cases/tourism-s.webp" alt="A family in a 4x4 in the desert at sunset" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Tourism · UAE</div>
@@ -1107,7 +1214,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="../cases/dealer-s.webp" alt="A customer in the driver’s seat of a new car in a showroom with a salesman" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Car dealership · Saudi Arabia</div>
@@ -1116,7 +1223,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="../cases/saas-s.webp" alt="A clinic receptionist working at a computer with patients waiting behind her" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Technology · Egypt</div>
@@ -1125,7 +1232,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="../cases/hospital-s.webp" alt="An orthopedic doctor examining a patient’s knee in a clinic" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Hospitals · Egypt</div>
@@ -1134,7 +1241,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="../cases/aesthetic-s.webp" alt="A dermatologist in a consultation with a patient holding a mirror" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Aesthetic clinics · UAE</div>
@@ -1143,7 +1250,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/inf-skincare-s.webp" alt="A content creator filming herself on a phone while holding a skincare product" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Influencers · Skincare · Saudi Arabia</div>
@@ -1152,7 +1259,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="../cases/inf-tourism-s.webp" alt="A content creator filming on a phone by a hotel pool with a family walking behind" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Influencers · Tourism · UAE</div>
@@ -1161,7 +1268,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="../cases/inf-restaurants-s.webp" alt="A food blogger filming a table full of food in a busy restaurant" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Influencers · Restaurants · Egypt</div>
@@ -1170,7 +1277,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="../cases/inf-b2b-s.webp" alt="A shop owner in a clothing stockroom checking inventory on a tablet" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">B2B influencers · Software · Saudi Arabia</div>
@@ -1179,7 +1286,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/journey-s.webp" alt="Hands holding a phone beside shopping bags and a folded dress" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Customer journey · Online fashion · UAE</div>
@@ -1188,7 +1295,7 @@ nav{font-weight:800;font-size:.86rem}
       <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="../cases/retention-s.webp" alt="An open delivery box of personal care products with a hand taking one out" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">Retention · Personal care · Saudi Arabia</div>
@@ -1723,10 +1830,10 @@ nav{font-weight:800;font-size:.86rem}
 <section class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-head"><h2>Industries <span class="red">I've worked in</span></h2></div>
   <div class="sectors">
-    <div><h3>Hospitality, tourism & sports</h3><ul><li>Hotels & hospitality</li><li>Tourism</li><li>Sports & football clubs</li><li>Hajj & Umrah mobility services</li><li>Media & video production</li></ul></div>
-    <div><h3>Consumer & luxury</h3><ul><li>Automotive & dealerships</li><li>Luxury watches & jewellery</li><li>Fashion, retail & franchising</li><li>Restaurants & quick service</li><li>Consumer goods & personal care</li></ul></div>
-    <div><h3>Healthcare</h3><ul><li>Hospitals & medical centres</li><li>Pharmaceuticals & medical products</li><li>Physician & clinic marketing</li><li>Community initiatives</li></ul></div>
-    <div><h3>Business & technology</h3><ul><li>Software & technology</li><li>Smart devices</li><li>Real estate & construction</li><li>Manufacturing, import & distribution</li><li>Personal brands & public figures</li></ul></div>
+    <details class="acc" open><summary>Hospitality, tourism & sports</summary><ul><li>Hotels & hospitality</li><li>Tourism</li><li>Sports & football clubs</li><li>Hajj & Umrah mobility services</li><li>Media & video production</li></ul></details>
+    <details class="acc" open><summary>Consumer & luxury</summary><ul><li>Automotive & dealerships</li><li>Luxury watches & jewellery</li><li>Fashion, retail & franchising</li><li>Restaurants & quick service</li><li>Consumer goods & personal care</li></ul></details>
+    <details class="acc" open><summary>Healthcare</summary><ul><li>Hospitals & medical centres</li><li>Pharmaceuticals & medical products</li><li>Physician & clinic marketing</li><li>Community initiatives</li></ul></details>
+    <details class="acc" open><summary>Business & technology</summary><ul><li>Software & technology</li><li>Smart devices</li><li>Real estate & construction</li><li>Manufacturing, import & distribution</li><li>Personal brands & public figures</li></ul></details>
   </div>
   <p class="caps-label">And I work on:</p>
   <ul class="facts caps"><li>Brand strategy</li><li>Marketing plans</li><li>Market entry</li><li>Integrated campaigns</li><li>Performance marketing</li><li>Business growth</li><li>Commercial strategy</li><li>Customer experience</li><li>Team leadership</li><li>Agency management</li><li>Training teams and business owners</li></ul>
@@ -1753,7 +1860,7 @@ nav{font-weight:800;font-size:.86rem}
 <section class="sec vhub" style="padding-top:0"><div class="wrap">
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img loading="lazy" decoding="async" src="../videos/youssef/intro-main.jpg" alt="Youssef Khalil in the intro video"><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
-    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">Sketch episodes</span><h3>Marketing Doodles</h3><p>A series of sketch videos. Each one explains a single marketing idea in a minute.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
     <a class="stile" href="#videos-whatif"><img loading="lazy" decoding="async" src="../videos/whatif/ep1-poster.jpg" alt="Poster of the film Muhammad Ali and the Citadel"><div class="stile-cap"><span class="vsub">Short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
   </div>
 </div></section>
@@ -1781,8 +1888,8 @@ nav{font-weight:800;font-size:.86rem}
   <div class="series-head">
     <div class="with-cover"><img class="series-cover" loading="lazy" decoding="async" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div><div class="tagline-s">SERIES 02 · MARKETING SKETCHES</div><h2>Marketing <span class="red">Doodles</span></h2></div></div>
     <div>
-      <p><b>The idea:</b> A notebook page, a stick figure, and one marketing idea in about a minute.</p>
-      <p><b>The goal:</b> Business owners understand their numbers and decisions without jargon. Each episode answers one question: does this discount make me money? Is this ROAS good? When do I scale the ad?</p>
+      <p><b>The idea:</b> A series of short videos drawn on notebook paper with a stick figure. Each video explains one marketing idea in about a minute.</p>
+      <p><b>The goal:</b> A business owner understands their numbers and decisions without jargon. Each video answers one question, such as: is this discount making me money? Is this ROAS good? When do I scale the ad?</p>
     </div>
   </div>
   <div class="season">
@@ -1951,6 +2058,21 @@ document.documentElement.setAttribute('lang','en');
     a.addEventListener('click',function(e){
       e.preventDefault();
       if(state===2 && window.Calendly) open(a.href); else load(a.href);
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  if(window.matchMedia('(max-width:860px)').matches) document.querySelectorAll('details.acc').forEach(function(d){ d.open=false; });
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click',function(){ var t=document.getElementById(b.dataset.go); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); });
+  });
+  var fs=document.querySelectorAll('.cf');
+  fs.forEach(function(f){
+    f.addEventListener('click',function(){
+      fs.forEach(function(x){ x.classList.toggle('on',x===f); x.setAttribute('aria-pressed',x===f?'true':'false'); });
+      document.querySelectorAll('.cx').forEach(function(c){ c.hidden=!(f.dataset.cat==='all'||c.dataset.cat===f.dataset.cat); });
     });
   });
 })();

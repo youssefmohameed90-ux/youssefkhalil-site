@@ -731,6 +731,87 @@ h1 .sel{font-weight:900}
   .cases-grid .pola .clg-num{font-size:1.95rem!important;letter-spacing:-.03em}
   .cases-grid .pola:first-child .clg-num{font-size:1.7rem!important}
 }
+
+/* ===== v32: third service, service picker, results filter, accordions, calmer mobile ===== */
+@media (min-width:861px){.svc-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}.acc summary{pointer-events:none}}
+.pick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px;max-width:980px}
+.pick-b{text-align:start;background:var(--sheet);border:2px solid var(--line);padding:14px 16px;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;gap:2px;transition:background .18s,color .18s}
+.pick-b b{font-family:var(--ar);font-weight:900;font-size:1.08rem}
+.pick-b span{color:var(--muted);font-size:.88rem}
+.pick-b:hover,.pick-b:focus-visible{background:var(--black);color:var(--on-black)}
+.pick-b:hover span,.pick-b:focus-visible span{color:var(--on-black-muted)}
+.sv{scroll-margin-top:16px}
+.acc summary{font-family:var(--ar);font-weight:800;font-size:1.05rem;margin-bottom:8px;list-style:none}
+.acc summary::-webkit-details-marker{display:none}
+.sectors > details{background:var(--sheet);border:2px solid var(--line);padding:22px;box-shadow:4px 4px 0 var(--black)}
+.sectors summary{font-size:1.08rem;margin-bottom:10px}
+.cx-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.cf{font-family:var(--ar);font-weight:700;font-size:.88rem;border:2px solid var(--line);border-radius:999px;padding:6px 16px;background:var(--sheet);color:var(--ink);cursor:pointer;transition:background .18s,color .18s}
+.cf.on{background:var(--black);color:var(--on-black)}
+.cx[hidden]{display:none}
+#v-videos .mega{font-size:clamp(3rem,11vw,8rem)}
+@media (max-width:860px){
+  .mini{flex-wrap:nowrap;gap:0 10px;justify-content:space-between}
+  .mini div{flex:1 1 0;max-width:none;min-width:0}
+  .mini b{font-size:1.2rem}
+  .mini span{font-size:.66rem;line-height:1.35}
+  .view-hero .mega{font-size:clamp(2.6rem,15vw,3.6rem);line-height:1.3;padding-bottom:.1em}
+  #v-videos .mega{font-size:12.5vw}
+  .sec{padding-block:44px}
+  .sec-head{margin-bottom:20px}
+  .svc-grid{gap:12px}
+  .svc{padding:16px 16px 14px;gap:10px;box-shadow:3px 3px 0 var(--black)}
+  .svc.star{box-shadow:3px 3px 0 var(--red)}
+  .svc h3{font-size:1.25rem}
+  .svc dl div:nth-child(2),.svc dt{display:none}
+  .svc dd{font-size:.92rem}
+  .svc .btn{padding-block:10px;font-size:.9rem}
+  .pick{grid-template-columns:1fr;gap:8px;margin-top:16px}
+  .pick-b{padding:11px 14px}
+  .sv{padding-block:28px;gap:16px}
+  .sv-body{gap:0}
+  .sv-body .facts{margin-bottom:14px;gap:6px 8px}
+  .sv-body .facts li{font-size:.8rem;padding:3px 12px}
+  .acc{border-top:2px solid var(--line)}
+  .acc summary{display:flex;justify-content:space-between;align-items:center;padding:13px 0;margin:0;cursor:pointer}
+  .acc summary::after{content:"+";font-family:var(--en);font-weight:900;font-size:1.3rem;line-height:1;color:var(--red)}
+  .acc[open] summary::after{content:"\2013"}
+  .acc > ul{padding-bottom:14px}
+  .sv-body .fit{margin-top:16px;gap:10px;border-top:2px solid var(--line);padding-top:16px}
+  .fit div{padding:12px 14px}
+  .terms{padding:16px;margin-top:20px;gap:12px}
+  .sectors{grid-template-columns:1fr;gap:0;border-bottom:2px solid var(--line)}
+  .sectors > details{padding:0;box-shadow:none;border:0;border-top:2px solid var(--line);background:none}
+  .sectors summary{font-size:1.02rem}
+  .story .big3{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:2px solid var(--line);background:var(--sheet);margin-top:18px}
+  .story .big3 div{padding:12px 14px;border-bottom:1px solid rgba(17,17,17,.16)}
+  .story .big3 div:nth-child(odd){border-inline-end:1px solid rgba(17,17,17,.16)}
+  .story .big3 div:nth-last-child(-n+2){border-bottom:0}
+  .story .big3 b{font-size:1.9rem}
+  .story .big3 span{font-size:.8rem}
+  .timeline{gap:18px}
+  .timeline li{padding-inline-start:20px}
+  .timeline h3{font-size:1.05rem}
+  .timeline p{font-size:.93rem}
+  .journey-pics{flex-direction:row;gap:10px}
+  .journey-pics .pola{flex:1 1 0;min-width:0;padding:6px 6px 8px}
+  .journey-pics .pola img{aspect-ratio:4/5;object-fit:cover}
+  .cols{gap:0}
+  .cols div{padding:14px 0}
+  .caps{gap:6px 8px}
+  .caps li{font-size:.8rem;padding:3px 12px}
+  .cx-filter{flex-wrap:nowrap;overflow-x:auto;margin-bottom:14px;padding-bottom:4px;scrollbar-width:none}
+  .cx-filter::-webkit-scrollbar{display:none}
+  .cf{white-space:nowrap;flex:0 0 auto;font-size:.82rem;padding:5px 14px}
+  .cx-grid{gap:10px}
+  .cx{grid-template-columns:84px minmax(0,1fr)}
+  .cx-body{padding:9px 12px}
+  .cx .cs-meta{font-size:.7rem}
+  .cx h2{font-size:.95rem!important;line-height:1.4}
+  .cx-num{border-top:0;padding-top:0;margin-top:2px;align-items:baseline}
+  .cx-num b{font-size:1.1rem;color:var(--red)}
+  .cx-num span{font-size:.74rem}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -804,9 +885,9 @@ h1 .sel{font-weight:900}
 
 <section class="sec"><div class="wrap">
   <div class="sec-head">
-    <div class="kicker"><span>SERVICES</span><span>01 — 02</span></div>
+    <div class="kicker"><span>SERVICES</span><span>01 — 03</span></div>
     <h2>بشتغل معاك <span class="red">إزاي</span></h2>
-    <p>طريقتين للتعاقد حسب وضع شركتك. السعر بيتحدد حسب احتياج كل عميل، وبتستلم عرض مكتوب قبل ما نبدأ.</p>
+    <p>تلات طرق للتعاقد حسب وضع شركتك. السعر بيتحدد حسب احتياج كل عميل، وبتستلم عرض مكتوب قبل ما نبدأ.</p>
   </div>
   <div class="svc-grid">
     <article class="svc star">
@@ -816,6 +897,14 @@ h1 .sel{font-weight:900}
         <div><dt>بعمل إيه</dt><dd><ul><li>استراتيجية وخطة بأولويات أسبوعية</li><li>متابعة أسبوعية للفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>تقرير شهري للإدارة</li></ul></dd></div>
       </dl>
       <a class="btn inv" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%82%D9%8A%D8%A7%D8%AF%D8%A9%20%D9%81%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%B9%D9%86%D8%AF%D9%8A">اطلب عرض سعر</a>
+    </article>
+    <article class="svc">
+      <div><div class="tagline">PART-TIME MARKETING MANAGER</div><h3>مدير تسويق بدوام جزئي</h3></div>
+      <dl>
+        <div><dt>لمين</dt><dd>شركة محتاجة مدير تسويق بخبرة جوه الإدارة، ومش محتاجاه بدوام كامل.</dd></div>
+        <div><dt>بعمل إيه</dt><dd><ul><li>أيام ثابتة معاكم كل أسبوع</li><li>بمسك خطة التسويق وميزانيته</li><li>ببني الفريق وأديره وأختار الوكالات</li><li>مسؤول قدام الإدارة عن أرقام التسويق</li></ul></dd></div>
+      </dl>
+      <a class="btn line" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%85%D8%AF%D9%8A%D8%B1%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A8%D8%AF%D9%88%D8%A7%D9%85%20%D8%AC%D8%B2%D8%A6%D9%8A">اطلب عرض سعر</a>
     </article>
     <article class="svc">
       <div><div class="tagline">MY TEAM DELIVERS</div><h3>فريقي ينفذلك</h3></div>
@@ -866,7 +955,7 @@ h1 .sel{font-weight:900}
   </div>
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img loading="lazy" decoding="async" src="videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p></div></a>
-    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="videos/stick/cover.jpg" alt="غلاف سلسلة شخبطة تسويق"><div class="stile-cap"><span class="vsub">حلقات مرسومة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p></div></a>
+    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="videos/stick/cover.jpg" alt="غلاف سلسلة شخبطة تسويق"><div class="stile-cap"><span class="vsub">حلقات مرسومة</span><h3>شخبطة تسويق</h3><p>سلسلة فيديوهات مرسومة. كل فيديو بيشرح فكرة تسويق واحدة في دقيقة.</p></div></a>
     <a class="stile" href="#videos-whatif"><img loading="lazy" decoding="async" src="videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">شوف كل الفيديوهات ←</a></p>
@@ -878,10 +967,11 @@ h1 .sel{font-weight:900}
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>SERVICES</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">الخدمات</h1>
-  <p>طريقتين للتعاقد: أقود فريقك الموجود، أو فريقي الخاص ينفذلك الشغل كله تحت قيادتي.</p>
+  <p>تلات طرق للتعاقد. اختار اللي يشبه وضعك:</p>
+  <div class="pick"><button type="button" class="pick-b" data-go="sv-lead"><b>أقود فريقك</b><span>عندي فريق أو وكالة ومحتاج قيادة</span></button><button type="button" class="pick-b" data-go="sv-part"><b>مدير تسويق بدوام جزئي</b><span>محتاج مدير تسويق، مش بدوام كامل</span></button><button type="button" class="pick-b" data-go="sv-team"><b>فريقي ينفذلك</b><span>معنديش فريق ومحتاج حد ينفذ</span></button></div>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <article class="sv">
+  <article class="sv" id="sv-lead">
     <div class="sv-title">
       <div class="tagline">I LEAD YOUR TEAM</div>
       <h2>أقود فريقك</h2>
@@ -890,12 +980,26 @@ h1 .sel{font-weight:900}
     </div>
     <div class="sv-body">
       <ul class="facts"><li>تعاقد شهري</li><li>متابعة أسبوعية</li><li>تقرير شهري</li></ul>
-      <div><h3>بيشمل إيه</h3><ul><li>الاستراتيجية والتموضع والعروض</li><li>خطة ربع سنوية بأولويات أسبوعية</li><li>اجتماع متابعة أسبوعي مع الفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>تقييم واختيار الموظفين والوكالات</li></ul></div>
-      <div><h3>هتستلم إيه</h3><ul><li>خطة مكتوبة بتتحدث كل شهر</li><li>تقرير شهري للإدارة بالنتائج والقرارات</li><li>فريق عارف أولوياته كل أسبوع</li></ul></div>
+      <details class="acc" open><summary>بيشمل إيه</summary><ul><li>الاستراتيجية والتموضع والعروض</li><li>خطة ربع سنوية بأولويات أسبوعية</li><li>اجتماع متابعة أسبوعي مع الفريق والوكالات</li><li>مراجعة الحملات والميزانيات قبل الصرف</li><li>تقييم واختيار الموظفين والوكالات</li></ul></details>
+      <details class="acc" open><summary>هتستلم إيه</summary><ul><li>خطة مكتوبة بتتحدث كل شهر</li><li>تقرير شهري للإدارة بالنتائج والقرارات</li><li>فريق عارف أولوياته كل أسبوع</li></ul></details>
       <div class="fit"><div><b>مناسبة ليك لو</b><p>عندك فريق أو وكالة بتنفذ ومحتاجين قيادة بخبرة.</p></div><div><b>مش مناسبة لو</b><p>معندكش حد ينفذ. ساعتها فريقي أنسبلك.</p></div></div>
     </div>
   </article>
-  <article class="sv">
+    <article class="sv" id="sv-part">
+    <div class="sv-title">
+      <div class="tagline">PART-TIME MARKETING MANAGER</div>
+      <h2>مدير تسويق بدوام جزئي</h2>
+      <p class="pain">محتاج مدير تسويق بخبرة يبقى جزء من إدارتك، بس حجم الشغل لسه مش محتاج مدير بدوام كامل.</p>
+      <a class="btn" href="https://wa.me/966567054546?text=%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1%3A%20%D9%85%D8%AF%D9%8A%D8%B1%20%D8%AA%D8%B3%D9%88%D9%8A%D9%82%20%D8%A8%D8%AF%D9%88%D8%A7%D9%85%20%D8%AC%D8%B2%D8%A6%D9%8A">اطلب عرض سعر</a>
+    </div>
+    <div class="sv-body">
+      <ul class="facts"><li>تعاقد شهري</li><li>أيام ثابتة في الأسبوع</li><li>جزء من فريق الإدارة</li></ul>
+      <details class="acc" open><summary>بيشمل إيه</summary><ul><li>أيام ثابتة كل أسبوع، في المكتب أو أونلاين</li><li>خطة التسويق وميزانيته وقراراته اليومية</li><li>بناء الفريق وإدارته واختيار الوكالات</li><li>حضور اجتماعات الإدارة</li><li>تقرير شهري بالأرقام</li></ul></details>
+      <details class="acc" open><summary>هتستلم إيه</summary><ul><li>مدير تسويق بخبرة 15 سنة من غير تكلفة الدوام الكامل</li><li>قسم تسويق ماشي بنظام وأولويات واضحة</li><li>شخص واحد مسؤول قدامك عن أرقام التسويق</li></ul></details>
+      <div class="fit"><div><b>مناسبة ليك لو</b><p>شركتك كبرت ومحتاجة مدير تسويق، ولسه بدري على تعيين مدير بدوام كامل.</p></div><div><b>مش مناسبة لو</b><p>محتاج حد موجود كل يوم طول الأسبوع.</p></div></div>
+    </div>
+  </article>
+<article class="sv" id="sv-team">
     <div class="sv-title">
       <div class="tagline">MY TEAM DELIVERS</div>
       <h2>فريقي ينفذلك</h2>
@@ -904,8 +1008,8 @@ h1 .sel{font-weight:900}
     </div>
     <div class="sv-body">
       <ul class="facts"><li>تعاقد شهري</li><li>فريق كامل</li><li>مسؤول واحد تكلمه</li></ul>
-      <div><h3>بيشمل إيه</h3><ul><li>الاستراتيجية والخطة</li><li>الإعلانات المدفوعة</li><li>المحتوى والكرييتيف</li><li>إدارة السوشيال ميديا</li><li>القياس والتقارير</li></ul></div>
-      <div><h3>هتستلم إيه</h3><ul><li>فريق متخصص شغال تحت قيادتي</li><li>خطة شهرية وتنفيذها</li><li>تقرير شهري بالأرقام والخطوة الجاية</li></ul></div>
+      <details class="acc" open><summary>بيشمل إيه</summary><ul><li>الاستراتيجية والخطة</li><li>الإعلانات المدفوعة</li><li>المحتوى والكرييتيف</li><li>إدارة السوشيال ميديا</li><li>القياس والتقارير</li></ul></details>
+      <details class="acc" open><summary>هتستلم إيه</summary><ul><li>فريق متخصص شغال تحت قيادتي</li><li>خطة شهرية وتنفيذها</li><li>تقرير شهري بالأرقام والخطوة الجاية</li></ul></details>
       <div class="fit"><div><b>مناسبة ليك لو</b><p>عايز نتيجة من غير ما تبني قسم تسويق جوه الشركة.</p></div><div><b>مش مناسبة لو</b><p>عندك فريق قوي ومحتاج قيادة بس.</p></div></div>
     </div>
   </article>
@@ -943,8 +1047,9 @@ h1 .sel{font-weight:900}
   <p>نماذج مختارة من شغل 15 سنة. افتح أي دراسة وشوف القصة كاملة: المشكلة، القرار، اللي اتعمل، والرقم.</p>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
+<div class="cx-filter" role="group" aria-label="اختار المجال"><button type="button" class="cf on" data-cat="all" aria-pressed="true">الكل</button><button type="button" class="cf" data-cat="retail" aria-pressed="false">ريتيل وإيكوميرس</button><button type="button" class="cf" data-cat="estate" aria-pressed="false">عقارات وسيارات</button><button type="button" class="cf" data-cat="health" aria-pressed="false">صحة وتجميل</button><button type="button" class="cf" data-cat="hosp" aria-pressed="false">ضيافة وسياحة</button><button type="button" class="cf" data-cat="b2b" aria-pressed="false">B2B وتكنولوجيا</button></div>
 <div class="cx-grid">
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="cases/sponsorship-s.webp" alt="حاج كبير في السن على كرسي متحرك ومعاه مرافق في ساحة رخام واسعة" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">الحج والعمرة · السعودية</div>
@@ -953,7 +1058,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/retail-s.webp" alt="عملاء بيتسوقوا في محل ملابس زحمة في رمضان" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">ريتيل · أزياء وتجزئة · السعودية</div>
@@ -962,7 +1067,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="cases/automotive-s.webp" alt="سيارة جديدة متغطية بقماش قبل لحظة الكشف عنها في حفل إطلاق" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مرسيدس · أوتوموتيف</div>
@@ -971,7 +1076,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="cases/qsr-s.webp" alt="عملاء واقفين على كاونتر مطعم وجبات سريعة زحمة بالليل" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">برجر كينج · مطاعم · السعودية</div>
@@ -980,7 +1085,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="cases/realestate-s.webp" alt="عملاء بيتفرجوا على ماكيت مشروع عقاري مع مسؤول مبيعات" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">عقارات · إدارة العملاء المحتملين</div>
@@ -989,7 +1094,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/perfumes-s.webp" alt="إيد بتعرض زجاجة عطر فاخرة على كاونتر رخام" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">عطور فاخرة · السعودية</div>
@@ -998,7 +1103,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/skincare-s.webp" alt="منتجات عناية بالبشرة مرصوصة على رف وإيد بتاخد منها" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">عناية بالبشرة · مصر والإمارات والسعودية</div>
@@ -1007,7 +1112,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="cases/ramadan-s.webp" alt="مصافحة فوق عقد ومفاتيح شقة جنب شباك بيطل على عمارات" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">عقارات · موسم رمضان · القاهرة</div>
@@ -1016,7 +1121,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="cases/mfg-s.webp" alt="عبوات بلاستيك فاضية على خط إنتاج في مصنع" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">تصنيع · مصر</div>
@@ -1025,7 +1130,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="cases/b2g-s.webp" alt="فني صيانة بيفحص لوحة تحكم في ممر مبنى إداري" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مناقصات حكومية · السعودية</div>
@@ -1034,7 +1139,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="cases/pharma-s.webp" alt="صيدلي بيرص علب أدوية على رف في صيدلية" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">فارما · السعودية</div>
@@ -1043,7 +1148,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="cases/tourism-s.webp" alt="أسرة في عربية دفع رباعي في الصحرا وقت الغروب" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">سياحة · الإمارات</div>
@@ -1052,7 +1157,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="estate">
     <img src="cases/dealer-s.webp" alt="عميل قاعد في كرسي السواق في عربية جديدة جوه معرض ومعاه مندوب مبيعات" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">وكيل سيارات · السعودية</div>
@@ -1061,7 +1166,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="cases/saas-s.webp" alt="موظفة استقبال في عيادة بتشتغل على كمبيوتر ومرضى مستنيين وراها" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">تكنولوجيا · مصر</div>
@@ -1070,7 +1175,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="cases/hospital-s.webp" alt="دكتور عظام بيكشف على ركبة مريض في العيادة" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مستشفيات · مصر</div>
@@ -1079,7 +1184,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="health">
     <img src="cases/aesthetic-s.webp" alt="دكتورة جلدية في استشارة مع مريضة ماسكة مراية" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">عيادات تجميل · الإمارات</div>
@@ -1088,7 +1193,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/inf-skincare-s.webp" alt="صانعة محتوى بتصور نفسها بالموبايل وهي ماسكة منتج عناية بالبشرة" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مؤثرين · عناية بالبشرة · السعودية</div>
@@ -1097,7 +1202,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="cases/inf-tourism-s.webp" alt="صانع محتوى بيصور بالموبايل عند حمام سباحة فندق وأسرة ماشية وراه" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مؤثرين · سياحة · الإمارات</div>
@@ -1106,7 +1211,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="hosp">
     <img src="cases/inf-restaurants-s.webp" alt="فود بلوجر بيصور بالموبايل ترابيزة مليانة أكل في مطعم زحمة" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مؤثرين · مطاعم · مصر</div>
@@ -1115,7 +1220,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="b2b">
     <img src="cases/inf-b2b-s.webp" alt="صاحب محل في مخزن ملابس بيراجع المخزون على تابلت" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">مؤثرين B2B · برمجيات · السعودية</div>
@@ -1124,7 +1229,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/journey-s.webp" alt="إيدين ماسكين موبايل وجنبهم شنط تسوق وفستان مطبق" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">رحلة العميل · أزياء أونلاين · الإمارات</div>
@@ -1133,7 +1238,7 @@ h1 .sel{font-weight:900}
       <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
   </article>
-  <article class="cx">
+  <article class="cx" data-cat="retail">
     <img src="cases/retention-s.webp" alt="صندوق شحن مفتوح فيه منتجات عناية شخصية وإيد بتطلع منتج منه" width="560" height="373" decoding="async" loading="lazy">
     <div class="cx-body">
       <div class="cs-meta">الاحتفاظ بالعملاء · عناية شخصية · السعودية</div>
@@ -1668,10 +1773,10 @@ h1 .sel{font-weight:900}
 <section class="sec" style="padding-top:0"><div class="wrap">
   <div class="sec-head"><h2>قطاعات <span class="red">اشتغلت فيها</span></h2></div>
   <div class="sectors">
-    <div><h3>الضيافة والسياحة والرياضة</h3><ul><li>الفنادق والضيافة</li><li>السياحة</li><li>الرياضة وأندية الكرة</li><li>خدمات تنقل الحج والعمرة</li><li>الإنتاج الإعلامي والفيديو</li></ul></div>
-    <div><h3>المستهلك والفاخر</h3><ul><li>السيارات والوكالات</li><li>الساعات والمجوهرات الفاخرة</li><li>الأزياء والتجزئة والفرنشايز</li><li>المطاعم والوجبات السريعة</li><li>السلع الاستهلاكية والعناية الشخصية</li></ul></div>
-    <div><h3>الصحة</h3><ul><li>المستشفيات والمراكز الطبية</li><li>الأدوية والمنتجات الطبية</li><li>تسويق الأطباء والعيادات</li><li>المبادرات المجتمعية</li></ul></div>
-    <div><h3>الأعمال والتكنولوجيا</h3><ul><li>البرمجيات والتكنولوجيا</li><li>الأجهزة الذكية</li><li>العقارات والإنشاءات</li><li>التصنيع والاستيراد والتوزيع</li><li>البراند الشخصي والشخصيات العامة</li></ul></div>
+    <details class="acc" open><summary>الضيافة والسياحة والرياضة</summary><ul><li>الفنادق والضيافة</li><li>السياحة</li><li>الرياضة وأندية الكرة</li><li>خدمات تنقل الحج والعمرة</li><li>الإنتاج الإعلامي والفيديو</li></ul></details>
+    <details class="acc" open><summary>المستهلك والفاخر</summary><ul><li>السيارات والوكالات</li><li>الساعات والمجوهرات الفاخرة</li><li>الأزياء والتجزئة والفرنشايز</li><li>المطاعم والوجبات السريعة</li><li>السلع الاستهلاكية والعناية الشخصية</li></ul></details>
+    <details class="acc" open><summary>الصحة</summary><ul><li>المستشفيات والمراكز الطبية</li><li>الأدوية والمنتجات الطبية</li><li>تسويق الأطباء والعيادات</li><li>المبادرات المجتمعية</li></ul></details>
+    <details class="acc" open><summary>الأعمال والتكنولوجيا</summary><ul><li>البرمجيات والتكنولوجيا</li><li>الأجهزة الذكية</li><li>العقارات والإنشاءات</li><li>التصنيع والاستيراد والتوزيع</li><li>البراند الشخصي والشخصيات العامة</li></ul></details>
   </div>
   <p class="caps-label">وبشتغل على:</p>
   <ul class="facts caps"><li>استراتيجية البراند</li><li>خطط التسويق</li><li>دخول الأسواق</li><li>الحملات المتكاملة</li><li>التسويق بالأداء</li><li>نمو البيزنس</li><li>الاستراتيجية التجارية</li><li>تجربة العميل</li><li>قيادة الفرق</li><li>إدارة الوكالات</li><li>تدريب الفرق وأصحاب البيزنس</li></ul>
@@ -1698,7 +1803,7 @@ h1 .sel{font-weight:900}
 <section class="sec vhub" style="padding-top:0"><div class="wrap">
   <div class="series-tiles">
     <a class="stile" href="#videos-youssef"><img loading="lazy" decoding="async" src="videos/youssef/intro-main.jpg" alt="يوسف خليل في الفيديو التعريفي"><div class="stile-cap"><span class="vsub">تعريفي</span><h3>يوسف</h3><p>أنا مين وبشتغل إزاي، في دقيقة ونص.</p><span class="stile-go" aria-hidden="true">ادخل القسم ←</span></div></a>
-    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="videos/stick/cover.jpg" alt="غلاف سلسلة شخبطة تسويق"><div class="stile-cap"><span class="vsub">حلقات مرسومة</span><h3>شخبطة تسويق</h3><p>فكرة تسويق واحدة في دقيقة، بالرسم البسيط.</p><span class="stile-go" aria-hidden="true">ادخل القسم ←</span></div></a>
+    <a class="stile" href="#videos-stick"><img loading="lazy" decoding="async" src="videos/stick/cover.jpg" alt="غلاف سلسلة شخبطة تسويق"><div class="stile-cap"><span class="vsub">حلقات مرسومة</span><h3>شخبطة تسويق</h3><p>سلسلة فيديوهات مرسومة. كل فيديو بيشرح فكرة تسويق واحدة في دقيقة.</p><span class="stile-go" aria-hidden="true">ادخل القسم ←</span></div></a>
     <a class="stile" href="#videos-whatif"><img loading="lazy" decoding="async" src="videos/whatif/ep1-poster.jpg" alt="بوستر فيلم محمد علي والقلعة"><div class="stile-cap"><span class="vsub">أفلام قصيرة</span><h3>ماذا لو…؟</h3><p>أحداث تاريخية بعين مسوّق: القلعة، نابليون، تايتانيك.</p><span class="stile-go" aria-hidden="true">ادخل القسم ←</span></div></a>
   </div>
 </div></section>
@@ -1726,8 +1831,8 @@ h1 .sel{font-weight:900}
   <div class="series-head">
     <div class="with-cover"><img class="series-cover" loading="lazy" decoding="async" src="videos/stick/cover.jpg" alt="غلاف سلسلة شخبطة تسويق"><div><div class="tagline-s">SERIES 02 · MARKETING SKETCHES</div><h2>شخبطة <span class="red">تسويق</span></h2></div></div>
     <div>
-      <p><b>الفكرة:</b> ورقة كراسة وراجل مرسوم بالعصاية، وفكرة تسويق واحدة في حوالي دقيقة.</p>
-      <p><b>الهدف:</b> صاحب البيزنس يفهم أرقامه وقراراته من غير مصطلحات. كل حلقة بتجاوب سؤال واحد: الخصم ده بيكسّبني؟ الـ ROAS ده كويس؟ أكبّر الإعلان إمتى؟</p>
+      <p><b>الفكرة:</b> سلسلة فيديوهات قصيرة مرسومة على ورقة كراسة براجل بالعصاية. كل فيديو بيشرح فكرة تسويق واحدة في حوالي دقيقة.</p>
+      <p><b>الهدف:</b> صاحب البيزنس يفهم أرقامه وقراراته من غير مصطلحات. كل فيديو بيجاوب سؤال واحد، زي: الخصم ده بيكسّبني؟ الـ ROAS ده كويس؟ أكبّر الإعلان إمتى؟</p>
     </div>
   </div>
   <div class="season">
@@ -1896,6 +2001,21 @@ document.documentElement.setAttribute('lang','ar');
     a.addEventListener('click',function(e){
       e.preventDefault();
       if(state===2 && window.Calendly) open(a.href); else load(a.href);
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  if(window.matchMedia('(max-width:860px)').matches) document.querySelectorAll('details.acc').forEach(function(d){ d.open=false; });
+  document.querySelectorAll('[data-go]').forEach(function(b){
+    b.addEventListener('click',function(){ var t=document.getElementById(b.dataset.go); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); });
+  });
+  var fs=document.querySelectorAll('.cf');
+  fs.forEach(function(f){
+    f.addEventListener('click',function(){
+      fs.forEach(function(x){ x.classList.toggle('on',x===f); x.setAttribute('aria-pressed',x===f?'true':'false'); });
+      document.querySelectorAll('.cx').forEach(function(c){ c.hidden=!(f.dataset.cat==='all'||c.dataset.cat===f.dataset.cat); });
     });
   });
 })();
