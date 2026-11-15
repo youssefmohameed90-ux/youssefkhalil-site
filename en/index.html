@@ -597,6 +597,60 @@ h1 .sel{font-weight:900}
 .cs-nums span{font-size:.82rem;line-height:1.4}
 @media (max-width:860px){.cs-nums{flex-wrap:wrap}.cs-nums b{font-size:2.2rem}}
 
+/* ===== v26: results index + one page per case ===== */
+.cx-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
+.cx{position:relative;background:var(--sheet);border:2px solid var(--line);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.cx:hover,.cx:focus-within{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--black)}
+.cx img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:2px solid var(--line)}
+.cx-body{padding:20px 24px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cx h2{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.45;letter-spacing:0}
+.cx h2 a{color:inherit;text-decoration:none}
+.cx h2 a::after{content:"";position:absolute;inset:0}
+.cx-num{display:flex;align-items:baseline;gap:12px;margin-top:10px;padding-top:14px;border-top:2px solid var(--line)}
+.cx-num b{font-family:var(--en);font-stretch:125%;font-weight:900;font-size:2.3rem;line-height:1;direction:ltr;font-variant-numeric:tabular-nums}
+.cx-num span{color:var(--muted);font-size:.9rem}
+.cx-more{margin-top:auto;padding-top:12px;font-family:var(--ar);font-weight:800;font-size:.9rem;color:var(--red)}
+.cases-grid .pola{position:relative}
+.cases-grid .pola h3 a{color:inherit;text-decoration:none}
+.cases-grid .pola h3 a::after{content:"";position:absolute;inset:0}
+.cp-top{padding-block:26px 0}
+.cp-back{display:inline-block;font-family:var(--ar);font-weight:800;font-size:.9rem;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;margin-bottom:26px}
+.cp .cp-title{font-family:var(--ar);font-weight:900;font-size:clamp(2rem,5.2vw,4rem);line-height:1.3;letter-spacing:-.01em;max-width:18ch}
+.cp-lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--muted);max-width:60ch;margin-top:14px}
+.cp-cover{margin:34px 0 0;border:2px solid var(--line);box-shadow:8px 8px 0 var(--black);background:var(--black)}
+.cp-cover img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block}
+.cs-nums.cp-nums{justify-content:flex-start;flex-wrap:wrap;gap:18px 56px;padding:30px 0 28px;border-bottom:2px solid var(--line)}
+.cp-main{padding-top:44px}
+.cp-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:60px;align-items:start}
+.cp-sec{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 12px;margin-bottom:38px}
+.cp-sec .n{font-family:var(--en);font-stretch:125%;font-weight:900;color:var(--red);font-size:1.05rem;padding-top:.5em;direction:ltr}
+.cp .cp-sec h2{font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.4;letter-spacing:0}
+.cp-sec p{margin-top:10px;max-width:62ch;font-size:1.06rem}
+.cp-sec ul{margin:12px 0 0;padding:0;list-style:none;max-width:62ch}
+.cp-sec li{position:relative;padding:9px 0;padding-inline-start:22px;border-top:1px solid rgba(0,0,0,.14);font-size:1.03rem}
+.cp-sec li::before{content:"";position:absolute;inset-inline-start:0;top:1.15em;width:9px;height:9px;background:var(--red)}
+.cp-side{position:sticky;top:96px;display:grid;gap:18px}
+.cp-box{background:var(--black);color:var(--on-black);padding:22px 24px}
+.cp-box h3{font-size:.85rem;font-weight:800;color:var(--red);margin-bottom:8px;letter-spacing:0}
+.cp-box.light{background:var(--sheet);color:var(--ink);border:2px solid var(--line)}
+.cp-lesson{font-family:var(--ar);font-weight:900;font-size:1.3rem;line-height:1.6}
+.cp-note{font-size:.86rem;color:var(--muted)}
+.cp-next{display:flex;flex-direction:column;gap:4px;margin-top:20px;padding:26px 0 6px;border-top:2px solid var(--line);text-decoration:none}
+.cp-next span{font-family:var(--ar);font-weight:800;font-size:.88rem;color:var(--red)}
+.cp-next b{font-family:var(--ar);font-weight:900;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.4}
+.cp-next:hover b{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:6px}
+@media (max-width:860px){
+  .cx-grid{grid-template-columns:1fr;gap:26px}
+  .cx:hover{transform:none;box-shadow:none}
+  .cp-cover{margin-top:24px;box-shadow:5px 5px 0 var(--black)}
+  .cp-cover img{aspect-ratio:3/2}
+  .cs-nums.cp-nums{gap:14px 30px;padding:22px 0}
+  .cp-main{padding-top:30px}
+  .cp-body{grid-template-columns:1fr;gap:10px}
+  .cp-sec{grid-template-columns:34px minmax(0,1fr);gap:0 6px;margin-bottom:30px}
+  .cp-side{position:static}
+}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -626,6 +680,12 @@ h1 .hello{font-size:clamp(2.4rem,5vw,4rem);line-height:1.15}
 .cases-grid .clg-strip{font-size:.7rem}
 nav{font-weight:800;font-size:.86rem}
 .lang{font-family:var(--ar)}
+.cp .cp-title,.cp-lesson,.cp-next b,.cp-next span,.cp-back,.cx-more,.cs-meta,.cp-box h3{font-family:var(--en),var(--ar);font-stretch:112%}
+.cp .cp-title{font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.15;letter-spacing:-.02em;max-width:22ch}
+.cp .cp-sec h2{font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.3;letter-spacing:-.01em}
+.cx h2{font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.3;letter-spacing:-.01em}
+.cp-lesson{font-size:1.2rem;line-height:1.4}
+.cp-next b{line-height:1.25}
 @media (max-width:860px){
   .hero-text{padding:12px 0 8px}
   h1{font-size:1.5rem}
@@ -746,22 +806,22 @@ nav{font-weight:800;font-size:.86rem}
   <div class="cases-grid">
     <article class="pola">
       <div class="shot clg dark" role="img" aria-label="Hajj & Umrah: SAR 180M sponsorship for one service"><span class="stk">Hajj & Umrah</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">180<i>M</i></div><div class="clg-strip">SAR sponsorship for one service</div></div>
-      <h3>A service that became the brand itself</h3>
+      <h3><a href="#case-sponsorship">A service that became the brand itself</a></h3>
       <p>A mobility solution for the elderly and people with disabilities during Hajj and Umrah. My role: I developed the concept and secured the sponsor.</p>
     </article>
     <article class="pola">
       <div class="shot clg" role="img" aria-label="Retail: SAR 48M in sales over the period"><span class="stk">Retail</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">48<i>M</i></div><div class="clg-strip">SAR in sales over the period</div></div>
-      <h3>A Ramadan season across a full branch network</h3>
+      <h3><a href="#case-retail">A Ramadan season across a full branch network</a></h3>
       <p>SAR 1.3M in marketing spend and one consistent campaign across every branch. My role: marketing leadership.</p>
     </article>
     <article class="pola">
       <div class="shot clg redstrip" role="img" aria-label="Automotive: 32.8× return on ad spend"><span class="stk">Automotive</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">return on ad spend</div></div>
-      <h3>A car launch at luxury-brand standards</h3>
+      <h3><a href="#case-automotive">A car launch at luxury-brand standards</a></h3>
       <p>A campaign budget of about USD 2.7M. My role: campaign consultant and performance review.</p>
     </article>
     <article class="pola">
       <div class="shot clg" role="img" aria-label="Real estate: 2× conversion rate on the same budget"><span class="stk">Real estate</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2<i>×</i></div><div class="clg-strip">conversion rate, same budget</div></div>
-      <h3>More sales with no extra ad spend</h3>
+      <h3><a href="#case-realestate">More sales with no extra ad spend</a></h3>
       <p>We fixed response, qualification and site visits. My role: rebuilding the customer journey with sales.</p>
     </article>
   </div>
@@ -849,66 +909,252 @@ nav{font-weight:800;font-size:.86rem}
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>SELECTED RESULTS</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">Results</h1>
-  <p>Eight projects from 15 years of work. For each one: the problem, what we did, the number, and exactly what my role was.</p>
+  <p>Eight projects from 15 years of work. Open any one for the full story: the problem, the decision, what was done, and the number.</p>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Retail · Fashion</div><h2>A Ramadan season across a full branch network</h2><p>One consistent seasonal campaign across every branch.</p></div>
-      <div class="cs-nums"><div><b>48M</b><span>SAR in sales over the period</span></div><div><b>1.3M</b><span>SAR in marketing spend</span></div></div>
+<div class="cx-grid">
+  <article class="cx">
+    <img src="../cases/sponsorship.jpg" alt="An elderly pilgrim in a wheelchair with an attendant in a wide marble courtyard" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Hajj and Umrah · Saudi Arabia</div>
+      <h2><a href="#case-sponsorship">A service that became the brand itself</a></h2>
+      <div class="cx-num"><b>180M</b><span>SAR sponsorship value</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>Capture the Ramadan shopping season with one brand and offer experience across many branches.</dd></div><div><dt>The strategy</dt><dd>Seasonal positioning, social reach, influencers, and tying the campaign to branch demand.</dd></div><div><dt>The execution</dt><dd>Integrated planning, paid social, influencers, and coordination with branch management.</dd></div><div><dt>My role</dt><dd>Marketing leadership at group level: strategy, planning and team management.</dd></div></dl><p class="cs-foot">The SAR 48M is total sales for the period, not attributed to advertising alone.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Mercedes-Benz · Automotive</div><h2>A car launch at luxury-brand standards</h2><p>Real demand for a new model without lowering the brand's standards.</p></div>
-      <div class="cs-nums"><div><b>32.8×</b><span>return on ad spend</span></div><div><b>$2.7M</b><span>approximate campaign budget</span></div></div>
+  <article class="cx">
+    <img src="../cases/retail.jpg" alt="Shoppers in a busy clothing store during Ramadan" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Retail · Fashion · Saudi Arabia</div>
+      <h2><a href="#case-retail">A Ramadan season across a full branch network</a></h2>
+      <div class="cx-num"><b>48M</b><span>SAR in sales over the period</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>Support the launch of a new car with clear luxury positioning and generate measurable demand.</dd></div><div><dt>The strategy</dt><dd>Connect the brand story to audience buying intent in one launch campaign with clear priorities.</dd></div><div><dt>The execution</dt><dd>Planning across digital, production and campaign partners, with ongoing performance reviews.</dd></div><div><dt>My role</dt><dd>Consultant: strategic oversight, campaign direction and performance review.</dd></div></dl>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Burger King · Restaurants · Saudi Arabia</div><h2>A 360° campaign in the quick-service market</h2><p>Tying the brand message to commercial performance in a highly competitive market.</p></div>
-      <div class="cs-nums"><div><b>73M</b><span>SAR in sales over the period</span></div><div><b>900K</b><span>SAR campaign budget</span></div></div>
+  <article class="cx">
+    <img src="../cases/automotive.jpg" alt="A new car under a cover moments before its reveal at a launch event" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Mercedes · Automotive</div>
+      <h2><a href="#case-automotive">A car launch at luxury-brand standards</a></h2>
+      <div class="cx-num"><b>32.8×</b><span>return on ad spend</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>An integrated campaign that reaches the customer at every touchpoint.</dd></div><div><dt>The strategy</dt><dd>One message and one commercial measure, instead of each channel working alone.</dd></div><div><dt>The execution</dt><dd>Planning and coordinating a 360° campaign across creative and every channel.</dd></div><div><dt>My role</dt><dd>Leading the campaign's marketing and coordinating the integrated approach.</dd></div></dl><p class="cs-foot">The SAR 73M is business sales for the period, not paid-media revenue alone.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Hajj & Umrah mobility services · Saudi Arabia</div><h2>A service that became the brand itself</h2><p>A mobility solution for the elderly and people with disabilities, in a setting where traditional advertising is restricted.</p></div>
-      <div class="cs-nums"><div><b>180M</b><span>SAR sponsorship I secured</span></div></div>
+  <article class="cx">
+    <img src="../cases/qsr.jpg" alt="Customers at the counter of a busy fast-food restaurant at night" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Burger King · Restaurants · Saudi Arabia</div>
+      <h2><a href="#case-qsr">A 360° campaign in the quick-service market</a></h2>
+      <div class="cx-num"><b>73M</b><span>SAR in sales over the period</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>Build a meaningful service in a highly regulated place with no room for ordinary advertising.</dd></div><div><dt>The strategy</dt><dd>Make the service itself the platform for the brand, sponsorships and the visitor experience.</dd></div><div><dt>The execution</dt><dd>Concept development, brand strategy, launch plan and sponsorship model.</dd></div><div><dt>My role</dt><dd>I developed the business and brand concept, and secured a SAR 180M sponsor.</dd></div></dl><p class="cs-foot">The sponsor's name is confidential under the contract.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Real estate · Lead management</div><h2>More sales with no extra ad spend</h2><p>Marketing says the numbers look good while sales keep missing target.</p></div>
-      <div class="cs-nums"><div><b>2×</b><span>conversion rate</span></div><div><b>-35%</b><span>cost per visit</span></div><div><b>-40%</b><span>lost leads</span></div></div>
+  <article class="cx">
+    <img src="../cases/realestate.jpg" alt="Buyers looking at a property development model with a sales agent" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Real estate · Lead management</div>
+      <h2><a href="#case-realestate">More sales with no extra ad spend</a></h2>
+      <div class="cx-num"><b>2×</b><span>conversion rate</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>Lots of leads, few site visits. Buying more traffic wouldn't have solved anything.</dd></div><div><dt>The strategy</dt><dd>Fix the journey from the first message through to the visit and the close.</dd></div><div><dt>The execution</dt><dd>Faster response, qualifying questions, visit scheduling, and a clear owner for every stage.</dd></div><div><dt>My role</dt><dd>Rebuilding the customer journey with the sales team.</dd></div></dl><p class="cs-foot">In under 60 days, on the same ad budget. Ad click-through rate rose from 0.8% to about 2%.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Luxury perfumes · Saudi Arabia</div><h2>A 12.8 ROAS, and the company was losing money</h2><p>SAR 1.28M in sales from SAR 100K in ads, and no net profit to show for it.</p></div>
-      <div class="cs-nums"><div><b>+180%</b><span>net profit</span></div><div><b>2.4</b><span>profit per SAR of ad spend, up from 0.5</span></div></div>
+  <article class="cx">
+    <img src="../cases/perfumes.jpg" alt="A hand presenting a luxury perfume bottle on a marble counter" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Luxury perfumes · Saudi Arabia</div>
+      <h2><a href="#case-perfumes">A 12.8 ROAS, and the company was losing money</a></h2>
+      <div class="cx-num"><b>+180%</b><span>net profit</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>Every metric said success, but when we calculated net profit, each SAR of ad spend was returning only half a SAR in profit.</dd></div><div><dt>The strategy</dt><dd>Measure by profit instead of sales: profitability per product, with campaigns split by margin and acquisition cost.</dd></div><div><dt>The execution</dt><dd>A review of product, shipping, returns and payment costs, pricing benchmarked against competitors, and fewer returns through a better customer experience.</dd></div><div><dt>My role</dt><dd>Consultant: I diagnosed the problem and led the restructuring of campaigns and pricing.</dd></div></dl><p class="cs-foot">In two months ROAS dropped from 12.8 to 8.2 while net profit rose 180%.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Skincare · Egypt, UAE & Saudi Arabia</div><h2>From a 1.8 ROAS to 5.2 in 90 days</h2><p>A brand with 22 products spending USD 15K a month while returns stood still.</p></div>
-      <div class="cs-nums"><div><b>5.2×</b><span>return on ad spend, up from 1.8</span></div><div><b>$78.5K</b><span>monthly sales, up from $27K</span></div><div><b>-38%</b><span>cost per purchase</span></div></div>
+  <article class="cx">
+    <img src="../cases/skincare.jpg" alt="Skincare products lined up on a shelf with a hand reaching for one" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Skincare · Egypt, UAE & Saudi Arabia</div>
+      <h2><a href="#case-skincare">From a 1.8 ROAS to 5.2 in 90 days</a></h2>
+      <div class="cx-num"><b>5.2×</b><span>return on ad spend, up from 1.8</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>A crowded market with similar prices, and 70% of the budget going to the top of the funnel with no customer nurturing.</dd></div><div><dt>The strategy</dt><dd>Redistribute the budget across funnel stages, add Google alongside Meta, and build different content for each segment.</dd></div><div><dt>The execution</dt><dd>A purchase-journey audit, Performance Max and Search on Google, audiences segmented by skin type and behaviour, and customer-generated content with educational videos.</dd></div><div><dt>My role</dt><dd>I led the strategy and execution with my team.</dd></div></dl><p class="cs-foot">Site visits rose from 42K to 117K, and customer messages from 220 to 940.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">Real estate · Ramadan season · Cairo</div><h2>We raised the budget in Ramadan while the whole market was cutting</h2><p>A residential project with an ad budget of about EGP 3.8M, and a CFO who wanted to pause the campaigns.</p></div>
-      <div class="cs-nums"><div><b>4.2×</b><span>return on investment, up from 3.1×</span></div><div><b>+24%</b><span>total sales</span></div><div><b>+34%</b><span>lead-to-visit conversion</span></div></div>
+  <article class="cx">
+    <img src="../cases/ramadan.jpg" alt="A handshake over a contract and apartment keys beside a window overlooking buildings" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">Real estate · Ramadan season · Cairo</div>
+      <h2><a href="#case-ramadan">We raised the budget in Ramadan while the whole market was cutting</a></h2>
+      <div class="cx-num"><b>4.2×</b><span>return on investment, up from 3.1×</span></div>
+      <span class="cx-more" aria-hidden="true">Read the case →</span>
     </div>
-    <dl class="cs-grid"><div><dt>The challenge</dt><dd>A week before Ramadan, cost per lead hit EGP 420 and the question was: pause the campaigns or cut them in half?</dd></div><div><dt>The strategy</dt><dd>The previous Ramadan’s data showed fewer leads but more serious ones, so we raised the budget by 30% instead of cutting it.</dd></div><div><dt>The execution</dt><dd>Ads after iftar only, a new sales script, a 7-minute response target, leads sorted by intent, and ads connected to the CRM and the site team.</dd></div><div><dt>My role</dt><dd>Managing the ad budget and leading the decision with sales and operations.</dd></div></dl><p class="cs-foot">Leads fell 14% from the previous month while total sales rose 24%.</p>
   </article>
+</div>
 </div></section>
+</div>
+
+<div class="view cp" id="v-case-sponsorship">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Hajj and Umrah · Saudi Arabia</div>
+  <h1 class="cp-title">A service that became the brand itself</h1>
+  <p class="cp-lead">A mobility solution for elderly and disabled pilgrims, in a place where traditional advertising is restricted. The outcome: a single sponsor worth SAR 180M.</p>
+  <figure class="cp-cover"><img src="../cases/sponsorship.jpg" alt="An elderly pilgrim in a wheelchair with an attendant in a wide marble courtyard" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>180M</b><span>SAR sponsorship value</span></div><div><b>1</b><span>one sponsor for the whole service</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>Background</h2><p>During Hajj and Umrah, elderly and disabled pilgrims need a safe, comfortable way to move through very large crowds. This service was built specifically for them.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>The challenge</h2><p>The environment is tightly regulated and traditional advertising is restricted. No billboards, no campaigns in the form any brand is used to.</p><p>So the question was: how do you build a brand and bring in a sponsor where there is no advertising space?</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The idea</h2><p>Instead of looking for ad space, we made the service itself the platform: it is the brand, the sponsorship space and the visitor experience.</p><p>Visitors meet the brand while actually using the service, and the sponsor appears inside something that matters to people, not inside an ad.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Developed the business concept from the start.</li><li>Built the brand strategy.</li><li>Set the launch plan.</li><li>Designed the sponsorship model and took it to sponsors.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>One sponsor came in at SAR 180M.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>I developed the business and brand concept, and secured a SAR 180M sponsor.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">When advertising is restricted, the service itself becomes the advertising.</p></div>
+    <p class="cp-note">The sponsor's name is confidential under the contract.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-retail"><span>Next case →</span><b>A Ramadan season across a full branch network</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-retail">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Retail · Fashion · Saudi Arabia</div>
+  <h1 class="cp-title">A Ramadan season across a full branch network</h1>
+  <p class="cp-lead">One consistent seasonal campaign across every branch. SAR 48M in sales for the period on SAR 1.3M of marketing spend.</p>
+  <figure class="cp-cover"><img src="../cases/retail.jpg" alt="Shoppers in a busy clothing store during Ramadan" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>48M</b><span>SAR in sales over the period</span></div><div><b>1.3M</b><span>SAR in marketing spend</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>Background</h2><p>Ramadan is the most important buying season in fashion. The group runs many branches, each with its own audience and demand.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>The challenge</h2><p>Capture the buying season with one brand and offer experience across all branches, without each branch going out with a different look and message.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The strategy</h2><p>One seasonal positioning for the brand, broad reach through social and influencers, and a campaign tied to demand at each branch rather than a generic one.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Integrated planning for the whole season before it started.</li><li>Paid social advertising.</li><li>Influencer campaigns.</li><li>Daily coordination with branch management.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>Sales for the period reached SAR 48M, with marketing spend of SAR 1.3M.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Marketing leadership at group level: strategy, planning and team management.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">In peak seasons, one consistent campaign across all branches beats a campaign per branch.</p></div>
+    <p class="cp-note">The SAR 48M is total sales for the period, not attributed to advertising alone.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-automotive"><span>Next case →</span><b>A car launch at luxury-brand standards</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-automotive">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Mercedes · Automotive</div>
+  <h1 class="cp-title">A car launch at luxury-brand standards</h1>
+  <p class="cp-lead">Real demand for a new model without the brand stepping down from its level. Return on ad spend: 32.8×.</p>
+  <figure class="cp-cover"><img src="../cases/automotive.jpg" alt="A new car under a cover moments before its reveal at a launch event" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>32.8×</b><span>return on ad spend</span></div><div><b>$2.7M</b><span>approximate campaign budget</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>Background</h2><p>The launch of a new model for a luxury brand. In this category, how the campaign looks is part of the product’s value.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>The challenge</h2><p>Support the launch with clear luxury positioning and, at the same time, generate demand that can be measured. Both together, not one at the expense of the other.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The strategy</h2><p>We tied the brand story to the audience’s purchase intent in one launch campaign with clear priorities.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Digital planning for the campaign.</li><li>Production planning.</li><li>Coordinating campaign partners.</li><li>Continuous performance reviews throughout the campaign.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>A 32.8× return on roughly USD 2.7M of ad spend.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Consultant: strategic oversight, campaign direction and performance review.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">A luxury brand does not have to choose between its image and its sales.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-qsr"><span>Next case →</span><b>A 360° campaign in the quick-service market</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-qsr">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Burger King · Restaurants · Saudi Arabia</div>
+  <h1 class="cp-title">A 360° campaign in the quick-service market</h1>
+  <p class="cp-lead">Linking the brand message to commercial performance in a fiercely competitive market. SAR 73M in sales for the period on a SAR 900K campaign budget.</p>
+  <figure class="cp-cover"><img src="../cases/qsr.jpg" alt="Customers at the counter of a busy fast-food restaurant at night" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>73M</b><span>SAR in sales over the period</span></div><div><b>900K</b><span>SAR campaign budget</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>Background</h2><p>Quick-service restaurants are among the most competitive markets in Saudi Arabia, and a customer meets the brand in many places in a single day.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>The challenge</h2><p>An integrated campaign that reaches the customer at every touchpoint, without each channel saying something different.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The strategy</h2><p>One message and one commercial measure, instead of each channel working and being measured on its own.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Planning a full 360 campaign.</li><li>Coordinating creative with every channel.</li><li>Tracking commercial performance, not channel metrics alone.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>Business sales for the period reached SAR 73M, on a campaign budget of SAR 900K.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Leading the campaign's marketing and coordinating the integrated approach.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">When every channel says the same sentence, the customer hears it.</p></div>
+    <p class="cp-note">The SAR 73M is business sales for the period, not paid-media revenue alone.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-realestate"><span>Next case →</span><b>More sales with no extra ad spend</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-realestate">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Real estate · Lead management</div>
+  <h1 class="cp-title">More sales with no extra ad spend</h1>
+  <p class="cp-lead">Marketing said the numbers looked good while sales kept missing target. In under 60 days the conversion rate doubled on the same budget.</p>
+  <figure class="cp-cover"><img src="../cases/realestate.jpg" alt="Buyers looking at a property development model with a sales agent" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>2×</b><span>conversion rate</span></div><div><b>-35%</b><span>cost per visit</span></div><div><b>-40%</b><span>lost leads</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>The problem</h2><p>Plenty of leads, very few site visits. Marketing believed its job was done, and sales believed the leads were weak.</p><p>The easy answer was to buy more traffic. That would only have made the same problem bigger.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>What the numbers said</h2><ul><li>A property buyer talks to between 3 and 7 developers before deciding.</li><li>The decision takes 45 to 120 days.</li><li>More than 60% of leads drop out before they reach a site visit.</li></ul><p>So the problem was not the number of leads. It was what happened after a lead came in.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The decision</h2><p>Leave the ad budget exactly as it was, and fix the journey from first message to site visit to close.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Scoring every lead by how serious it is.</li><li>Smart routing of leads to the sales team.</li><li>Automated follow-up so no lead is forgotten.</li><li>Faster replies and clear qualifying questions.</li><li>Coordinated site visits and a clear owner for every stage.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><ul><li>Conversion rate roughly doubled.</li><li>Cost per visit fell by more than 35%.</li><li>Lost leads dropped by more than 40%.</li><li>Contact rate rose by about 30%.</li><li>Ad click-through rate went from 0.8% to about 2%.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Rebuilding the customer journey with the sales team.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">Before you buy more leads, find out where the ones you already have are going.</p></div>
+    <p class="cp-note">All of it in under 60 days, on the same ad budget.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-perfumes"><span>Next case →</span><b>A 12.8 ROAS, and the company was losing money</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-perfumes">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Luxury perfumes · Saudi Arabia</div>
+  <h1 class="cp-title">A 12.8 ROAS, and the company was losing money</h1>
+  <p class="cp-lead">SAR 1.28M in sales from SAR 100K in ads, and no net profit to show for it. In two months net profit rose 180%.</p>
+  <figure class="cp-cover"><img src="../cases/perfumes.jpg" alt="A hand presenting a luxury perfume bottle on a marble counter" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>+180%</b><span>net profit</span></div><div><b>2.4</b><span>profit per SAR of ad spend, up from 0.5</span></div><div><b>2</b><span>months only</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>The problem</h2><p>On paper everything looked excellent: SAR 100K in ads brought SAR 1.28M in sales. A ROAS of 12.8.</p><p>Yet the owner was not seeing money at the end of it.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>What the numbers said</h2><p>Once we calculated net profit after every cost, each riyal of advertising was returning only half a riyal of profit. A POAS of 0.5.</p><p>Sales were high, but a large share came from low-margin products, with shipping, returns and payment fees on top.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The decision</h2><p>Stop measuring by sales and measure by profit. Campaigns get built around margin, not around the ROAS figure.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Reviewed every cost: product, shipping, returns and payment.</li><li>Calculated profitability for each product on its own.</li><li>Compared pricing against competitors.</li><li>Restructured campaigns by profit margin and acquisition cost.</li><li>Reduced returns by improving the customer experience.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>In two months ROAS came down from 12.8 to 8.2, profit per riyal of ads went from 0.5 to 2.4, and net profit rose 180%.</p><p>The ROAS number went down, and the company started making money.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Consultant: I diagnosed the problem and led the restructuring of campaigns and pricing.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">ROAS tells you how much you sold. POAS tells you how much you made.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-skincare"><span>Next case →</span><b>From a 1.8 ROAS to 5.2 in 90 days</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-skincare">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Skincare · Egypt, UAE & Saudi Arabia</div>
+  <h1 class="cp-title">From a 1.8 ROAS to 5.2 in 90 days</h1>
+  <p class="cp-lead">A 22-product brand spending USD 15K a month with returns that would not move. The budget was not the problem. How it was split was.</p>
+  <figure class="cp-cover"><img src="../cases/skincare.jpg" alt="Skincare products lined up on a shelf with a hand reaching for one" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>5.2×</b><span>return on ad spend, up from 1.8</span></div><div><b>$78.5K</b><span>monthly sales, up from $27K</span></div><div><b>-38%</b><span>cost per purchase</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>Background</h2><p>A skincare brand with 22 products selling in Egypt, the UAE and Saudi Arabia. A crowded market with similar prices, and a budget of USD 15K a month.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>What the numbers said</h2><p>We found three problems, each with its own fix:</p><ul><li>70% of the budget was going to the top of the funnel, with no nurturing of the customer afterwards.</li><li>All spend sat on one platform, and people actively searching for the product were not being reached.</li><li>The same ad was shown to everyone, whatever their skin type or behaviour.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>What we did</h2><p>1. We re-split the budget: 40% bottom of funnel, 35% middle, 25% top. Conversion rate reached 2.3× and cost per purchase fell 37%.</p><p>2. We added Google alongside Meta: Performance Max and Search. Search click-through reached 7.9%, bounce rate fell 45%, and Google’s return overtook Meta’s.</p><p>3. We built a creative matrix per segment: customer content and educational videos. Click-through rose 66%, CPM fell 23%, and purchases tripled.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>The result</h2><ul><li>Return on ad spend from 1.8 to 5.2.</li><li>Monthly sales from USD 27K to USD 78.5K.</li><li>Site visits from 42K to 117K.</li><li>Cost per purchase from USD 22.5 to USD 13.9.</li><li>Customer messages on Meta from 220 to 940.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>I led the strategy and execution with my team.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">Before you raise the budget, look at how it is split.</p></div>
+    <p class="cp-note">All figures within 90 days, on the same monthly budget.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-ramadan"><span>Next case →</span><b>We raised the budget in Ramadan while the whole market was cutting</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-ramadan">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">← All results</a>
+  <div class="cs-meta">Real estate · Ramadan season · Cairo</div>
+  <h1 class="cp-title">We raised the budget in Ramadan while the whole market was cutting</h1>
+  <p class="cp-lead">A residential project in East Cairo with an ad budget of about EGP 3.8M, and a CFO who wanted the campaigns stopped. We decided the opposite.</p>
+  <figure class="cp-cover"><img src="../cases/ramadan.jpg" alt="A handshake over a contract and apartment keys beside a window overlooking buildings" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>4.2×</b><span>return on investment, up from 3.1×</span></div><div><b>+24%</b><span>total sales</span></div><div><b>+34%</b><span>lead-to-visit conversion</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>The problem</h2><p>A week before Ramadan, cost per lead had reached EGP 420. Lead-to-visit conversion stood at 18% and the close rate at 11%.</p><p>The whole market cuts spend in Ramadan, and the question in the meeting was: do we stop the campaigns or cut them in half?</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>What the numbers said</h2><p>Before deciding, we went back to the data from the previous Ramadan:</p><ul><li>The number of leads fell 22%.</li><li>Site-visit attendance rose 31%.</li><li>The close rate rose 19%.</li></ul><p>So fewer people enquire during Ramadan, but the ones who do are more serious.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>The decision</h2><p>We raised the budget by 30% instead of cutting it, and changed the whole way of working to fit the month.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>What we did</h2><ul><li>Ads ran after iftar only.</li><li>A new sales script suited to Ramadan.</li><li>Every lead answered within 7 minutes.</li><li>Leads sorted by seriousness: hot, warm and cold.</li><li>Ads connected to the CRM and the on-site team.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>The result</h2><p>After 30 days:</p><ul><li>The number of leads fell 14%.</li><li>Total sales rose 24%.</li><li>Return on investment went from 3.1× to 4.2×.</li><li>Lead-to-visit conversion rose 34%.</li><li>Revenue rose 22%.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>My role</h3><p>Managing the ad budget and leading the decision with sales and operations.</p></div>
+    <div class="cp-box light"><h3>The takeaway</h3><p class="cp-lesson">Fewer leads does not mean fewer sales. Ask the data before you cut the budget.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-sponsorship"><span>Next case →</span><b>A service that became the brand itself</b></a></div>
+</section>
 </div>
 
 <div class="view" id="v-about">
@@ -1099,13 +1345,13 @@ nav{font-weight:800;font-size:.86rem}
 document.documentElement.setAttribute('dir','ltr');
 document.documentElement.setAttribute('lang','en');
 (function(){
-  var names=['home','services','cases','videos','about'];
+  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan'];
   function show(){
     var r=(location.hash||'').replace('#','');
     if(names.indexOf(r)<0) r='home';
     names.forEach(function(n){ var v=document.getElementById('v-'+n); if(v) v.hidden=(n!==r); });
     document.querySelectorAll('nav a[data-route]').forEach(function(a){
-      if(a.dataset.route===r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      if(a.dataset.route===(r.indexOf('case-')===0?'cases':r)) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
     window.scrollTo(0,0);
   }

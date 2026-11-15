@@ -596,6 +596,60 @@ h1 .sel{font-weight:900}
 .cs-nums b{font-size:clamp(1.8rem,3.3vw,2.8rem);white-space:nowrap}
 .cs-nums span{font-size:.82rem;line-height:1.4}
 @media (max-width:860px){.cs-nums{flex-wrap:wrap}.cs-nums b{font-size:2.2rem}}
+
+/* ===== v26: results index + one page per case ===== */
+.cx-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 32px}
+.cx{position:relative;background:var(--sheet);border:2px solid var(--line);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.cx:hover,.cx:focus-within{transform:translate(-3px,-3px);box-shadow:7px 7px 0 var(--black)}
+.cx img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:2px solid var(--line)}
+.cx-body{padding:20px 24px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.cx h2{font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.45;letter-spacing:0}
+.cx h2 a{color:inherit;text-decoration:none}
+.cx h2 a::after{content:"";position:absolute;inset:0}
+.cx-num{display:flex;align-items:baseline;gap:12px;margin-top:10px;padding-top:14px;border-top:2px solid var(--line)}
+.cx-num b{font-family:var(--en);font-stretch:125%;font-weight:900;font-size:2.3rem;line-height:1;direction:ltr;font-variant-numeric:tabular-nums}
+.cx-num span{color:var(--muted);font-size:.9rem}
+.cx-more{margin-top:auto;padding-top:12px;font-family:var(--ar);font-weight:800;font-size:.9rem;color:var(--red)}
+.cases-grid .pola{position:relative}
+.cases-grid .pola h3 a{color:inherit;text-decoration:none}
+.cases-grid .pola h3 a::after{content:"";position:absolute;inset:0}
+.cp-top{padding-block:26px 0}
+.cp-back{display:inline-block;font-family:var(--ar);font-weight:800;font-size:.9rem;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px;margin-bottom:26px}
+.cp .cp-title{font-family:var(--ar);font-weight:900;font-size:clamp(2rem,5.2vw,4rem);line-height:1.3;letter-spacing:-.01em;max-width:18ch}
+.cp-lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--muted);max-width:60ch;margin-top:14px}
+.cp-cover{margin:34px 0 0;border:2px solid var(--line);box-shadow:8px 8px 0 var(--black);background:var(--black)}
+.cp-cover img{width:100%;height:auto;aspect-ratio:21/9;object-fit:cover;display:block}
+.cs-nums.cp-nums{justify-content:flex-start;flex-wrap:wrap;gap:18px 56px;padding:30px 0 28px;border-bottom:2px solid var(--line)}
+.cp-main{padding-top:44px}
+.cp-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:60px;align-items:start}
+.cp-sec{display:grid;grid-template-columns:48px minmax(0,1fr);gap:0 12px;margin-bottom:38px}
+.cp-sec .n{font-family:var(--en);font-stretch:125%;font-weight:900;color:var(--red);font-size:1.05rem;padding-top:.5em;direction:ltr}
+.cp .cp-sec h2{font-size:clamp(1.35rem,2.2vw,1.7rem);line-height:1.4;letter-spacing:0}
+.cp-sec p{margin-top:10px;max-width:62ch;font-size:1.06rem}
+.cp-sec ul{margin:12px 0 0;padding:0;list-style:none;max-width:62ch}
+.cp-sec li{position:relative;padding:9px 0;padding-inline-start:22px;border-top:1px solid rgba(0,0,0,.14);font-size:1.03rem}
+.cp-sec li::before{content:"";position:absolute;inset-inline-start:0;top:1.15em;width:9px;height:9px;background:var(--red)}
+.cp-side{position:sticky;top:96px;display:grid;gap:18px}
+.cp-box{background:var(--black);color:var(--on-black);padding:22px 24px}
+.cp-box h3{font-size:.85rem;font-weight:800;color:var(--red);margin-bottom:8px;letter-spacing:0}
+.cp-box.light{background:var(--sheet);color:var(--ink);border:2px solid var(--line)}
+.cp-lesson{font-family:var(--ar);font-weight:900;font-size:1.3rem;line-height:1.6}
+.cp-note{font-size:.86rem;color:var(--muted)}
+.cp-next{display:flex;flex-direction:column;gap:4px;margin-top:20px;padding:26px 0 6px;border-top:2px solid var(--line);text-decoration:none}
+.cp-next span{font-family:var(--ar);font-weight:800;font-size:.88rem;color:var(--red)}
+.cp-next b{font-family:var(--ar);font-weight:900;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.4}
+.cp-next:hover b{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:6px}
+@media (max-width:860px){
+  .cx-grid{grid-template-columns:1fr;gap:26px}
+  .cx:hover{transform:none;box-shadow:none}
+  .cp-cover{margin-top:24px;box-shadow:5px 5px 0 var(--black)}
+  .cp-cover img{aspect-ratio:3/2}
+  .cs-nums.cp-nums{gap:14px 30px;padding:22px 0}
+  .cp-main{padding-top:30px}
+  .cp-body{grid-template-columns:1fr;gap:10px}
+  .cp-sec{grid-template-columns:34px minmax(0,1fr);gap:0 6px;margin-bottom:30px}
+  .cp-side{position:static}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -702,22 +756,22 @@ h1 .sel{font-weight:900}
   <div class="cases-grid">
     <article class="pola">
       <div class="shot clg dark" role="img" aria-label="الحج والعمرة: 180M ريال رعاية لخدمة واحدة"><span class="stk">الحج والعمرة</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">180<i>M</i></div><div class="clg-strip">ريال رعاية لخدمة واحدة</div></div>
-      <h3>خدمة بقت هي نفسها البراند</h3>
+      <h3><a href="#case-sponsorship">خدمة بقت هي نفسها البراند</a></h3>
       <p>حل تنقل لكبار السن وذوي الإعاقة في الحج والعمرة. دوري: طورت الفكرة وجبت الراعي.</p>
     </article>
     <article class="pola">
       <div class="shot clg" role="img" aria-label="ريتيل: 48M ريال مبيعات الفترة"><span class="stk">ريتيل</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">48<i>M</i></div><div class="clg-strip">ريال مبيعات الفترة</div></div>
-      <h3>موسم رمضان على شبكة فروع كاملة</h3>
+      <h3><a href="#case-retail">موسم رمضان على شبكة فروع كاملة</a></h3>
       <p>صرف تسويقي 1.3 مليون ريال وحملة واحدة متسقة على كل الفروع. دوري: قيادة التسويق.</p>
     </article>
     <article class="pola">
       <div class="shot clg redstrip" role="img" aria-label="أوتوموتيف: 32.8× عائد على الصرف الإعلاني"><span class="stk">أوتوموتيف</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">32.8<i>×</i></div><div class="clg-strip">عائد على الصرف الإعلاني</div></div>
-      <h3>إطلاق سيارة بمعايير براند فاخر</h3>
+      <h3><a href="#case-automotive">إطلاق سيارة بمعايير براند فاخر</a></h3>
       <p>ميزانية حملة حوالي 2.7 مليون دولار. دوري: استشاري الحملة ومراجعة الأداء.</p>
     </article>
     <article class="pola">
       <div class="shot clg" role="img" aria-label="عقارات: 2× معدل التحويل بنفس الميزانية"><span class="stk">عقارات</span><span class="clg-stars" aria-hidden="true">✸✦</span><div class="clg-num">2<i>×</i></div><div class="clg-strip">معدل التحويل بنفس الميزانية</div></div>
-      <h3>مبيعات أكتر من غير زيادة في الإعلانات</h3>
+      <h3><a href="#case-realestate">مبيعات أكتر من غير زيادة في الإعلانات</a></h3>
       <p>صلحنا الرد والتأهيل والمعاينات. دوري: إعادة بناء رحلة العميل مع المبيعات.</p>
     </article>
   </div>
@@ -805,66 +859,252 @@ h1 .sel{font-weight:900}
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>SELECTED RESULTS</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">النتائج</h1>
-  <p>تمن مشاريع من 15 سنة شغل. في كل واحد: المشكلة، اللي عملناه، الرقم، ودوري بالظبط.</p>
+  <p>تمن مشاريع من 15 سنة شغل. افتح أي واحدة وشوف القصة كاملة: المشكلة، القرار، اللي اتعمل، والرقم.</p>
 </div></section>
 <section class="sec" style="padding-top:0"><div class="wrap">
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">ريتيل · أزياء وتجزئة</div><h2>موسم رمضان على شبكة فروع كاملة</h2><p>حملة موسمية واحدة متسقة على كل الفروع.</p></div>
-      <div class="cs-nums"><div><b>48M</b><span>ريال مبيعات الفترة</span></div><div><b>1.3M</b><span>ريال صرف تسويقي</span></div></div>
+<div class="cx-grid">
+  <article class="cx">
+    <img src="cases/sponsorship.jpg" alt="حاج كبير في السن على كرسي متحرك ومعاه مرافق في ساحة رخام واسعة" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">الحج والعمرة · السعودية</div>
+      <h2><a href="#case-sponsorship">خدمة بقت هي نفسها البراند</a></h2>
+      <div class="cx-num"><b>180M</b><span>ريال قيمة الرعاية</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>نلحق موسم الشراء في رمضان بتجربة واحدة للبراند والعروض على فروع كتير.</dd></div><div><dt>الاستراتيجية</dt><dd>تموضع موسمي، وصول من السوشيال، مؤثرين، وربط الحملة بطلب الفروع.</dd></div><div><dt>التنفيذ</dt><dd>تخطيط متكامل، إعلانات سوشيال مدفوعة، مؤثرين، وتنسيق مع إدارة الفروع.</dd></div><div><dt>دوري</dt><dd>قيادة التسويق في المجموعة: الاستراتيجية والتخطيط وإدارة الفرق.</dd></div></dl><p class="cs-foot">الـ 48 مليون مبيعات الفترة كلها، مش منسوبة للإعلانات لوحدها.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">مرسيدس · سيارات</div><h2>إطلاق سيارة بمعايير براند فاخر</h2><p>طلب حقيقي على موديل جديد من غير ما البراند ينزل عن مستواه.</p></div>
-      <div class="cs-nums"><div><b>32.8×</b><span>عائد على الصرف الإعلاني</span></div><div><b>$2.7M</b><span>ميزانية الحملة تقريباً</span></div></div>
+  <article class="cx">
+    <img src="cases/retail.jpg" alt="عملاء بيتسوقوا في محل ملابس زحمة في رمضان" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">ريتيل · أزياء وتجزئة · السعودية</div>
+      <h2><a href="#case-retail">موسم رمضان على شبكة فروع كاملة</a></h2>
+      <div class="cx-num"><b>48M</b><span>ريال مبيعات الفترة</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>ندعم إطلاق سيارة جديدة بتموضع فاخر واضح ونولّد طلب يتقاس.</dd></div><div><dt>الاستراتيجية</dt><dd>ربط قصة البراند بنية الشراء عند الجمهور في حملة إطلاق واحدة بأولويات واضحة.</dd></div><div><dt>التنفيذ</dt><dd>تخطيط للديجيتال والإنتاج وشركاء الحملة مع مراجعات أداء مستمرة.</dd></div><div><dt>دوري</dt><dd>استشاري: إشراف استراتيجي وتوجيه الحملة ومراجعة الأداء.</dd></div></dl>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">برجر كينج · مطاعم · السعودية</div><h2>حملة 360 في سوق المطاعم السريعة</h2><p>ربط رسالة البراند بالأداء التجاري في سوق شديد المنافسة.</p></div>
-      <div class="cs-nums"><div><b>73M</b><span>ريال مبيعات الفترة</span></div><div><b>900K</b><span>ريال ميزانية الحملة</span></div></div>
+  <article class="cx">
+    <img src="cases/automotive.jpg" alt="سيارة جديدة متغطية بقماش قبل لحظة الكشف عنها في حفل إطلاق" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">مرسيدس · أوتوموتيف</div>
+      <h2><a href="#case-automotive">إطلاق سيارة بمعايير براند فاخر</a></h2>
+      <div class="cx-num"><b>32.8×</b><span>عائد على الصرف الإعلاني</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>حملة متكاملة توصل للعميل من كل نقطة تواصل.</dd></div><div><dt>الاستراتيجية</dt><dd>رسالة واحدة وقياس تجاري واحد، بدل ما كل قناة تشتغل لوحدها.</dd></div><div><dt>التنفيذ</dt><dd>تخطيط وتنسيق حملة 360 بين الكرييتيف وكل القنوات.</dd></div><div><dt>دوري</dt><dd>قيادة تسويق الحملة وتنسيق المنهج المتكامل.</dd></div></dl><p class="cs-foot">الـ 73 مليون مبيعات البيزنس في الفترة، مش عائد الإعلانات المدفوعة لوحدها.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">خدمات تنقل الحج والعمرة · السعودية</div><h2>خدمة بقت هي نفسها البراند</h2><p>حل تنقل لكبار السن وذوي الإعاقة في بيئة الإعلان التقليدي فيها مقيّد.</p></div>
-      <div class="cs-nums"><div><b>180M</b><span>ريال قيمة الرعاية اللي جبتها</span></div></div>
+  <article class="cx">
+    <img src="cases/qsr.jpg" alt="عملاء واقفين على كاونتر مطعم وجبات سريعة زحمة بالليل" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">برجر كينج · مطاعم · السعودية</div>
+      <h2><a href="#case-qsr">حملة 360 في سوق المطاعم السريعة</a></h2>
+      <div class="cx-num"><b>73M</b><span>ريال مبيعات الفترة</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>نبني خدمة ليها معنى في مكان منظم جداً ومفيهوش مساحة إعلانات عادية.</dd></div><div><dt>الاستراتيجية</dt><dd>الخدمة نفسها تبقى منصة البراند والرعايات وتجربة الزائر.</dd></div><div><dt>التنفيذ</dt><dd>تطوير الفكرة، استراتيجية البراند، خطة الإطلاق، ونموذج الرعاية.</dd></div><div><dt>دوري</dt><dd>طورت فكرة البيزنس والبراند، وجبت راعي بـ 180 مليون ريال.</dd></div></dl><p class="cs-foot">اسم الراعي سري بحكم العقد.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">عقارات · إدارة العملاء المحتملين</div><h2>مبيعات أكتر من غير زيادة في الإعلانات</h2><p>التسويق بيقول الأرقام حلوة والمبيعات مش بتحقق التارجت.</p></div>
-      <div class="cs-nums"><div><b>2×</b><span>معدل التحويل</span></div><div><b>-35%</b><span>تكلفة الزيارة</span></div><div><b>-40%</b><span>ليدز ضايعة</span></div></div>
+  <article class="cx">
+    <img src="cases/realestate.jpg" alt="عملاء بيتفرجوا على ماكيت مشروع عقاري مع مسؤول مبيعات" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">عقارات · إدارة العملاء المحتملين</div>
+      <h2><a href="#case-realestate">مبيعات أكتر من غير زيادة في الإعلانات</a></h2>
+      <div class="cx-num"><b>2×</b><span>معدل التحويل</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>ليدز كتير ومعاينات قليلة. شراء ترافيك أكتر مكانش هيحل حاجة.</dd></div><div><dt>الاستراتيجية</dt><dd>نصلح الرحلة من أول رسالة لحد المعاينة والتقفيل.</dd></div><div><dt>التنفيذ</dt><dd>رد أسرع، أسئلة تأهيل، تنسيق معاينات، ومسؤول واضح عن كل مرحلة.</dd></div><div><dt>دوري</dt><dd>إعادة بناء رحلة العميل مع فريق المبيعات.</dd></div></dl><p class="cs-foot">في أقل من 60 يوم وبنفس ميزانية الإعلانات. نسبة النقر على الإعلانات طلعت من 0.8% لحوالي 2%.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">عطور فاخرة · السعودية</div><h2>ROAS 12.8 والشركة بتخسر</h2><p>مبيعات 1.28 مليون ريال من 100 ألف ريال إعلانات، والربح الصافي مش موجود.</p></div>
-      <div class="cs-nums"><div><b>+180%</b><span>صافي الربح</span></div><div><b>2.4</b><span>ربح لكل ريال إعلانات، كان 0.5</span></div></div>
+  <article class="cx">
+    <img src="cases/perfumes.jpg" alt="إيد بتعرض زجاجة عطر فاخرة على كاونتر رخام" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">عطور فاخرة · السعودية</div>
+      <h2><a href="#case-perfumes">ROAS 12.8 والشركة بتخسر</a></h2>
+      <div class="cx-num"><b>+180%</b><span>صافي الربح</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>كل المؤشرات بتقول نجاح، بس لما حسبنا الربح الصافي لقينا كل ريال إعلانات بيرجّع نص ريال ربح بس.</dd></div><div><dt>الاستراتيجية</dt><dd>نقيس بالربح بدل المبيعات: ربحية كل منتج لوحده، وحملات متقسمة على هامش الربح وتكلفة الاكتساب.</dd></div><div><dt>التنفيذ</dt><dd>مراجعة تكاليف المنتج والشحن والمرتجعات والدفع، مقارنة التسعير بالمنافسين، وتقليل المرتجعات بتحسين تجربة العميل.</dd></div><div><dt>دوري</dt><dd>استشاري: شخّصت المشكلة وقدت إعادة هيكلة الحملات والتسعير.</dd></div></dl><p class="cs-foot">في شهرين الـ ROAS نزل من 12.8 لـ 8.2، والربح الصافي زاد 180%.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">عناية بالبشرة · مصر والإمارات والسعودية</div><h2>من ROAS 1.8 لـ 5.2 في 90 يوم</h2><p>براند بـ 22 منتج بيصرف 15 ألف دولار في الشهر والعائد واقف.</p></div>
-      <div class="cs-nums"><div><b>5.2×</b><span>عائد على الصرف، كان 1.8</span></div><div><b>$78.5K</b><span>مبيعات شهرية، كانت $27K</span></div><div><b>-38%</b><span>تكلفة عملية الشراء</span></div></div>
+  <article class="cx">
+    <img src="cases/skincare.jpg" alt="منتجات عناية بالبشرة مرصوصة على رف وإيد بتاخد منها" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">عناية بالبشرة · مصر والإمارات والسعودية</div>
+      <h2><a href="#case-skincare">من ROAS 1.8 لـ 5.2 في 90 يوم</a></h2>
+      <div class="cx-num"><b>5.2×</b><span>عائد على الصرف، كان 1.8</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>سوق زحمة وأسعار متقاربة، و70% من الميزانية رايحة لأول الفانل من غير أي تأهيل للعميل.</dd></div><div><dt>الاستراتيجية</dt><dd>إعادة توزيع الميزانية على مراحل الفانل، إضافة جوجل جنب ميتا، ومحتوى مختلف لكل شريحة.</dd></div><div><dt>التنفيذ</dt><dd>مراجعة رحلة الشراء، Performance Max و Search على جوجل، تقسيم الجمهور حسب نوع البشرة والسلوك، ومحتوى من العملاء وفيديوهات تعليمية.</dd></div><div><dt>دوري</dt><dd>قدت الاستراتيجية والتنفيذ مع فريقي.</dd></div></dl><p class="cs-foot">زيارات الموقع زادت من 42 ألف لـ 117 ألف، ورسايل العملاء من 220 لـ 940.</p>
   </article>
-  <article class="cs">
-    <div class="cs-head">
-      <div><div class="cs-meta">عقارات · موسم رمضان · القاهرة</div><h2>زودنا الميزانية في رمضان والسوق كله بيقلل</h2><p>مشروع سكني بميزانية إعلانية حوالي 3.8 مليون جنيه، والمدير المالي عايز يوقف الحملات.</p></div>
-      <div class="cs-nums"><div><b>4.2×</b><span>عائد على الاستثمار، كان 3.1×</span></div><div><b>+24%</b><span>إجمالي المبيعات</span></div><div><b>+34%</b><span>تحويل من ليد لمعاينة</span></div></div>
+  <article class="cx">
+    <img src="cases/ramadan.jpg" alt="مصافحة فوق عقد ومفاتيح شقة جنب شباك بيطل على عمارات" width="1400" height="933" loading="lazy">
+    <div class="cx-body">
+      <div class="cs-meta">عقارات · موسم رمضان · القاهرة</div>
+      <h2><a href="#case-ramadan">زودنا الميزانية في رمضان والسوق كله بيقلل</a></h2>
+      <div class="cx-num"><b>4.2×</b><span>عائد على الاستثمار، كان 3.1×</span></div>
+      <span class="cx-more" aria-hidden="true">اقرأ الدراسة ←</span>
     </div>
-    <dl class="cs-grid"><div><dt>التحدي</dt><dd>قبل رمضان بأسبوع تكلفة الليد وصلت 420 جنيه، والسؤال كان: نوقف الحملات ولا نقلل النص؟</dd></div><div><dt>الاستراتيجية</dt><dd>بيانات رمضان اللي قبله قالت إن الليدز بتقل بس بتبقى أكتر جدية، فزودنا الميزانية 30% بدل ما نقللها.</dd></div><div><dt>التنفيذ</dt><dd>إعلانات بعد الإفطار بس، سكريبت مبيعات جديد، رد خلال 7 دقايق، تقسيم الليدز حسب الجدية، وربط الإعلانات بالـ CRM وفريق الموقع.</dd></div><div><dt>دوري</dt><dd>إدارة الميزانية الإعلانية وقيادة القرار مع المبيعات والتشغيل.</dd></div></dl><p class="cs-foot">عدد الليدز قل 14% عن الشهر اللي قبله، وإجمالي المبيعات زاد 24%.</p>
   </article>
+</div>
 </div></section>
+</div>
+
+<div class="view cp" id="v-case-sponsorship">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">الحج والعمرة · السعودية</div>
+  <h1 class="cp-title">خدمة بقت هي نفسها البراند</h1>
+  <p class="cp-lead">حل تنقل لكبار السن وذوي الإعاقة في الحج والعمرة، في مكان الإعلان التقليدي فيه مقيّد. النتيجة: راعي واحد بـ 180 مليون ريال.</p>
+  <figure class="cp-cover"><img src="cases/sponsorship.jpg" alt="حاج كبير في السن على كرسي متحرك ومعاه مرافق في ساحة رخام واسعة" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>180M</b><span>ريال قيمة الرعاية</span></div><div><b>1</b><span>راعي واحد للخدمة كلها</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>الخلفية</h2><p>في الحج والعمرة، كبار السن وذوي الإعاقة بيحتاجوا وسيلة تنقل مريحة وآمنة وسط زحمة كبيرة. الخدمة دي اتعملت ليهم مخصوص.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>التحدي</h2><p>المكان منظم جداً، والإعلان التقليدي فيه مقيّد. مفيش لوحات ولا حملات بالشكل اللي أي براند متعود عليه.</p><p>فالسؤال كان: إزاي نبني براند وندخل راعي في مكان مفيهوش مساحة إعلانات؟</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>الفكرة</h2><p>بدل ما ندوّر على مساحة إعلانية، خلينا الخدمة نفسها هي المنصة: هي البراند، وهي مكان الرعاية، وهي تجربة الزائر.</p><p>الزائر بيشوف البراند وهو بيستخدم الخدمة فعلاً، والراعي بيظهر في حاجة ليها معنى عند الناس مش في إعلان.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>طورت فكرة البيزنس من الأول.</li><li>بنيت استراتيجية البراند.</li><li>حطيت خطة الإطلاق.</li><li>صممت نموذج الرعاية وقدمته للرعاة.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>راعي واحد دخل بقيمة 180 مليون ريال.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>طورت فكرة البيزنس والبراند، وجبت راعي بـ 180 مليون ريال.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">لما الإعلان يبقى مقيّد، الخدمة نفسها تبقى هي الإعلان.</p></div>
+    <p class="cp-note">اسم الراعي سري بحكم العقد.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-retail"><span>الدراسة اللي بعدها ←</span><b>موسم رمضان على شبكة فروع كاملة</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-retail">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">ريتيل · أزياء وتجزئة · السعودية</div>
+  <h1 class="cp-title">موسم رمضان على شبكة فروع كاملة</h1>
+  <p class="cp-lead">حملة موسمية واحدة متسقة على كل الفروع. مبيعات الفترة 48 مليون ريال بصرف تسويقي 1.3 مليون.</p>
+  <figure class="cp-cover"><img src="cases/retail.jpg" alt="عملاء بيتسوقوا في محل ملابس زحمة في رمضان" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>48M</b><span>ريال مبيعات الفترة</span></div><div><b>1.3M</b><span>ريال صرف تسويقي</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>الخلفية</h2><p>رمضان أهم موسم شراء في الأزياء. والمجموعة عندها فروع كتير، كل فرع ليه جمهوره وطلبه.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>التحدي</h2><p>نلحق موسم الشراء بتجربة واحدة للبراند والعروض على كل الفروع، من غير ما كل فرع يطلع بشكل ورسالة مختلفة.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>الاستراتيجية</h2><p>تموضع موسمي واحد للبراند، وصول واسع من السوشيال والمؤثرين، وربط الحملة بطلب كل فرع بدل ما تبقى حملة عامة.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>تخطيط متكامل للموسم كله قبل ما يبدأ.</li><li>إعلانات سوشيال مدفوعة.</li><li>حملات مؤثرين.</li><li>تنسيق يومي مع إدارة الفروع.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>مبيعات الفترة وصلت 48 مليون ريال، والصرف التسويقي كان 1.3 مليون ريال.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>قيادة التسويق في المجموعة: الاستراتيجية والتخطيط وإدارة الفرق.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">في المواسم، حملة واحدة متسقة على كل الفروع أقوى من حملة لكل فرع.</p></div>
+    <p class="cp-note">الـ 48 مليون مبيعات الفترة كلها، مش منسوبة للإعلانات لوحدها.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-automotive"><span>الدراسة اللي بعدها ←</span><b>إطلاق سيارة بمعايير براند فاخر</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-automotive">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">مرسيدس · أوتوموتيف</div>
+  <h1 class="cp-title">إطلاق سيارة بمعايير براند فاخر</h1>
+  <p class="cp-lead">طلب حقيقي على موديل جديد من غير ما البراند ينزل عن مستواه. العائد على الصرف الإعلاني 32.8×.</p>
+  <figure class="cp-cover"><img src="cases/automotive.jpg" alt="سيارة جديدة متغطية بقماش قبل لحظة الكشف عنها في حفل إطلاق" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>32.8×</b><span>عائد على الصرف الإعلاني</span></div><div><b>$2.7M</b><span>ميزانية الحملة تقريباً</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>الخلفية</h2><p>إطلاق موديل جديد لبراند فاخر. في الفئة دي، شكل الحملة جزء من قيمة المنتج نفسه.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>التحدي</h2><p>ندعم الإطلاق بتموضع فاخر واضح، وفي نفس الوقت نولّد طلب يتقاس بالأرقام. الاتنين مع بعض، مش واحد على حساب التاني.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>الاستراتيجية</h2><p>ربطنا قصة البراند بنية الشراء عند الجمهور في حملة إطلاق واحدة بأولويات واضحة.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>تخطيط الديجيتال للحملة.</li><li>تخطيط الإنتاج.</li><li>تنسيق شركاء الحملة.</li><li>مراجعات أداء مستمرة طول الحملة.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>عائد 32.8× على صرف إعلاني حوالي 2.7 مليون دولار.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>استشاري: إشراف استراتيجي وتوجيه الحملة ومراجعة الأداء.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">البراند الفاخر مش مضطر يختار بين صورته ومبيعاته.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-qsr"><span>الدراسة اللي بعدها ←</span><b>حملة 360 في سوق المطاعم السريعة</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-qsr">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">برجر كينج · مطاعم · السعودية</div>
+  <h1 class="cp-title">حملة 360 في سوق المطاعم السريعة</h1>
+  <p class="cp-lead">ربط رسالة البراند بالأداء التجاري في سوق شديد المنافسة. مبيعات الفترة 73 مليون ريال بميزانية حملة 900 ألف.</p>
+  <figure class="cp-cover"><img src="cases/qsr.jpg" alt="عملاء واقفين على كاونتر مطعم وجبات سريعة زحمة بالليل" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>73M</b><span>ريال مبيعات الفترة</span></div><div><b>900K</b><span>ريال ميزانية الحملة</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>الخلفية</h2><p>سوق المطاعم السريعة في السعودية من أكتر الأسواق منافسة، والعميل بيقابل البراند في أماكن كتير في نفس اليوم.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>التحدي</h2><p>حملة متكاملة توصل للعميل من كل نقطة تواصل، من غير ما كل قناة تقول حاجة مختلفة.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>الاستراتيجية</h2><p>رسالة واحدة وقياس تجاري واحد، بدل ما كل قناة تشتغل لوحدها وتتقاس لوحدها.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>تخطيط حملة 360 كاملة.</li><li>تنسيق بين الكرييتيف وكل القنوات.</li><li>متابعة الأداء التجاري مش أرقام القنوات بس.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>مبيعات البيزنس في الفترة وصلت 73 مليون ريال، بميزانية حملة 900 ألف ريال.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>قيادة تسويق الحملة وتنسيق المنهج المتكامل.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">لما كل القنوات تقول نفس الجملة، العميل بيسمعها.</p></div>
+    <p class="cp-note">الـ 73 مليون مبيعات البيزنس في الفترة، مش عائد الإعلانات المدفوعة لوحدها.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-realestate"><span>الدراسة اللي بعدها ←</span><b>مبيعات أكتر من غير زيادة في الإعلانات</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-realestate">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">عقارات · إدارة العملاء المحتملين</div>
+  <h1 class="cp-title">مبيعات أكتر من غير زيادة في الإعلانات</h1>
+  <p class="cp-lead">التسويق بيقول الأرقام حلوة والمبيعات مش بتحقق التارجت. في أقل من 60 يوم معدل التحويل بقى الضعف بنفس الميزانية.</p>
+  <figure class="cp-cover"><img src="cases/realestate.jpg" alt="عملاء بيتفرجوا على ماكيت مشروع عقاري مع مسؤول مبيعات" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>2×</b><span>معدل التحويل</span></div><div><b>-35%</b><span>تكلفة الزيارة</span></div><div><b>-40%</b><span>ليدز ضايعة</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>المشكلة</h2><p>ليدز كتير ومعاينات قليلة. التسويق شايف شغله ماشي، والمبيعات شايفة إن الليدز ضعيفة.</p><p>الحل السهل كان نشتري ترافيك أكتر. بس ده كان هيكبّر نفس المشكلة.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>اللي الأرقام قالته</h2><ul><li>العميل العقاري بيكلم من 3 لـ 7 مطورين قبل ما يقرر.</li><li>القرار بياخد من 45 لـ 120 يوم.</li><li>أكتر من 60% من الليدز بتقع قبل ما توصل للمعاينة.</li></ul><p>يعني المشكلة مش في عدد الليدز. المشكلة في اللي بيحصل بعد ما الليد يدخل.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>القرار</h2><p>نسيب ميزانية الإعلانات زي ما هي، ونصلح الرحلة من أول رسالة لحد المعاينة والتقفيل.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>تقييم لكل ليد حسب جديته.</li><li>توزيع ذكي لليدز على فريق المبيعات.</li><li>متابعة أوتوماتيك عشان مفيش ليد يتنسي.</li><li>رد أسرع وأسئلة تأهيل واضحة.</li><li>تنسيق المعاينات ومسؤول واضح عن كل مرحلة.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><ul><li>معدل التحويل بقى الضعف تقريباً.</li><li>تكلفة الزيارة نزلت أكتر من 35%.</li><li>الليدز الضايعة قلّت أكتر من 40%.</li><li>نسبة الوصول للعميل زادت حوالي 30%.</li><li>نسبة النقر على الإعلانات طلعت من 0.8% لحوالي 2%.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>إعادة بناء رحلة العميل مع فريق المبيعات.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">قبل ما تشتري ليدز أكتر، شوف الليدز اللي عندك بتروح فين.</p></div>
+    <p class="cp-note">كل ده في أقل من 60 يوم وبنفس ميزانية الإعلانات.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-perfumes"><span>الدراسة اللي بعدها ←</span><b>ROAS 12.8 والشركة بتخسر</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-perfumes">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">عطور فاخرة · السعودية</div>
+  <h1 class="cp-title">ROAS 12.8 والشركة بتخسر</h1>
+  <p class="cp-lead">مبيعات 1.28 مليون ريال من 100 ألف ريال إعلانات، والربح الصافي مش موجود. في شهرين صافي الربح زاد 180%.</p>
+  <figure class="cp-cover"><img src="cases/perfumes.jpg" alt="إيد بتعرض زجاجة عطر فاخرة على كاونتر رخام" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>+180%</b><span>صافي الربح</span></div><div><b>2.4</b><span>ربح لكل ريال إعلانات، كان 0.5</span></div><div><b>2</b><span>شهرين بس</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>المشكلة</h2><p>على الورق كل حاجة ممتازة: 100 ألف ريال إعلانات جابوا مبيعات 1.28 مليون ريال. يعني ROAS 12.8.</p><p>بس صاحب البيزنس مش شايف فلوس في الآخر.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>اللي الأرقام قالته</h2><p>لما حسبنا الربح الصافي بعد كل التكاليف، لقينا إن كل ريال إعلانات بيرجّع نص ريال ربح بس. يعني POAS 0.5.</p><p>المبيعات عالية، بس جزء كبير منها على منتجات هامشها ضعيف، ومعاها شحن ومرتجعات ورسوم دفع.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>القرار</h2><p>نبطل نقيس بالمبيعات ونقيس بالربح. الحملات تتبني على هامش الربح مش على رقم الـ ROAS.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>راجعنا كل التكاليف: المنتج والشحن والمرتجعات والدفع.</li><li>حسبنا ربحية كل منتج لوحده.</li><li>قارنّا التسعير بالمنافسين.</li><li>قسمنا الحملات على هامش الربح وتكلفة الاكتساب.</li><li>قللنا المرتجعات بتحسين تجربة العميل.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>في شهرين الـ ROAS نزل من 12.8 لـ 8.2، والربح لكل ريال إعلانات طلع من 0.5 لـ 2.4، وصافي الربح زاد 180%.</p><p>رقم الـ ROAS قل، والشركة بقت بتكسب.</p></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>استشاري: شخّصت المشكلة وقدت إعادة هيكلة الحملات والتسعير.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">الـ ROAS بيقولك بعت بكام. الـ POAS بيقولك كسبت كام.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-skincare"><span>الدراسة اللي بعدها ←</span><b>من ROAS 1.8 لـ 5.2 في 90 يوم</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-skincare">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">عناية بالبشرة · مصر والإمارات والسعودية</div>
+  <h1 class="cp-title">من ROAS 1.8 لـ 5.2 في 90 يوم</h1>
+  <p class="cp-lead">براند بـ 22 منتج بيصرف 15 ألف دولار في الشهر والعائد واقف. المشكلة مكانتش في الميزانية، كانت في توزيعها.</p>
+  <figure class="cp-cover"><img src="cases/skincare.jpg" alt="منتجات عناية بالبشرة مرصوصة على رف وإيد بتاخد منها" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>5.2×</b><span>عائد على الصرف، كان 1.8</span></div><div><b>$78.5K</b><span>مبيعات شهرية، كانت $27K</span></div><div><b>-38%</b><span>تكلفة عملية الشراء</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>الخلفية</h2><p>براند عناية بالبشرة عنده 22 منتج وبيبيع في مصر والإمارات والسعودية. سوق زحمة وأسعار متقاربة، وميزانية 15 ألف دولار في الشهر.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>اللي الأرقام قالته</h2><p>لقينا تلات مشاكل، كل واحدة ليها حل لوحدها:</p><ul><li>70% من الميزانية رايحة لأول الفانل، من غير أي تأهيل للعميل بعدها.</li><li>كل الصرف على منصة واحدة، والناس اللي بتدوّر على المنتج فعلاً محدش بيكلمها.</li><li>نفس الإعلان بيتعرض على كل الناس، مهما كان نوع بشرتهم أو سلوكهم.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>اللي اتعمل</h2><p>1. وزعنا الميزانية من جديد: 40% لآخر الفانل، 35% للنص، 25% للأول. معدل التحويل بقى 2.3×، وتكلفة عملية الشراء نزلت 37%.</p><p>2. ضفنا جوجل جنب ميتا: Performance Max و Search. نسبة النقر في البحث وصلت 7.9%، معدل الارتداد نزل 45%، وعائد جوجل عدّى ميتا.</p><p>3. بنينا مصفوفة محتوى لكل شريحة: محتوى من العملاء وفيديوهات تعليمية. نسبة النقر زادت 66%، تكلفة الظهور نزلت 23%، وعمليات الشراء بقت 3 أضعاف.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>النتيجة</h2><ul><li>العائد على الصرف من 1.8 لـ 5.2.</li><li>المبيعات الشهرية من 27 ألف دولار لـ 78.5 ألف.</li><li>زيارات الموقع من 42 ألف لـ 117 ألف.</li><li>تكلفة عملية الشراء من 22.5 دولار لـ 13.9.</li><li>رسايل العملاء على ميتا من 220 لـ 940.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>قدت الاستراتيجية والتنفيذ مع فريقي.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">قبل ما تزود الميزانية، شوف هي متوزعة إزاي.</p></div>
+    <p class="cp-note">كل الأرقام في 90 يوم وبنفس الميزانية الشهرية.</p>
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-ramadan"><span>الدراسة اللي بعدها ←</span><b>زودنا الميزانية في رمضان والسوق كله بيقلل</b></a></div>
+</section>
+</div>
+
+<div class="view cp" id="v-case-ramadan">
+<section class="cp-top"><div class="wrap">
+  <a class="cp-back" href="#cases">→ كل النتائج</a>
+  <div class="cs-meta">عقارات · موسم رمضان · القاهرة</div>
+  <h1 class="cp-title">زودنا الميزانية في رمضان والسوق كله بيقلل</h1>
+  <p class="cp-lead">مشروع سكني في شرق القاهرة بميزانية إعلانية حوالي 3.8 مليون جنيه، والمدير المالي عايز يوقف الحملات. قررنا العكس.</p>
+  <figure class="cp-cover"><img src="cases/ramadan.jpg" alt="مصافحة فوق عقد ومفاتيح شقة جنب شباك بيطل على عمارات" width="1400" height="933" loading="lazy"></figure>
+  <div class="cs-nums cp-nums"><div><b>4.2×</b><span>عائد على الاستثمار، كان 3.1×</span></div><div><b>+24%</b><span>إجمالي المبيعات</span></div><div><b>+34%</b><span>تحويل من ليد لمعاينة</span></div></div>
+</div></section>
+<section class="sec cp-main"><div class="wrap cp-body">
+  <div class="cp-text"><section class="cp-sec"><span class="n" aria-hidden="true">01</span><div><h2>المشكلة</h2><p>قبل رمضان بأسبوع تكلفة الليد وصلت 420 جنيه. نسبة التحويل من ليد لمعاينة 18%، ونسبة التقفيل 11%.</p><p>السوق كله بيقلل صرفه في رمضان، والسؤال في الاجتماع كان: نوقف الحملات ولا نقلل النص؟</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">02</span><div><h2>اللي الأرقام قالته</h2><p>قبل ما نقرر، رجعنا لبيانات رمضان اللي قبله:</p><ul><li>عدد الليدز قل 22%.</li><li>نسبة حضور المعاينات زادت 31%.</li><li>نسبة التقفيل زادت 19%.</li></ul><p>يعني اللي بيسأل في رمضان أقل، بس أكتر جدية.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">03</span><div><h2>القرار</h2><p>زودنا الميزانية 30% بدل ما نقللها، وغيرنا طريقة الشغل كلها عشان تناسب الشهر.</p></div></section><section class="cp-sec"><span class="n" aria-hidden="true">04</span><div><h2>اللي اتعمل</h2><ul><li>الإعلانات بتشتغل بعد الإفطار بس.</li><li>سكريبت مبيعات جديد يناسب رمضان.</li><li>الرد على أي ليد خلال 7 دقايق.</li><li>تقسيم الليدز حسب الجدية: ساخن ودافي وبارد.</li><li>ربط الإعلانات بالـ CRM وفريق الموقع.</li></ul></div></section><section class="cp-sec"><span class="n" aria-hidden="true">05</span><div><h2>النتيجة</h2><p>بعد 30 يوم:</p><ul><li>عدد الليدز قل 14%.</li><li>إجمالي المبيعات زاد 24%.</li><li>العائد على الاستثمار من 3.1× لـ 4.2×.</li><li>التحويل من ليد لمعاينة زاد 34%.</li><li>الإيرادات زادت 22%.</li></ul></div></section></div>
+  <aside class="cp-side">
+    <div class="cp-box"><h3>دوري</h3><p>إدارة الميزانية الإعلانية وقيادة القرار مع المبيعات والتشغيل.</p></div>
+    <div class="cp-box light"><h3>الدرس</h3><p class="cp-lesson">ليدز أقل مش معناها مبيعات أقل. اسأل البيانات قبل ما تقطع الميزانية.</p></div>
+    
+  </aside>
+</div>
+<div class="wrap"><a class="cp-next" href="#case-sponsorship"><span>الدراسة اللي بعدها ←</span><b>خدمة بقت هي نفسها البراند</b></a></div>
+</section>
 </div>
 
 <div class="view" id="v-about">
@@ -1055,13 +1295,13 @@ h1 .sel{font-weight:900}
 document.documentElement.setAttribute('dir','rtl');
 document.documentElement.setAttribute('lang','ar');
 (function(){
-  var names=['home','services','cases','videos','about'];
+  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan'];
   function show(){
     var r=(location.hash||'').replace('#','');
     if(names.indexOf(r)<0) r='home';
     names.forEach(function(n){ var v=document.getElementById('v-'+n); if(v) v.hidden=(n!==r); });
     document.querySelectorAll('nav a[data-route]').forEach(function(a){
-      if(a.dataset.route===r) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      if(a.dataset.route===(r.indexOf('case-')===0?'cases':r)) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
     window.scrollTo(0,0);
   }
