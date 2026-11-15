@@ -654,6 +654,38 @@ h1 .sel{font-weight:900}
 /* ===== v27: 22 cases, three-column index on wide screens ===== */
 @media (min-width:1100px){.cx-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 26px}.cx-num b{font-size:2rem}.cx-num{flex-wrap:wrap;gap:4px 12px}}
 
+/* ===== v28: videos hub, play button off the face, calmer mobile ===== */
+.vcard.film .play{inset:auto;inset-inline-start:16px;bottom:16px;margin:0;width:60px;height:60px}
+.vcard.film .play svg{width:24px;height:24px}
+.vhub .series-tiles{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.stile-go{margin-top:8px;font-family:var(--ar);font-weight:800;font-size:.9rem;color:var(--red)}
+.vsub-top{padding-top:22px}
+.vsub-top .cp-back{margin-bottom:22px}
+.vsub .series-head{border-top:0;padding-top:0}
+@media (max-width:860px){
+  .vhub .series-tiles{grid-template-columns:1fr;gap:18px}
+  .vhub .stile{display:grid;grid-template-columns:128px minmax(0,1fr)}
+  .vhub .stile img{height:100%;aspect-ratio:4/5;border-bottom:0;border-inline-end:2px solid var(--line)}
+  .vhub .stile-cap{padding:14px 16px;justify-content:center}
+  .vhub .stile-cap h3{font-size:1.35rem}
+  .vhub .stile-cap p{font-size:.9rem}
+  .vcard.film .play{width:52px;height:52px;inset-inline-start:12px;bottom:12px}
+  /* results index: compact rows so 22 cases stay easy to scan */
+  .cx-grid{gap:14px}
+  .cx{display:grid;grid-template-columns:112px minmax(0,1fr)}
+  .cx img{height:100%;aspect-ratio:auto;border-bottom:0;border-inline-end:2px solid var(--line)}
+  .cx-body{padding:12px 14px;gap:3px}
+  .cx .cs-meta{font-size:.74rem;margin-bottom:0}
+  .cx h2{font-size:1.02rem;line-height:1.45}
+  .cx-num{margin-top:6px;padding-top:8px;gap:2px 8px;flex-wrap:wrap}
+  .cx-num b{font-size:1.5rem}
+  .cx-num span{font-size:.78rem}
+  .cx-more{display:none}
+  .cp-back{padding-block:8px 4px}
+  .cp-sec p,.cp-sec li{font-size:1rem}
+  .view-hero{padding-block:22px 28px}
+}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -689,6 +721,8 @@ nav{font-weight:800;font-size:.86rem}
 .cx h2{font-size:clamp(1.2rem,1.9vw,1.5rem);line-height:1.3;letter-spacing:-.01em}
 .cp-lesson{font-size:1.2rem;line-height:1.4}
 .cp-next b{line-height:1.25}
+.stile-go{font-family:var(--en),var(--ar);font-stretch:112%}
+@media (max-width:860px){.cx h2{font-size:1rem;line-height:1.3}}
 @media (max-width:860px){
   .hero-text{padding:12px 0 8px}
   h1{font-size:1.5rem}
@@ -837,9 +871,9 @@ nav{font-weight:800;font-size:.86rem}
     <h2>Marketing you can see, <span class="red">not just hear about</span></h2>
   </div>
   <div class="series-tiles">
-    <a class="stile" href="#videos"><img src="../videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p></div></a>
-    <a class="stile" href="#videos"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">20 episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p></div></a>
-    <a class="stile" href="#videos"><img src="../videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p></div></a>
+    <a class="stile" href="#videos-youssef"><img src="../videos/youssef/intro-main.jpg" alt=""><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p></div></a>
+    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">20 episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p></div></a>
+    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt=""><div class="stile-cap"><span class="vsub">3 short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p></div></a>
   </div>
   <p class="more"><a class="ulink" href="#videos">See all videos →</a></p>
 </div></section>
@@ -1650,9 +1684,20 @@ nav{font-weight:800;font-size:.86rem}
 <section class="view-hero"><div class="wrap">
   <div class="kicker"><span>VIDEOS</span><span class="stars">✸✦✤</span></div>
   <h1 class="mega">Videos</h1>
-  <p>Three sections: intro videos about me, simple drawings in a minute, and short films from history. The videos are in Arabic.</p>
+  <p>Three series. Pick the one you want and open its videos.</p>
 </div></section>
 
+<section class="sec vhub" style="padding-top:0"><div class="wrap">
+  <div class="series-tiles">
+    <a class="stile" href="#videos-youssef"><img src="../videos/youssef/intro-main.jpg" alt="Youssef Khalil in the intro video"><div class="stile-cap"><span class="vsub">Intro</span><h3>Youssef</h3><p>Who I am and how I work, in a minute and a half.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+    <a class="stile" href="#videos-stick"><img src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div class="stile-cap"><span class="vsub">20 episodes</span><h3>Marketing Doodles</h3><p>One marketing idea in a minute, in simple drawings.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+    <a class="stile" href="#videos-whatif"><img src="../videos/whatif/ep1-poster.jpg" alt="Poster of the film Muhammad Ali and the Citadel"><div class="stile-cap"><span class="vsub">3 short films</span><h3>What If…?</h3><p>Historic events through a marketer's eyes: the Citadel, Napoleon, Titanic.</p><span class="stile-go" aria-hidden="true">Open the series →</span></div></a>
+  </div>
+</div></section>
+</div>
+
+<div class="view vsub" id="v-videos-youssef">
+<div class="wrap vsub-top"><a class="cp-back" href="#videos">← All series</a></div>
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
     <div><div class="tagline-s">SERIES 01 · ABOUT ME</div><h2><span class="red">Youssef</span></h2></div>
@@ -1665,7 +1710,10 @@ nav{font-weight:800;font-size:.86rem}
     <article class="vcard film wide"><div class="vframe" data-video="../videos/youssef/intro-main.mp4"><img src="../videos/youssef/intro-main.jpg" alt="The intro video" loading="lazy"><button type="button" class="play" aria-label="Play: The intro video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div><div class="vcap"><span class="vsub">1:26 · My story from 2010 to today</span><h3>The intro video</h3></div></article>
   </div>
 </div></section>
+</div>
 
+<div class="view vsub" id="v-videos-stick">
+<div class="wrap vsub-top"><a class="cp-back" href="#videos">← All series</a></div>
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
     <div class="with-cover"><img class="series-cover" src="../videos/stick/cover.jpg" alt="Marketing Doodles series cover"><div><div class="tagline-s">SERIES 02 · 20 EPISODES</div><h2>Marketing <span class="red">Doodles</span></h2></div></div>
@@ -1715,7 +1763,10 @@ nav{font-weight:800;font-size:.86rem}
     </div>
   </div>
 </div></section>
+</div>
 
+<div class="view vsub" id="v-videos-whatif">
+<div class="wrap vsub-top"><a class="cp-back" href="#videos">← All series</a></div>
 <section class="sec series" style="padding-top:0"><div class="wrap">
   <div class="series-head">
     <div><div class="tagline-s">SERIES 03 · 3 FILMS</div><h2>What <span class="red">If…?</span></h2></div>
@@ -1754,14 +1805,15 @@ nav{font-weight:800;font-size:.86rem}
 document.documentElement.setAttribute('dir','ltr');
 document.documentElement.setAttribute('lang','en');
 (function(){
-  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention'];
+  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention','videos-youssef','videos-stick','videos-whatif'];
   function show(){
     var r=(location.hash||'').replace('#','');
     if(names.indexOf(r)<0) r='home';
     names.forEach(function(n){ var v=document.getElementById('v-'+n); if(v) v.hidden=(n!==r); });
     document.querySelectorAll('nav a[data-route]').forEach(function(a){
-      if(a.dataset.route===(r.indexOf('case-')===0?'cases':r)) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      if(a.dataset.route===(r.indexOf('case-')===0?'cases':(r.indexOf('videos-')===0?'videos':r))) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
     });
+    document.querySelectorAll('video').forEach(function(x){ x.pause(); });
     window.scrollTo(0,0);
   }
   window.addEventListener('hashchange',show);
