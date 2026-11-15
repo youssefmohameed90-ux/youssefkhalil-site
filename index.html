@@ -2011,7 +2011,10 @@ document.documentElement.setAttribute('lang','ar');
 </script>
 <script>
 (function(){
-  if(window.matchMedia('(max-width:860px)').matches) document.querySelectorAll('details.acc').forEach(function(d){ d.open=false; });
+  var mq=window.matchMedia('(max-width:860px)');
+  function syncAcc(){ document.querySelectorAll('details.acc').forEach(function(d){ d.open=!mq.matches; }); }
+  syncAcc();
+  if(mq.addEventListener) mq.addEventListener('change',syncAcc); else if(mq.addListener) mq.addListener(syncAcc);
   document.querySelectorAll('[data-go]').forEach(function(b){
     b.addEventListener('click',function(){ var t=document.getElementById(b.dataset.go); if(t) t.scrollIntoView({behavior:'smooth',block:'start'}); });
   });
