@@ -23,7 +23,7 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 ## Case studies
 - [A service that became the brand itself](https://youssefkhalil.co/en/case-sponsorship) (Hajj and Umrah · Saudi Arabia): A mobility solution for elderly and disabled pilgrims, in a place where traditional advertising is restricted. The outcome: a single sponsor worth SAR 180M.
 - [A Ramadan season across a full branch network](https://youssefkhalil.co/en/case-retail) (Retail · Fashion · Saudi Arabia): One consistent seasonal campaign across every branch. SAR 48M in sales for the period on SAR 1.3M of marketing spend.
-- [A car launch at luxury-brand standards](https://youssefkhalil.co/en/case-automotive) (Mercedes · Automotive): Real demand for a new model without the brand stepping down from its level. Return on ad spend: 32.8×.
+- [A car launch at luxury-brand standards](https://youssefkhalil.co/en/case-automotive) (Mercedes · Automotive · Saudi Arabia & Egypt): Real demand for a new model without the brand stepping down from its level. Return on ad spend: 32.8×.
 - [A 360° campaign in the quick-service market](https://youssefkhalil.co/en/case-qsr) (Burger King · Restaurants · Saudi Arabia): Linking the brand message to commercial performance in a fiercely competitive market. SAR 73M in sales for the period on a SAR 900K campaign budget.
 - [More sales with no extra ad spend](https://youssefkhalil.co/en/case-realestate) (Real estate · Lead management): The project was receiving plenty of leads, and most opportunities stalled before a site visit. Within 90 days, on the same ad budget, contracts nearly tripled.
 - [A 12.8 ROAS, and the company was losing money](https://youssefkhalil.co/en/case-perfumes) (Luxury perfumes · Saudi Arabia): SAR 1.28M in sales from SAR 100K in ads, and no net profit to show for it. In two months net profit rose 180%.
@@ -67,7 +67,7 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 
 - [خدمة أصبحت هي نفسها البراند](https://youssefkhalil.co/case-sponsorship) (الحج والعمرة · السعودية)
 - [موسم رمضان على شبكة فروع كاملة](https://youssefkhalil.co/case-retail) (ريتيل · أزياء وتجزئة · السعودية)
-- [إطلاق سيارة بمعايير براند فاخر](https://youssefkhalil.co/case-automotive) (مرسيدس · أوتوموتيف)
+- [إطلاق سيارة بمعايير براند فاخر](https://youssefkhalil.co/case-automotive) (مرسيدس · أوتوموتيف · السعودية ومصر)
 - [حملة 360 في سوق المطاعم السريعة](https://youssefkhalil.co/case-qsr) (برجر كينج · مطاعم · السعودية)
 - [مبيعات أكثر بدون زيادة في الإعلانات](https://youssefkhalil.co/case-realestate) (عقارات · إدارة العملاء المحتملين)
 - [ROAS 12.8 والشركة تخسر](https://youssefkhalil.co/case-perfumes) (عطور فاخرة · السعودية)
