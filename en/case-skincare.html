@@ -885,6 +885,30 @@ h1 .me{display:block}
 /* ===== v38: four services ===== */
 @media (min-width:861px){#v-home .svc-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:980px}.pick{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+/* ===== guides (GEO answer pages) ===== */
+.guide .cp-title{max-width:22ch}
+.g-list{margin:10px 0 0;padding-inline-start:1.1em;display:grid;gap:8px}
+.g-list li{line-height:1.8}
+.gt-wrap{overflow-x:auto;margin-top:14px}
+.gt{width:100%;border-collapse:collapse;font-size:.96rem;line-height:1.7}
+.gt th,.gt td{border-top:2px solid var(--line);padding:14px 12px;text-align:start;vertical-align:top}
+.gt thead th{background:var(--black);color:var(--on-black);border-top:0;font-family:var(--ar);font-weight:800}
+.gt tbody th{font-family:var(--ar);font-weight:800;min-width:9em}
+.gt tr.me th{color:var(--red)}
+.gt .gl{display:none}
+.g-faq{margin-top:10px;padding-top:30px;border-top:2px solid var(--line)}
+.g-faq h2{margin-bottom:14px}
+.g-cta{margin-top:16px}
+.more-read{margin-top:26px}
+@media (max-width:760px){
+  .gt thead{display:none}
+  .gt,.gt tbody,.gt tr,.gt th,.gt td{display:block;width:100%}
+  .gt tr{border-top:3px solid var(--line);padding:12px 0}
+  .gt th,.gt td{border:0;padding:4px 0}
+  .gt tbody th{font-size:1.1rem;margin-bottom:4px}
+  .gt .gl{display:block;font-weight:700;color:var(--muted);font-size:.82rem}
+}
+
 /* ===== English (LTR) overrides ===== */
 .page{direction:ltr;text-align:left}
 h1,h2,h3,.mega,.about-lead,.quote,.season-head h3,.plat-head h3,.btn,.ulink,nav,.chip,.mbar a,.wa-float,.stk,.sticker,.clg-strip,.tl-k,.facts li,.vsub,.season-head .count,.caps-label,summary,.final-acts .btn{font-family:var(--en),var(--ar);font-stretch:112%}
@@ -1010,7 +1034,7 @@ h1 .hello{font-size:clamp(2.4rem,5vw,4rem);line-height:1.15}
 document.documentElement.setAttribute('dir','ltr');
 document.documentElement.setAttribute('lang','en');
 (function(){
-  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention','videos-youssef','videos-stick','videos-whatif'];
+  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention','videos-youssef','videos-stick','videos-whatif','guide-part-time-cmo'];
   var BASE=(document.documentElement.getAttribute('lang')==='en')?'/en/':'/';
   function url(r){ return r==='home'?BASE:BASE+r; }
   function cur(){
