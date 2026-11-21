@@ -15,6 +15,7 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [Why is ROAS high while the company loses money?](https://youssefkhalil.co/en/guide-roas-vs-profit): ROAS measures sales, not profit. Where the profit disappears, how to calculate profit on ad spend (POAS), and a real Saudi example: ROAS 12.8 while losing money, then +180% net profit.
 - [Tourism marketing: from booking to the trip that happens](https://youssefkhalil.co/en/guide-tourism-marketing): How to market a tourism or experiences company in the UAE and Saudi Arabia: why bookings do not mean profit, what works, and numbers from real projects: cancellations from 25% to 10%, AED 14.3M from an influencer campaign.
 - [Sports club marketing: how to sell tickets and build loyalty](https://youssefkhalil.co/en/guide-sports-club-marketing): How clubs sell more tickets and build loyalty. Youssef Khalil’s work with Al Hilal (ticket sales 32% above target, 46% early season-ticket renewal) and the Jockey Club of Saudi Arabia, from tender to launch.
+- [Marketing Hajj & Umrah hotels: how to sell your rooms before the season](https://youssefkhalil.co/en/guide-hotel-marketing): How Hajj and Umrah hotels sell rooms through long-term advance bookings with fewer partners. A real example: Le Méridien Medina, from 1,500+ travel agencies to fewer than 20 partners covering at least 30% of capacity.
 
 ## Case studies
 - [A service that became the brand itself](https://youssefkhalil.co/en/case-sponsorship) (Hajj and Umrah · Saudi Arabia): A mobility solution for elderly and disabled pilgrims, in a place where traditional advertising is restricted. The outcome: a single sponsor worth SAR 180M.
@@ -41,6 +42,7 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [A retention programme that added about SAR 15M in sales in a year](https://youssefkhalil.co/en/case-retention) (Retention · Personal care · Saudi Arabia): A personal care brand was winning tens of thousands of customers, with a thin margin on the first order after advertising. Growth depended on constant acquisition spend, and many customers bought only once.
 - [Al Hilal: season tickets booked before they went on sale](https://youssefkhalil.co/en/case-hilal) (Sports · Football · Saudi Arabia): I led the marketing strategy and the rollout of the ticket sales system for Al Hilal. Ticket sales beat the target by 32%, and 46% of season ticket holders asked to renew before the season ended, against a previous best of 14%.
 - [Jockey Club of Saudi Arabia: a ticketing system from tender file to launch](https://youssefkhalil.co/en/case-jockey-club) (Sports · Equestrian · Saudi Arabia): I owned the project from preparing the tender file and the services offer through to delivery: a ticketing system serving around four different categories, a social media plan that lifted engagement by more than 83% in the first month, and PR with the government bodies involved.
+- [Le Méridien Medina: from 1,500 travel agencies to fewer than 20 partners](https://youssefkhalil.co/en/case-le-meridien-madinah) (Hotels · Hajj & Umrah · Medina): I developed the hotel’s Hajj and Umrah booking strategy: instead of scattered requests from 1,500+ travel agencies, long-term bookings with fewer than 20 partners covering at least 30% of operating capacity, with profitability held roughly level.
 
 ## About and videos
 - [About Youssef Khalil](https://youssefkhalil.co/en/about): story, journey, industries and way of working.
@@ -84,3 +86,4 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [برنامج احتفاظ زاد المبيعات حوالي 15 مليون ريال في سنة](https://youssefkhalil.co/case-retention) (الاحتفاظ بالعملاء · عناية شخصية · السعودية)
 - [نادي الهلال: تذاكر موسمية محجوزة قبل طرحها](https://youssefkhalil.co/case-hilal) (رياضة · كرة القدم · السعودية)
 - [نادي الفروسية السعودي: منظومة تذاكر من ملف المناقصة إلى التشغيل](https://youssefkhalil.co/case-jockey-club) (رياضة · الفروسية · السعودية)
+- [لو ميريديان المدينة المنورة: من 1,500 شركة سياحة إلى أقل من 20 شريكا](https://youssefkhalil.co/case-le-meridien-madinah) (فنادق · الحج والعمرة · المدينة المنورة)
