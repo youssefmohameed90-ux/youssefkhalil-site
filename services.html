@@ -908,6 +908,26 @@ h1 .me{display:block}
   .gt tbody th{font-size:1.1rem;margin-bottom:4px}
   .gt .gl{display:block;font-weight:700;color:var(--muted);font-size:.82rem}
 }
+
+/* ===== typographic covers for cases without photos ===== */
+.cx-cov,.cp-clg .clg{position:relative;display:block;overflow:hidden;color:var(--ink);background-color:#F4F4F1;background-image:linear-gradient(rgba(17,17,17,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(17,17,17,.07) 1px,transparent 1px);background-size:26px 26px}
+.cx-cov.dark,.cp-clg .clg.dark{background-color:var(--black);color:var(--on-black);background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px)}
+.cx-cov.dark .clg-strip,.cp-clg .clg.dark .clg-strip{background:#F4F4F1;color:var(--ink)}
+
+.cx .cx-cov{aspect-ratio:16/9;border-bottom:2px solid var(--line)}
+.cx .cx-cov .clg-num{font-size:clamp(2.4rem,4.4vw,3.4rem)}
+.cx .cx-cov .clg-strip{font-size:.85rem;padding:9px 16px 11px}
+.cp-clg{background:none}
+.cp-clg .clg{aspect-ratio:21/9}
+.cp-clg .clg-num{font-size:clamp(4rem,10vw,8rem)}
+.cp-clg .clg-strip{font-size:clamp(1rem,1.8vw,1.4rem)}
+@media (max-width:860px){
+  .cx .cx-cov{aspect-ratio:auto;height:100%;min-height:84px;border-bottom:0;border-inline-end:2px solid var(--line)}
+  .cx .cx-cov .clg-num{font-size:1.35rem}
+  .cx .cx-cov .clg-strip{font-size:.55rem;padding:3px 6px 4px;bottom:6%}
+  .cx .cx-cov .clg-stars{display:none}
+  .cp-clg .clg{aspect-ratio:16/9}
+}
 </style>
 
 <div class="page" dir="rtl" lang="ar">
@@ -1037,7 +1057,7 @@ h1 .me{display:block}
 document.documentElement.setAttribute('dir','rtl');
 document.documentElement.setAttribute('lang','ar');
 (function(){
-  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention','videos-youssef','videos-stick','videos-whatif','guide-part-time-cmo','guide-roas-vs-profit','guide-tourism-marketing','guide-sports-club-marketing'];
+  var names=['home','services','cases','videos','about','case-sponsorship','case-retail','case-automotive','case-qsr','case-realestate','case-perfumes','case-skincare','case-ramadan','case-mfg','case-b2g','case-pharma','case-tourism','case-dealer','case-saas','case-hospital','case-aesthetic','case-inf-skincare','case-inf-tourism','case-inf-restaurants','case-inf-b2b','case-journey','case-retention','videos-youssef','videos-stick','videos-whatif','guide-part-time-cmo','guide-roas-vs-profit','guide-tourism-marketing','guide-sports-club-marketing','case-hilal','case-jockey-club'];
   var BASE=(document.documentElement.getAttribute('lang')==='en')?'/en/':'/';
   function url(r){ return r==='home'?BASE:BASE+r; }
   function cur(){

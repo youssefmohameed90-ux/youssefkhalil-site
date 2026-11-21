@@ -14,7 +14,7 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [Part-time marketing manager, consultant or full-time hire?](https://youssefkhalil.co/en/guide-part-time-cmo): When you need a part-time marketing manager (fractional CMO), when to hire full-time, and when a consultant or agency is enough. A clear comparison and the questions to ask before you sign, by Youssef Khalil.
 - [Why is ROAS high while the company loses money?](https://youssefkhalil.co/en/guide-roas-vs-profit): ROAS measures sales, not profit. Where the profit disappears, how to calculate profit on ad spend (POAS), and a real Saudi example: ROAS 12.8 while losing money, then +180% net profit.
 - [Tourism marketing: from booking to the trip that happens](https://youssefkhalil.co/en/guide-tourism-marketing): How to market a tourism or experiences company in the UAE and Saudi Arabia: why bookings do not mean profit, what works, and numbers from real projects: cancellations from 25% to 10%, AED 14.3M from an influencer campaign.
-- [Sports club marketing: how to sell tickets and build loyalty](https://youssefkhalil.co/en/guide-sports-club-marketing): How clubs sell more tickets and build loyalty. Youssef Khalil’s ticketing marketing work for Al Hilal (season ticket sales 32% above target) and the Jockey Club of Saudi Arabia, from tender to delivery.
+- [Sports club marketing: how to sell tickets and build loyalty](https://youssefkhalil.co/en/guide-sports-club-marketing): How clubs sell more tickets and build loyalty. Youssef Khalil’s work with Al Hilal (ticket sales 32% above target, 46% early season-ticket renewal) and the Jockey Club of Saudi Arabia, from tender to launch.
 
 ## Case studies
 - [A service that became the brand itself](https://youssefkhalil.co/en/case-sponsorship) (Hajj and Umrah · Saudi Arabia): A mobility solution for elderly and disabled pilgrims, in a place where traditional advertising is restricted. The outcome: a single sponsor worth SAR 180M.
@@ -39,6 +39,8 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [Specialists instead of celebrities](https://youssefkhalil.co/en/case-inf-b2b) (B2B influencers · Software · Saudi Arabia): A store and inventory software company worked with entrepreneurship celebrities and collected thousands of enquiries. Most were still planning to start a business, while the product is built for stores already running.
 - [The same traffic, 2.7× the sales](https://youssefkhalil.co/en/case-journey) (Customer journey · Online fashion · UAE): A regional fashion store spent about AED 3M a month on ads and received around 1.2M visits, yet completed sales were only about AED 4.2M. Management wanted new creative and bigger discounts.
 - [A retention programme that added about SAR 15M in sales in a year](https://youssefkhalil.co/en/case-retention) (Retention · Personal care · Saudi Arabia): A personal care brand was winning tens of thousands of customers, with a thin margin on the first order after advertising. Growth depended on constant acquisition spend, and many customers bought only once.
+- [Al Hilal: season tickets booked before they went on sale](https://youssefkhalil.co/en/case-hilal) (Sports · Football · Saudi Arabia): I led the marketing strategy and the rollout of the ticket sales system for Al Hilal. Ticket sales beat the target by 32%, and 46% of season ticket holders asked to renew before the season ended, against a previous best of 14%.
+- [Jockey Club of Saudi Arabia: a ticketing system from tender file to launch](https://youssefkhalil.co/en/case-jockey-club) (Sports · Equestrian · Saudi Arabia): I owned the project from preparing the tender file and the services offer through to delivery: a ticketing system serving around four different categories, a social media plan that lifted engagement by more than 83% in the first month, and PR with the government bodies involved.
 
 ## About and videos
 - [About Youssef Khalil](https://youssefkhalil.co/en/about): story, journey, industries and way of working.
@@ -80,3 +82,5 @@ Site languages: Arabic (main, https://youssefkhalil.co/) and English (https://yo
 - [متخصصون بدل مشاهير](https://youssefkhalil.co/case-inf-b2b) (مؤثرين B2B · برمجيات · السعودية)
 - [نفس الزيارات، ومبيعات 2.7×](https://youssefkhalil.co/case-journey) (رحلة العميل · أزياء أونلاين · الإمارات)
 - [برنامج احتفاظ زاد المبيعات حوالي 15 مليون ريال في سنة](https://youssefkhalil.co/case-retention) (الاحتفاظ بالعملاء · عناية شخصية · السعودية)
+- [نادي الهلال: تذاكر موسمية محجوزة قبل طرحها](https://youssefkhalil.co/case-hilal) (رياضة · كرة القدم · السعودية)
+- [نادي الفروسية السعودي: منظومة تذاكر من ملف المناقصة إلى التشغيل](https://youssefkhalil.co/case-jockey-club) (رياضة · الفروسية · السعودية)
