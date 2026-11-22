@@ -18,6 +18,32 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23fff' text-anchor='middle'%3EYK%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<script>
+/* Meta Pixel + booking events. Loads only on youssefkhalil.co and only once ID is a real number.
+   Page changes inside the site are counted by the pixel itself (it follows pushState). */
+(function(){
+  var ID='1155934826778527';
+  if(/(^|\.)youssefkhalil\.co$/.test(location.hostname) && /^\d+$/.test(ID)){
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init',ID);
+    fbq('track','PageView');
+  }
+  function t(){ if(window.fbq) window.fbq.apply(null,arguments); }
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href]'); if(!a) return;
+    var h=a.getAttribute('href')||'';
+    if(a.classList.contains('cal')) t('trackCustom','OpenBooking');
+    else if(/wa\.me|whatsapp\.com/.test(h)) t('track','Contact',{content_name:'whatsapp'});
+    else if(h.indexOf('tel:')===0) t('track','Contact',{content_name:'phone'});
+  },true);
+  var sent={};
+  window.addEventListener('message',function(e){
+    if(e.origin!=='https://calendly.com'||!e.data||typeof e.data.event!=='string') return;
+    if(e.data.event==='calendly.date_and_time_selected'&&!sent.p){ sent.p=1; t('trackCustom','PickTime'); }
+    if(e.data.event==='calendly.event_scheduled'&&!sent.s){ sent.s=1; t('track','Schedule',{content_name:'marketing-consultation'}); }
+  });
+})();
+</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://youssefkhalil.co/#person","name":"Youssef Khalil","alternateName":"يوسف خليل","jobTitle":"مستشار تسويق","description":"يوسف خليل، مستشار تسويق بخبرة 15 سنة في مصر والسعودية والإمارات وأوروبا. أقود تسويق الشركات بالأرقام، من الاستراتيجية إلى المبيعات. عملت مع مرسيدس، ونادي الهلال، ونادي الفروسية السعودي، ولو ميريديان المدينة المنورة.","url":"https://youssefkhalil.co/","image":"https://youssefkhalil.co/youssef-khalil.png","sameAs":["https://www.linkedin.com/in/youssefkhaliltalks/","https://www.instagram.com/youssefkhaliltalks/","https://www.tiktok.com/@youssefkhaliltalks","https://www.facebook.com/profile.php?id=61594907297633","https://www.sortlist.com/agency/youssef-khalil-marketing-consulting","https://clutch.co/profile/youssef-khalil-marketing-consulting"],"knowsLanguage":["ar","en"],"knowsAbout":["Marketing strategy","Branding","Integrated campaigns","Performance marketing","Media buying","Market entry","Customer experience","Marketing team leadership","Fractional CMO","Hospitality marketing","Tourism marketing","Sports marketing"],"areaServed":["Saudi Arabia","Egypt","United Arab Emirates","Europe"]},{"@type":"ProfessionalService","@id":"https://youssefkhalil.co/#business","name":"يوسف خليل – استشارات تسويق","url":"https://youssefkhalil.co/","image":"https://youssefkhalil.co/youssef-khalil.png","founder":{"@id":"https://youssefkhalil.co/#person"},"telephone":"+966567054546","areaServed":["Saudi Arabia","Egypt","United Arab Emirates","Europe"],"sameAs":["https://www.linkedin.com/in/youssefkhaliltalks/","https://www.instagram.com/youssefkhaliltalks/","https://www.tiktok.com/@youssefkhaliltalks","https://www.facebook.com/profile.php?id=61594907297633","https://www.sortlist.com/agency/youssef-khalil-marketing-consulting","https://clutch.co/profile/youssef-khalil-marketing-consulting"],"potentialAction":{"@type":"ReserveAction","target":"https://calendly.com/youssefmohameed90/marketing-consultation","name":"احجز استشارة مجانية"}},{"@type":"WebSite","@id":"https://youssefkhalil.co/#website","url":"https://youssefkhalil.co/","name":"Youssef Khalil","alternateName":"يوسف خليل","inLanguage":["ar","en"],"publisher":{"@id":"https://youssefkhalil.co/#person"}},{"@type":"WebPage","@id":"https://youssefkhalil.co/videos#webpage","url":"https://youssefkhalil.co/videos","name":"فيديوهات تسويق: شخبطة تسويق وماذا لو | يوسف خليل","description":"فيديوهات يوسف خليل عن التسويق: الفيديو التعريفي، سلسلة «شخبطة تسويق» المرسومة التي تشرح فكرة تسويق في كل فيديو، وأفلام «ماذا لو…؟» عن أحداث تاريخية بعين مسوق.","inLanguage":"ar","isPartOf":{"@id":"https://youssefkhalil.co/#website"},"about":{"@id":"https://youssefkhalil.co/#person"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://youssefkhalil.co/"},{"@type":"ListItem","position":2,"name":"الفيديوهات","item":"https://youssefkhalil.co/videos"}]}}]}</script>
 </head>
 <body>
