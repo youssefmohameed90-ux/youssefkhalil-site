@@ -92,7 +92,8 @@ section{padding:64px 0}
 .book{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
 .book h2{font-weight:900;font-size:clamp(1.8rem,4.4vw,2.8rem);line-height:1.35;margin-bottom:6px}
 .book .sub{margin:0 0 20px;color:var(--muted)}
-#cal{min-width:280px;height:720px;border:2px solid var(--ink);background:var(--paper);position:relative}
+#cal{min-width:280px;height:720px;min-height:560px;border:2px solid var(--ink);background:var(--paper);position:relative}
+@media (max-width:767px){#cal{height:620px}}
 #cal .wait{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:var(--muted)}
 .fallback{margin:14px 0 0;font-size:.95rem;color:var(--muted)}
 
@@ -226,7 +227,10 @@ footer a{font-weight:600;color:var(--ink)}
     s.onload=function(){
       if(!window.Calendly) return fail();
       box.innerHTML='';
-      Calendly.initInlineWidget({url:CAL+'?hide_gdpr_banner=1',parentElement:box,utm:utm});
+      /* on phones Calendly stacks its details card above the calendar, which pushed the open days out of the box;
+         the section heading already says what the call is, so the card is hidden there (the chosen time still shows on the form) */
+      var phone=window.matchMedia&&matchMedia('(max-width:767px)').matches;
+      Calendly.initInlineWidget({url:CAL+'?hide_gdpr_banner=1'+(phone?'&hide_event_type_details=1':''),parentElement:box,utm:utm});
     };
     s.onerror=fail;
     document.head.appendChild(s);
@@ -261,6 +265,13 @@ footer a{font-weight:600;color:var(--ink)}
   },true);
   window.addEventListener('message',function(e){
     if(e.origin!=='https://calendly.com'||!e.data||typeof e.data.event!=='string') return;
+    /* the box takes the height of each Calendly step (calendar, times, form), so nothing scrolls inside it;
+       tiny heights sent while Calendly is still loading are ignored, and +4 covers the 2px border */
+    if(e.data.event==='calendly.page_height'){
+      var f=box.querySelector('iframe'), px=parseInt(e.data.payload&&e.data.payload.height,10);
+      if(f&&e.source===f.contentWindow&&px>300) box.style.height=(px+4)+'px';
+      return;
+    }
     if(e.data.event==='calendly.date_and_time_selected'&&!sent.p){ sent.p=1; t('trackCustom','PickTime'); }
     if(e.data.event==='calendly.event_scheduled'&&!sent.s){ sent.s=1; t('track','Schedule',{content_name:'marketing-consultation'}); }
   });
